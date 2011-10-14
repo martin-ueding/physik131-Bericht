@@ -1,0 +1,66 @@
+% Copyright (c) 2011 Martin Ueding <dev@martin-ueding.de>
+%
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{a4paper}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage[utf8]{inputenc}
+\usepackage[activate]{pdfcprot}
+\usepackage{setspace}
+\usepackage[ngerman]{babel}
+\usepackage[parfill]{parskip}
+\usepackage{hyperref}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0,0,.5}
+\hypersetup{pdftex=true, colorlinks=true, breaklinks=false, linkcolor=black, menucolor=black, pagecolor=black, urlcolor=darkblue}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\newcommand\gqq[1]{\glqq #1\grqq}
+
+\title{EDV für Physiker}
+\author{Martin Ueding}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Übung 1}
+
+\subsection{Befehle in der Konsole}
+
+\begin{itemize}
+
+\item[\texttt{mkdir <dir>}] Erstellt ein Verzeichnis \texttt{<dir>}.
+\item[\texttt{cd <dir>}] Wechselt in das Verzeichnis \texttt{<dir>}. Dabei ist \texttt{..} das übergeordnete Verzeichnis. Wird als Verzeichnis \texttt{-} angegeben, kommt man in das vorherige Verzeichnis. \texttt{cd} ohne Verzeichnis wechselt in das Heimatverzeichnis\footnote{\texttt{$\sim$} oder meistens \texttt{/home/<benutzername>}.}
+\item[\texttt{ls -l [<dir>]}] Listet den Inhalt des Verzeichnises \texttt{<dir>} oder des aktuellen Verzeichnises aus. Dabei werden auch Informationen über Zugriffsrechte und Eigentümer, Größe und Änderungsdatum angezeigt.
+\item[\texttt{gv <datei>}] Zeigt die PDF oder PS Datei \texttt{<datei>} an.
+\end{itemize}
+
+\subsection{absoluter und relativer Pfad}
+
+Ein absoluter Pfad beginnt immer mit einem \texttt{/}, wie beispielsweise \texttt{/home/\-mu/\-Dokumente/\-Studium/\-EDV/\-Bericht} oder \texttt{/dev/null}. Ein relativer Pfad bezieht sich immer auf ein aktuelles Arbeitsverzeichnis. Beispielsweise beschreibt \texttt{datei.tex} die Datei \texttt{/tmp/datei.txt}, falls der Benutzer gerade \texttt{/tmp} als Arbeitsverzeichnis hat. Pfade können auch \texttt{..} enthalten, dies bezeichnet das übergeordnete Verzeichnis. Ist man gerade in \texttt{/etc/apache2}, so kann man mit \texttt{../passwd} auf die zentrale Passwortdatei verweisen.
+
+Gemeinerweise können absolute Pfade auch \texttt{..} enthalten, so wäre \texttt{/etc/\-apache2/\-../\-passwd} ein legaler Pfad, sinnvoll ist es in vielen Fällen allerdings nicht.
+
+\subsection{Emacs}
+
+\begin{tabular}{lc}
+Aktion & Tasten \\
+\hline
+Seite rauf & M-v \\
+Seite runter & C-v \\
+Cursor links & C-b \\
+Cursor rechts & C-f \\
+Cursor rauf & C-p \\
+Cursor runter & C-n \\
+Datei speichern & C-x C-s \\
+Emacs beenden & C-x C-c \\
+\end{tabular}
+
+\end{document}
