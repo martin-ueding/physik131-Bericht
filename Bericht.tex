@@ -1,6 +1,6 @@
 % Copyright (c) 2011 Martin Ueding <dev@martin-ueding.de>
 %
-\documentclass[12pt]{article}
+\documentclass[10pt]{article}
 \usepackage{geometry}
 \geometry{a4paper}
 \usepackage{graphicx}
@@ -80,6 +80,7 @@
 \dd{whatis}{Zeigt die erste Zeile der man page an.}
 \dd{whoami}{Eigener Benutzername.}
 \dd{w}{Wie \texttt{who}, nur ausführlicher.}
+\dd{diff}{Vergleicht Dateien miteinander.}
 \end{itemize}
 
 \subsection{absoluter und relativer Pfad}
@@ -121,7 +122,23 @@ Mit den geschweiften Klammern kann man mehrere Wörter aus einem erzeugen, dies 
 
 \section{Übung 3}
 
-\subsection{Kompression}
+\subsection{Weitere Unix-Befehle}
+
+Siehe \ref{commands}.
+
+\subsection{Eingabe- und Ausgabeumleitung}
+
+Siehe \url{../Uebung_03/standardausgabe.txt}.
+
+\subsection{Handling von Textdateien Dateien}
+
+Siehe \url{../Uebung_03/Auto_out_D.txt}.
+
+\subsection{Pipelines}
+
+Siehe \url{../Uebung_03/zahlen_out.dat}.
+
+\subsection{Komprimierung und Archivierung}
 
 Leider war die Datei cc++.tar zum Bearbeitungszeitpunkt nicht verfügbar. So habe ich 55 MiB HTML Dateien zum Testen benutzt.
 
@@ -141,6 +158,31 @@ Man sieht, dass bzip2 etwas besser komprimiert, allerdings deutlich länger brau
 
 Das Skript, das die Zeiten erzeugt, kann in \ref{listing:compression} gefunden werden.
 
+
+\subsection{Verteiltes Arbeiten}
+
+Die Dateien auf den zwei verschiedenen Rechnern, die allerdings ihr Heimatverzeichnis teilen, ist fast gleich, bis auf die Datei, die auf dem anderen Rechner schon erstellt worden ist.
+
+\begin{lstlisting}
+--- ls-lR.host1 2011-10-30 14:43:46.031286114 +0100
++++ ls-lR.host2 2011-10-30 14:43:49.275286307 +0100
+@@ -2 +2 @@
+-insgesamt 156
++insgesamt 184
+@@ -9 +9,2 @@
+--rw-r--r-- 1 ueding studis      0 30. Okt 2011  ls-lR.host1
++-rw-r--r-- 1 ueding studis  24614 30. Okt 2011  ls-lR.host1
++-rw-r--r-- 1 ueding studis      0 30. Okt 2011  ls-lR.host2
+\end{lstlisting}
+
+Die Dateien sind zwar direkt angelegt, weil bash sie öffnet, allerdings haben sie noch keine Größe. Erst nach dem Durchlauf ist die Datei da. Zwischen Physik und Astro CIP-Pool sind natürlich alle Dateien anders, weil es komplett verschiedene Ordner sind. Nur Dateien wie meine \texttt{.bashrc} sind beispielsweise auf beiden Seiten vorhanden und haben die gleiche Größe, jedoch unterscheidet sich das Änderungsdatum.
+
+
+\subsection{Shell - Skript}
+
+
+\lstset{language=bash}
+\lstinputlisting{../Uebung_03/farben.sh}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                Ende Inhalte                                 %
