@@ -1,6 +1,6 @@
 % Copyright (c) 2011 Martin Ueding <dev@martin-ueding.de>
 %
-\documentclass[10pt]{article}
+\documentclass[12pt]{article}
 \usepackage{geometry}
 \geometry{a4paper}
 \usepackage{graphicx}
@@ -25,7 +25,8 @@
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, margin=0pt, font={bf,footnotesize}}
 
 \usepackage{listings}
-\lstset{breaklines=true,
+\lstset{
+	breaklines=true,
 	showstringspaces=false,
 %	backgroundcolor=\color{lightblue},
 	framexleftmargin=0pt,
@@ -35,6 +36,8 @@
 	frame=b,
 	xleftmargin=0pt,
 	xrightmargin=0pt,
+	basicstyle=\footnotesize\ttfamily
+	keywordstyle=\color{black}\bfseries\underbar,
 	}
 
 \newcommand\gqq[1]{\glqq #1\grqq}
@@ -274,7 +277,11 @@ Soll von 2 bis 20 gezählt werden und der Vorname ausgegeben werden, wenn der Z�
 Der Befehl \verb#{find /uebung_03 -type f -exec du -k {} \;| sort -n -r# iteriert durch das Verzeichnis \verb#uebung_03# und dessen Unterverzeichnisse, sucht Einträge heraus, die Dateien sind (und keine Ordner, Links, Fifos, …). Auf jede dieser Dateien wird der Befehl \texttt{du -k} ausgeführt. Man erhält eine Liste mit Dateigrößen in kiB. Diese Liste wird dann numerisch und rückwärts sortiert, also die größten Dateien nach vorne.
 
 \paragraph{Teilaufgabe a}
-In dieser Aufgabe ist wahrscheinlich ein \verb#ps aux | grep ueding# gefragt. Dies ist allerdings gefährlich, falls jemand anderes ein Programm ausführt, das meinen Namen im Namen hat, oder jemand anders so heißt wie ich, nur mit einer 2 dahinter. Daher wäre \verb#ps aux | grep '^ueding\ s '# etwas sicherer. Allerdings kann man auch einfach das \texttt{a} weglassen und erhält direkt eine Liste mit seinen eigenen Prozessen.
+In dieser Aufgabe ist wahrscheinlich ein \verb#ps aux | grep ueding# gefragt. Dies ist allerdings gefährlich, falls jemand anderes ein Programm ausführt, das meinen Namen im Namen hat, oder jemand anders so heißt wie ich, nur mit einer 2 dahinter. Daher wäre es mit einer genauen Suche nach der Position in der Zeile etwas sicherer. Allerdings kann man auch einfach das \texttt{a} weglassen und erhält direkt eine Liste mit seinen eigenen Prozessen.
+
+\begin{lstlisting}[caption=Einschänkung des Suchbereichs]
+ps aux | grep '^ueding\ s '
+\end{lstlisting}
 
 \paragraph{Teilaufgabe b}
 Für das Sortieren hat \texttt{ps} auch eine entsprechende Option: \texttt{O+p}. So lässt sich mit \texttt{ps ux O+p} direkt nach Prozess-ID sortieren.
@@ -304,7 +311,7 @@ ps aux | grep ueding | sort -n > myprocesses.txt
 \subsection{Kompressionsvergleich}
 \label{listing:compression}
 \lstset{language=bash}
-\lstinputlisting[caption=compare.sh]{/home/mu/Branches/compression_comparison/compare.sh}
+\lstinputlisting[caption=compare.sh, language=bash]{/home/mu/Branches/compression_comparison/compare.sh}
 
 \subsection{Alternative Zählschleife}
 \label{listing:zahlen2}
