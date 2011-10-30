@@ -14,11 +14,13 @@
 \usepackage{hyperref}
 \usepackage{color}
 \definecolor{darkblue}{rgb}{0,0,.5}
+\definecolor{lightgray}{rgb}{0.9,.9,1}
 \hypersetup{pdftex=true, colorlinks=true, breaklinks=false, linkcolor=black, menucolor=black, pagecolor=black, urlcolor=darkblue}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
 \usepackage{listings}
-\lstset{breaklines=true, showstringspaces=false, frame=tb}
+\lstset{breaklines=true, showstringspaces=false, backgroundcolor=\color{lightgray}, framexleftmargin=5pt,
+         framexrightmargin=5pt, frame=tblr}
 
 \newcommand\gqq[1]{\glqq #1\grqq}
 
@@ -120,7 +122,7 @@ Seite runter & C-v \\
 
 \section{Übung 2}
 
-Neue Befehle sind in Kapitel \ref{commands} mit den Befehlen aus vorherigen Übungen zusammen.
+Neue Befehle sind in §\ref{commands} mit den Befehlen aus vorherigen Übungen zusammen.
 
 \subsection{Das Unix-Hilfe-System -- der \texttt{man} Befehl}
 
@@ -173,7 +175,7 @@ Jede Datei hat drei grundlegende Rechte, lesen (r), schreiben (w) und ausführen
 
 \subsection{Weitere Unix-Befehle}
 
-Siehe \ref{commands}.
+Siehe §\ref{commands}.
 
 \subsection{Eingabe- und Ausgabeumleitung}
 
@@ -205,7 +207,7 @@ zip &  & 2.29 & 16694\\
 
 Man sieht, dass bzip2 etwas besser komprimiert, allerdings deutlich länger braucht. Zip komprimiert lede Datei einzeln und kann so Passagen, die in mehreren Dateien vorkommen, nicht effizient komprimieren. Jedoch können einzelne Dateien aus dem Archiv genommen werden, bei einem komprimierten tar muss erst alles expandiert werden, damit eine einzelne Datei entnommen werden kann.
 
-Das Skript, das die Zeiten erzeugt, kann in \ref{listing:compression} gefunden werden.
+Das Skript, das die Zeiten erzeugt, kann in §\ref{listing:compression} gefunden werden.
 
 
 \subsection{Verteiltes Arbeiten}
@@ -245,7 +247,7 @@ Dieses Skript erzeugt folgende Ausgabe:
 
 \lstinputlisting{../Uebung_03/zahlen.sh.out}
 
-Ein Beispiel für die \texttt{{1..3}} finden Sie in Abschnitt \ref{listing:zahlen2}
+Ein Beispiel für die \texttt{{1..3}} finden Sie in Abschnitt §\ref{listing:zahlen2}
 
 Soll von 2 bis 20 gezählt werden und der Vorname ausgegeben werden, wenn der Zähler auf 10 steht, sieht das Skript so aus:
 
@@ -267,8 +269,10 @@ In dieser Aufgabe ist wahrscheinlich ein \verb#ps aux | grep ueding# gefragt. Di
 
 Für das Sortieren hat \texttt{ps} auch eine entsprechende Option: \texttt{O+p}. So lässt sich mit \texttt{ps ux O+p} direkt nach Prozess-ID sortieren.
 
-Mit \verb#ps ux O+p > myprocesses.txt# lässt sich die entsprechnde Datei \url{../Uebung_03/myprocesses.txt} erzeugen. Wenn man mag, kann man natürlich auch \verb#ps aux | grep ueding | sort -n > myprocesses.txt# benutzen.
-
+Mit \verb#ps ux O+p > myprocesses.txt# lässt sich die entsprechnde Datei \url{../Uebung_03/myprocesses.txt} erzeugen. Wenn man mag, kann man natürlich auch diesen ineffizienten Code benutzen:
+\begin{lstlisting}
+ps aux | grep ueding | sort -n > myprocesses.txt
+\end{lstlisting}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
