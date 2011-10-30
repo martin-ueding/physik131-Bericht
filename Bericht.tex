@@ -262,12 +262,14 @@ Dieses Skript erzeugt folgende Ausgabe:
 
 Der Befehl \verb#{find /uebung_03 -type f -exec du -k {} \;| sort -n -r# iteriert durch das Verzeichnis \verb#uebung_03# und dessen Unterverzeichnisse, sucht Einträge heraus, die Dateien sind (und keine Ordner, Links, Fifos, …). Auf jede dieser Dateien wird der Befehl \texttt{du -k} ausgeführt. Man erhält eine Liste mit Dateigrößen in kiB. Diese Liste wird dann numerisch und rückwärts sortiert, also die größten Dateien nach vorne.
 
-
+\paragraph{Teilaufgabe a}
 In dieser Aufgabe ist wahrscheinlich ein \verb#ps aux | grep ueding# gefragt. Dies ist allerdings gefährlich, falls jemand anderes ein Programm ausführt, das meinen Namen im Namen hat, oder jemand anders so heißt wie ich, nur mit einer 2 dahinter. Daher wäre \verb#ps aux | grep '^ueding\ s '# etwas sicherer. Allerdings kann man auch einfach das \texttt{a} weglassen und erhält direkt eine Liste mit seinen eigenen Prozessen.
 
+\paragraph{Teilaufgabe b}
 Für das Sortieren hat \texttt{ps} auch eine entsprechende Option: \texttt{O+p}. So lässt sich mit \texttt{ps ux O+p} direkt nach Prozess-ID sortieren.
 
-Mit \verb#ps ux O+p > myprocesses.txt# lässt sich die entsprechnde Datei \url{../Uebung_03/myprocesses.txt} erzeugen. Wenn man mag, kann man natürlich auch diesen ineffizienten Code benutzen:
+\paragraph{Teilaufgabe c}
+Mit \verb#ps ux O+p > myprocesses.txt# lässt sich die entsprechnde Datei \url{../Uebung_03/myprocesses.txt} erzeugen. Wenn man mag, kann man natürlich auch diesen Code benutzen:
 \begin{lstlisting}
 ps aux | grep ueding | sort -n > myprocesses.txt
 \end{lstlisting}
