@@ -155,17 +155,17 @@ Auch hier muss man sein Arbeitsverzeichnis für die relativen Pfade im Kopf habe
 \subsection{Wildcards}
 
 Die Dateien lassen sich recht einfach erstellen:
-\begin{verbatim}
+\begin{lstlisting}
 touch datei{1..9}.txt logfile{10,10a,11,11a,11b}.txt
-\end{verbatim}
+\end{lstlisting}
 
 Dann kann man die Datein mit folgenden Dateien zeigen:
-\begin{verbatim}
+\begin{lstlisting}
 ls *.log
 ls *[4-7]*
 ls datei[2-78].txt
 ls *[a-zA-Z].log
-\end{verbatim}
+\end{lstlisting}
 
 \subsection{Umgang mit Rechten unter Unix}
 
