@@ -55,6 +55,21 @@
 \dd{date}{Zeigt das Datum in einem gewählten Format an.}
 \dd{touch}{Setzt das Änderungsdatum einer Datei auf den aktuellen Zeitpunkt und erzeugt die Datei, falls sie nicht existiert.}
 \dd{less}{Zeigt eine Datei an und erlaubt scrollen, suchen, springen. Es können viele Befehle aus \texttt{vi} (gg, G, /, j, k) benutzt werden.}
+\dd{clear}{Fügt leere Zeilen ein, bis der Bildschirm leer ist.}
+\dd{history}{Zeigt die letzten Kommandos an.}
+\dd{echo}{Gibt Text aus.}
+\dd{ps}{Prozessliste.}
+\dd{df}{Listet die Dateisysteme mit Belegungsangabe.}
+\dd{du}{Zeigt die Größe von Dateien auf dem Datenträger an. Diese muss nicht unbedingt mit der Größe überstimmen, die \texttt{ls} anzeigt, da die Dateien in Blöcken organisiert sind.}
+\dd{head}{Zeigt die ersten n Zeilen einer Datei an.}
+\dd{tail}{Gegenstück zu \texttt{head}.}
+\dd{grep}{Filtert Zeilen nach einem Suchmuster.}
+\dd{sort}{Sortiert Zeilen.}
+\dd{uniq}{Spezialfall von \texttt{sort -u}}
+\dd{find}{Führt eine Dateisystemtraverse nach speziellen Suchvorgaben durch und zeigt standardmäßig alle Dateien und Ordner an.}
+\dd{tar}{Erstellt ein Archiv mehrerer Dateien. Mit \texttt{tar -xzf archiv.tar.gt datei1 datei2…} erstellt man direkt ein komprimiertes Archiv mehrerer Dateien.}
+\dd{gzip}{Komprimiert eine Datei.}
+\dd{bzip2}{Komprimiert eine Datei.}
 \end{itemize}
 
 \subsection{absoluter und relativer Pfad}
@@ -81,11 +96,17 @@ Emacs beenden & C-x C-c \\
 
 \section{Übung 2}
 
-Neue Befehle sind in \ref{commands} mit den Alten.
+Neue Befehle sind in Kapitel \ref{commands} mit den Befehlen aus vorherigen Übungen zusammen.
 
 \subsection{date}
 
 Das Programm \texttt{cal} zeigt einen Kalendermonat an. Der September 1752 ist etwas anders, als die restlichen Monate, da hier in einigen, leider nicht allen, Ländern der Wechsel zwischen Kalendersystemen vollzogen worden ist.
+
+\subsection{Bash Variablen}
+
+Mit \verb#echo ${HOME}# kann man das Heimatverzeichnis anzeigen lassen. Dabei ist \verb#echo $HOME# eine der vielen Environmentvariablen, die in der Bash gesetzt sind. Man kann sie mit \texttt{set} anschauen. \verb#echo ${HOSTNAME}# enthält den Rechnernamen.
+
+Mit den geschweiften Klammern kann man mehrere Wörter aus einem erzeugen, dies ist praktisch für das erstellen von Sicherungskopien: \verb#cp foo{,.bak}# erstellt eine Kopie der Datei \texttt{foo} nach \texttt{foo.bak}, ohne dass man foo zweimal schreiben muss.
 
 
 \end{document}
