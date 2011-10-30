@@ -18,12 +18,12 @@
 \definecolor{gray}{rgb}{.3,.3,.3}
 \hypersetup{pdftex=true, colorlinks=true, breaklinks=false, linkcolor=black, menucolor=black, pagecolor=black, urlcolor=darkblue}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
-\usepackage{bold-extra}
 \usepackage{caption}
 \DeclareCaptionFont{white}{\color{white}}
 \DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, margin=0pt, font={bf,footnotesize}}
-
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{beramono}
 \usepackage{listings}
 \lstset{
 	breaklines=true,
@@ -38,6 +38,7 @@
 	xrightmargin=0pt,
 	basicstyle=\footnotesize\ttfamily,
 	keywordstyle=\color{black}\bfseries,
+	tabsize=4
 	}
 
 \newcommand\gqq[1]{\glqq #1\grqq}
