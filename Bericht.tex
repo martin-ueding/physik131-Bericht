@@ -18,6 +18,8 @@
 \definecolor{gray}{rgb}{.3,.3,.3}
 \hypersetup{pdftex=true, colorlinks=true, breaklinks=false, linkcolor=black, menucolor=black, pagecolor=black, urlcolor=darkblue}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+% Format for listings
 \usepackage{caption}
 \DeclareCaptionFont{white}{\color{white}}
 \DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
@@ -41,8 +43,11 @@
 	tabsize=4
 	}
 
+
+% Easy German quotes
 \newcommand\gqq[1]{\glqq #1\grqq}
 
+% Definition List Item
 \newcommand\dd[2]{\item[\texttt{#1}] #2}
 
 \title{EDV für Physiker}
