@@ -69,6 +69,8 @@
 \dd{mkdir <dir>}{Erstellt ein Verzeichnis \texttt{<dir>}.}
 \dd{ps}{Prozessliste.}
 \dd{set}{Zeigt das Environment der Shell an.}
+\dd{rm}{Löscht Dateien.}
+\dd{rmdir}{Löscht leere Verzeichnisse.}
 \dd{sort}{Sortiert Zeilen.}
 \dd{tail}{Gegenstück zu \texttt{head}.}
 \dd{tar}{Erstellt ein Archiv mehrerer Dateien. Mit \texttt{tar -xzf archiv.tar.gt datei1 datei2…} erstellt man direkt ein komprimiertes Archiv mehrerer Dateien.}
@@ -110,15 +112,52 @@ Seite runter & C-v \\
 
 Neue Befehle sind in Kapitel \ref{commands} mit den Befehlen aus vorherigen Übungen zusammen.
 
-\subsection{date}
+\subsection{Das Unix-Hilfe-System -- der \texttt{man} Befehl}
 
-Das Programm \texttt{cal} zeigt einen Kalendermonat an. Der September 1752 ist etwas anders, als die restlichen Monate, da hier in einigen, leider nicht allen, Ländern der Wechsel zwischen Kalendersystemen vollzogen worden ist.
+Generell sollte jedes Programm eine man page haben, die genauso wie das Programm selbst heißt. So kann man mit \texttt{man programm} diese Seite aufrufen.
+
+Bash Builtins haben keine solche Hilfeseite, sie werden mit \texttt{help command} dokumentiert, oder können in \texttt{bash.1} nachgeschaut werden.
+
+Darüber hinaus gibt es noch die info Dokumente.
+
+Meistens haben Programme auch noch eine eigene Hilfe dabei, die mit \texttt{programm -h} oder \texttt{programm --help} aufgerufen werden kann.
+
+\subsection{Datums und Kalenderangaben}
 
 \subsection{Bash Variablen}
 
 Mit \texttt{echo \${HOME}} kann man das Heimatverzeichnis anzeigen lassen. Dabei ist \texttt{echo \$HOME} eine der vielen Environmentvariablen, die in der Bash gesetzt sind. Man kann sie mit \texttt{set} anschauen. \texttt{echo \${HOSTNAME}} enthält den Rechnernamen.
 
 Mit den geschweiften Klammern kann man mehrere Wörter aus einem erzeugen, dies ist praktisch für das erstellen von Sicherungskopien: \verb#cp foo{,.bak}# erstellt eine Kopie der Datei \texttt{foo} nach \texttt{foo.bak}, ohne dass man foo zweimal schreiben muss.
+
+Das Programm \texttt{cal} zeigt einen Kalendermonat an. Der September 1752 ist etwas anders, als die restlichen Monate, da hier in einigen, leider nicht allen, Ländern der Wechsel zwischen Kalendersystemen vollzogen worden ist.
+
+\subsection{Umgang mit Dateien und Verzeichnissen}
+
+Hier gibt es wenig zu beschreiben, man muss sein aktuelles Arbeitsverzeichnis im Auge behalten und beachten, dass \texttt{rmdir} nur leere Verzeichnisse löscht.
+
+\subsection{Absolute und relative Pfade}
+
+Auch hier muss man sein Arbeitsverzeichnis für die relativen Pfade im Kopf haben, ansonsten ist es alles recht logisch.
+
+\subsection{Wildcards}
+
+Die Dateien lassen sich recht einfach erstellen:
+\begin{verbatim}
+touch datei{1..9}.txt logfile{10,10a,11,11a,11b}.txt
+\end{verbatim}
+
+Dann kann man die Datein mit folgenden Dateien zeigen:
+\begin{verbatim}
+ls *.log
+ls *[4-7]*
+ls datei[2-78].txt
+ls *[a-zA-Z].log
+\end{verbatim}
+
+\subsection{Umgang mit Rechten unter Unix}
+
+Jede Datei hat drei grundlegende Rechte, lesen (r), schreiben (w) und ausführen (x). Darüber hinaus gibt es noch drei Kategorien: Eigentümer, Gruppe und Alle. Mit \texttt{chmod -w} entzieht man allen das Schreibrecht, auch sich selbst. Setzt man die Rechte auf \texttt{rw-r--r--}\footnote{mit \texttt{chmod 644}} darf nur der Eigentümer die Datei schreiben, alle sie aber lesen.
 
 \section{Übung 3}
 
@@ -180,9 +219,47 @@ Die Dateien sind zwar direkt angelegt, weil bash sie öffnet, allerdings haben s
 
 \subsection{Shell - Skript}
 
-
 \lstset{language=bash}
 \lstinputlisting{../Uebung_03/farben.sh}
+
+Dieses Skript erzeugt folgende Ausgabe:
+
+\lstinputlisting{../Uebung_03/farben.sh.out}
+
+Für die Zahlen kann man entweder \texttt{{1..3}} benutzen, oder eine C-artige for-Schleife benutzen. Die Syntax, die auf dem Übungszettel gibt es nicht, ich weiß nicht, wie Sie die Ausgabe damit erzeugt haben.
+
+\lstset{language=bash}
+\lstinputlisting{../Uebung_03/zahlen.sh}
+
+Dieses Skript erzeugt folgende Ausgabe:
+
+\lstinputlisting{../Uebung_03/zahlen.sh.out}
+
+Ein Beispiel für die \texttt{{1..3}} finden Sie in Abschnitt \ref{listing:zahlen2}
+
+Soll von 2 bis 20 gezählt werden und der Vorname ausgegeben werden, wenn der Zähler auf 10 steht, sieht das Skript so aus:
+
+
+\lstset{language=bash}
+\lstinputlisting{../Uebung_03/zahlen_name.sh}
+
+Dieses Skript erzeugt folgende Ausgabe:
+
+\lstinputlisting{../Uebung_03/zahlen_name.sh.out}
+
+
+\subsection{Analyse von Pipelines}
+
+Der Befehl \verb#{find /uebung_03 -type f -exec du -k {} \;| sort -n -r# iteriert durch das Verzeichnis \verb#uebung_03# und dessen Unterverzeichnisse, sucht Einträge heraus, die Dateien sind (und keine Ordner, Links, Fifos, …). Auf jede dieser Dateien wird der Befehl \texttt{du -k} ausgeführt. Man erhält eine Liste mit Dateigrößen in kiB. Diese Liste wird dann numerisch und rückwärts sortiert, also die größten Dateien nach vorne.
+
+
+In dieser Aufgabe ist wahrscheinlich ein \verb#ps aux | grep ueding# gefragt. Dies ist allerdings gefährlich, falls jemand anderes ein Programm ausführt, das meinen Namen im Namen hat, oder jemand anders so heißt wie ich, nur mit einer 2 dahinter. Daher wäre \verb#ps aux | grep '^ueding\ s '# etwas sicherer. Allerdings kann man auch einfach das \texttt{a} weglassen und erhält direkt eine Liste mit seinen eigenen Prozessen.
+
+Für das Sortieren hat \texttt{ps} auch eine entsprechende Option: \texttt{O+p}. So lässt sich mit \texttt{ps ux O+p} direkt nach Prozess-ID sortieren.
+
+Mit \verb#ps ux O+p > myprocesses.txt# lässt sich die entsprechnde Datei \url{../Uebung_03/myprocesses.txt} erzeugen. Wenn man mag, kann man natürlich auch \verb#ps aux | grep ueding | sort -n > myprocesses.txt# benutzen.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                Ende Inhalte                                 %
@@ -203,6 +280,16 @@ Die Dateien sind zwar direkt angelegt, weil bash sie öffnet, allerdings haben s
 \label{listing:compression}
 \lstset{language=bash}
 \lstinputlisting{/home/mu/Branches/compression_comparison/compare.sh}
+
+\subsection{Alternative Zählschleife}
+\label{listing:zahlen2}
+
+\lstset{language=bash}
+\lstinputlisting{../Uebung_03/zahlen2.sh}
+
+Dieses Skript erzeugt folgende Ausgabe:
+
+\lstinputlisting{../Uebung_03/zahlen2.sh.out}
 \end{appendix}
 
 \end{document}
