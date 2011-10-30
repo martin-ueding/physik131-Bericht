@@ -18,7 +18,7 @@
 \definecolor{gray}{rgb}{.3,.3,.3}
 \hypersetup{pdftex=true, colorlinks=true, breaklinks=false, linkcolor=black, menucolor=black, pagecolor=black, urlcolor=darkblue}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
-
+\usepackage{bold-extra}
 \usepackage{caption}
 \DeclareCaptionFont{white}{\color{white}}
 \DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
@@ -36,8 +36,8 @@
 	frame=b,
 	xleftmargin=0pt,
 	xrightmargin=0pt,
-	basicstyle=\footnotesize\ttfamily
-	keywordstyle=\color{black}\bfseries\underbar,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\color{black}\bfseries,
 	}
 
 \newcommand\gqq[1]{\glqq #1\grqq}
@@ -250,9 +250,10 @@ Die Dateien sind zwar direkt angelegt, weil bash sie öffnet, allerdings haben s
 \lstset{language=bash}
 \lstinputlisting[caption=farben.sh]{../Uebung_03/farben.sh}
 
-Dieses Skript erzeugt folgende Ausgabe:
-
 \lstinputlisting[caption=Ausgabe von farben.sh]{../Uebung_03/farben.sh.out}
+
+
+\paragraph{Zahlen}
 
 Für die Zahlen kann man entweder \texttt{{1..3}} benutzen, oder eine C-artige for-Schleife benutzen. Die Syntax, die auf dem Übungszettel gibt es nicht, ich weiß nicht, wie Sie die Ausgabe damit erzeugt haben.
 
