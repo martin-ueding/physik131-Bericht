@@ -34,6 +34,11 @@
 \tableofcontents
 \newpage
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                               Anfang Inhalte                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \section{Übung 1}
 
 \subsection{Befehle in der Konsole}
@@ -130,13 +135,31 @@ tar + gzip &  & 4.29 + 2.37 & 14149 \\
 tar + gzip & -1 & 4.29 + 1.51 & 15514 \\
 tar + gzip & -9 & 4.29 + 4.30 & 14073 \\
 zip &  & 2.29 & 16694\\
-
-
 \end{tabular}
 
-Folgendes Skript komprimiert und berechnet die Zeiten:
+Man sieht, dass bzip2 etwas besser komprimiert, allerdings deutlich länger braucht. Zip komprimiert lede Datei einzeln und kann so Passagen, die in mehreren Dateien vorkommen, nicht effizient komprimieren. Jedoch können einzelne Dateien aus dem Archiv genommen werden, bei einem komprimierten tar muss erst alles expandiert werden, damit eine einzelne Datei entnommen werden kann.
 
+Das Skript, das die Zeiten erzeugt, kann in \ref{listing:compression} gefunden werden.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                Ende Inhalte                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newpage
+
+\begin{appendix}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                Code Listings                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Kompressionsvergleich}
+\label{listing:compression}
 \lstset{language=bash}
 \lstinputlisting{/home/mu/Branches/compression_comparison/compare.sh}
+\end{appendix}
 
 \end{document}
