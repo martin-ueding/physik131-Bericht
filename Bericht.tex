@@ -18,7 +18,7 @@
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
 \usepackage{listings}
-\lstset{breaklines=true, showstringspaces=false, frame=tlrb}
+\lstset{breaklines=true, showstringspaces=false, frame=tb}
 
 \newcommand\gqq[1]{\glqq #1\grqq}
 
@@ -156,7 +156,8 @@ Das Skript, das die Zeiten erzeugt, kann in \ref{listing:compression} gefunden w
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Kompressionsvergleich}
+\section{Code Listings}
+\subsection{Kompressionsvergleich}
 \label{listing:compression}
 \lstset{language=bash}
 \lstinputlisting{/home/mu/Branches/compression_comparison/compare.sh}
