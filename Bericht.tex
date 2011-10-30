@@ -19,6 +19,8 @@
 
 \newcommand\gqq[1]{\glqq #1\grqq}
 
+\newcommand\dd[2]{\item[\texttt{#1}] #2}
+
 \title{EDV für Physiker}
 \author{Martin Ueding}
 
@@ -32,13 +34,27 @@
 \section{Übung 1}
 
 \subsection{Befehle in der Konsole}
+\label{commands}
 
 \begin{itemize}
 
-\item[\texttt{mkdir <dir>}] Erstellt ein Verzeichnis \texttt{<dir>}.
-\item[\texttt{cd <dir>}] Wechselt in das Verzeichnis \texttt{<dir>}. Dabei ist \texttt{..} das übergeordnete Verzeichnis. Wird als Verzeichnis \texttt{-} angegeben, kommt man in das vorherige Verzeichnis. \texttt{cd} ohne Verzeichnis wechselt in das Heimatverzeichnis\footnote{\texttt{$\sim$} oder meistens \texttt{/home/<benutzername>}.}
-\item[\texttt{ls -l [<dir>]}] Listet den Inhalt des Verzeichnises \texttt{<dir>} oder des aktuellen Verzeichnises aus. Dabei werden auch Informationen über Zugriffsrechte und Eigentümer, Größe und Änderungsdatum angezeigt.
-\item[\texttt{gv <datei>}] Zeigt die PDF oder PS Datei \texttt{<datei>} an.
+\dd{mkdir <dir>}{Erstellt ein Verzeichnis \texttt{<dir>}.}
+\dd{cd <dir>}{Wechselt in das Verzeichnis \texttt{<dir>}. Dabei ist \texttt{..} das übergeordnete Verzeichnis. Wird als Verzeichnis \texttt{-} angegeben, kommt man in das vorherige Verzeichnis. \texttt{cd} ohne Verzeichnis wechselt in das Heimatverzeichnis\footnote{\texttt{$\sim$} oder meistens \texttt{/home/<benutzername>}.}}
+\dd{ls -l [<dir>]}{ Listet den Inhalt des Verzeichnises \texttt{<dir>} oder des aktuellen Verzeichnises aus. Dabei werden auch Informationen über Zugriffsrechte und Eigentümer, Größe und Änderungsdatum angezeigt.}
+\dd{gv <datei>}{Zeigt die PDF oder PS Datei \texttt{<datei>} an.}
+\dd{whoami}{Eigener Benutzername.}
+\dd{w}{Wie \texttt{who}, nur ausführlicher.}
+\dd{hostname}{Rechnername.}
+\dd{uname -a}{Kernelversion, Rechnername, ...}
+\dd{last}{Letzte logins aller Benutzer.}
+\dd{uptime}{Zeigt, wie viele Nächte der Rechner am Stück durchgemacht hat.}
+\dd{whatis}{Zeigt die erste Zeile der man page an.}
+\dd{apropos}{Unscharfe suche nach Befehlen.}
+\dd{top}{Vorgänger von \texttt{htop}, ein Taskmanager.}
+\dd{cal}{Zeigt einen Kalendermonat an.}
+\dd{date}{Zeigt das Datum in einem gewählten Format an.}
+\dd{touch}{Setzt das Änderungsdatum einer Datei auf den aktuellen Zeitpunkt und erzeugt die Datei, falls sie nicht existiert.}
+\dd{less}{Zeigt eine Datei an und erlaubt scrollen, suchen, springen. Es können viele Befehle aus \texttt{vi} (gg, G, /, j, k) benutzt werden.}
 \end{itemize}
 
 \subsection{absoluter und relativer Pfad}
