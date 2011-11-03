@@ -201,15 +201,15 @@ Siehe §\ref{commands}.
 
 \subsection{Eingabe- und Ausgabeumleitung}
 
-Siehe \url{../Uebung_03/standardausgabe.txt}.
+\lstinputlisting[caption=standardausgabe.txt]{../Uebung_03/standardausgabe.txt}
 
 \subsection{Handling von Textdateien Dateien}
 
-Siehe \url{../Uebung_03/Auto_out_D.txt}.
+\lstinputlisting[caption=Auto\_out\_D.txt]{../Uebung_03/Auto_out_D.txt}
 
 \subsection{Pipelines}
 
-Siehe \url{../Uebung_03/zahlen_out.dat}.
+\lstinputlisting[caption=zahlen\_out.dat]{../Uebung_03/zahlen_out.dat}
 
 \subsection{Komprimierung und Archivierung}
 
@@ -294,7 +294,10 @@ ps aux | grep '^ueding\ s '
 Für das Sortieren hat \texttt{ps} auch eine entsprechende Option: \texttt{O+p}. So lässt sich mit \texttt{ps ux O+p} direkt nach Prozess-ID sortieren.
 
 \paragraph{Teilaufgabe c}
-Mit \verb#ps ux O+p > myprocesses.txt# lässt sich die entsprechnde Datei \url{../Uebung_03/myprocesses.txt} erzeugen. Wenn man mag, kann man natürlich auch diesen Code benutzen:
+Mit \verb#ps ux O+p > myprocesses.txt# lässt sich die entsprechnde Datei erzeugen. \lstinputlisting[caption=myprocesses.txt]{../Uebung_03/myprocesses.txt} 
+
+
+Wenn man mag, kann man natürlich auch diesen Code benutzen:
 \begin{lstlisting}[caption=verkettete Pipes]
 ps aux | grep ueding | sort -n > myprocesses.txt
 \end{lstlisting}
