@@ -1,6 +1,6 @@
 % Copyright (c) 2011 Martin Ueding <dev@martin-ueding.de>
 %
-\documentclass[12pt]{article}
+\documentclass[12pt]{report}
 \usepackage{geometry}
 \geometry{a4paper}
 \usepackage{graphicx}
@@ -65,13 +65,14 @@
 %                               Anfang Inhalte                                %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\part{Linux}
 
-\section{Übung 1}
+\chapter{Übung 1}
 
-\subsection{Befehle in der Konsole}
+\section{Befehle in der Konsole}
 \label{commands}
 
-\subsubsection{Benutzerverwaltung und -rechte}
+\subsection{Benutzerverwaltung und -rechte}
 \begin{itemize}
 \dd{chmod}{Ändert Dateirechte.}
 \dd{hostname}{Rechnername.}
@@ -84,7 +85,7 @@
 \dd{w}{Wie \texttt{who}, nur ausführlicher.}
 \end{itemize}
 
-\subsubsection{Dateibehandlung}
+\subsection{Dateibehandlung}
 \begin{itemize}
 \dd{bzip2}{Komprimiert eine Datei.}
 \dd{cd}{Wechselt in das angegebene Verzeichnis. Dabei ist \texttt{..} das übergeordnete Verzeichnis. Wird als Verzeichnis \texttt{-} angegeben, kommt man in das vorherige Verzeichnis. \texttt{cd} ohne Verzeichnis wechselt in das Heimatverzeichnis\footnote{Meistens \texttt{/home/<benutzername>}.}}
@@ -103,14 +104,14 @@
 \dd{touch}{Setzt das Änderungsdatum einer Datei auf den aktuellen Zeitpunkt und erzeugt die Datei, falls sie nicht existiert.}
 \end{itemize}
 
-\subsubsection{Informationen zu Programmen}
+\subsection{Informationen zu Programmen}
 \begin{itemize}
 \dd{apropos}{Unscharfe Suche nach Befehlen.}
 \dd{man}{Zeigt man pages an.}
 \dd{whatis}{Zeigt die erste Zeile der man page an.}
 \end{itemize}
 
-\subsubsection{Textdateien}
+\subsection{Textdateien}
 \begin{itemize}
 \dd{diff}{Vergleicht Dateien miteinander.}
 \dd{emacs}{Texteditor.}
@@ -125,7 +126,7 @@
 \dd{wc}{Zählt Wörter, Zeilen, Buchstaben.}
 \end{itemize}
 
-\subsubsection{Bash built-ins}
+\subsection{Bash built-ins}
 \begin{itemize}
 \dd{clear}{Fügt leere Zeilen ein, bis der Bildschirm leer ist.}
 \dd{set}{Zeigt das Environment der Shell an.}
@@ -133,7 +134,7 @@
 \dd{history}{Zeigt die letzten Kommandos an.}
 \end{itemize}
 
-\subsubsection{Diverses}
+\subsection{Diverses}
 \begin{itemize}
 \dd{bc}{Einfacher Taschenrechner. Man sollte in der Bash allerdings nicht mit \texttt{\$(echo 5+4 | bc)} rechnen, sondern die neuen, von C übernommenen Funktionen zum direkten Rechnen, \texttt{\$((5+4))}, benutzen.}
 \dd{ssh}{Öffnete eine Shell auf einem anderen Computer.}
@@ -143,14 +144,14 @@
 \dd{gv}{Zeigt eine PDF oder PS Datei an. Normalerweise würde man okular (KDE) oder evince (Gnome) benutzen.}
 \end{itemize}
 
-\subsection{absoluter und relativer Pfad}
+\section{absoluter und relativer Pfad}
 
 Ein absoluter Pfad beginnt immer mit einem \texttt{/}, wie beispielsweise \\ \texttt{/home/mu/Dokumente/Studium/EDV/Bericht} oder \texttt{/dev/null}. Ein relativer Pfad bezieht sich immer auf ein aktuelles Arbeitsverzeichnis. Beispielsweise beschreibt \texttt{datei.tex} die Datei \texttt{/tmp/datei.txt}, falls der Benutzer gerade \texttt{/tmp} als Arbeitsverzeichnis hat. Pfade können auch \texttt{..} enthalten, dies bezeichnet das übergeordnete Verzeichnis. Ist man gerade in \texttt{/etc/apache2}, so kann man mit \texttt{../passwd} auf die zentrale Passwortdatei verweisen.
 
 Gemeinerweise können absolute Pfade auch \texttt{..} enthalten, so wäre \\
 \texttt{/etc/apache2/../passwd} ein legaler Pfad, sinnvoll ist es in vielen Fällen allerdings nicht.
 
-\subsection{grundlegende Emacs Steuerung}
+\section{grundlegende Emacs Steuerung}
 
 \begin{tabular}{ll}
 Aktion & Tasten \\
@@ -166,11 +167,11 @@ Seite rauf & M-v \\
 Seite runter & C-v \\
 \end{tabular}
 
-\section{Übung 2}
+\chapter{Übung 2}
 
 Neue Befehle sind in §\ref{commands} mit den Befehlen aus vorherigen Übungen zusammen.
 
-\subsection{Das Unix-Hilfe-System -- der \texttt{man} Befehl}
+\section{Das Unix-Hilfe-System -- der \texttt{man} Befehl}
 
 Generell sollte jedes Programm eine man page haben, die genauso wie das Programm selbst heißt. So kann man mit \texttt{man programm} diese Seite aufrufen.
 
@@ -180,9 +181,9 @@ Darüber hinaus gibt es noch die info Dokumente.
 
 Meistens haben Programme auch noch eine eigene Hilfe dabei, die mit \texttt{programm -h} oder \texttt{programm --help} aufgerufen werden kann.
 
-\subsection{Datums und Kalenderangaben}
+\section{Datums und Kalenderangaben}
 
-\subsection{Bash Variablen}
+\section{Bash Variablen}
 
 Mit \texttt{echo \${HOME}} kann man das Heimatverzeichnis anzeigen lassen. Dabei ist \texttt{echo \$HOME} eine der vielen Environmentvariablen, die in der Bash gesetzt sind. Man kann sie mit \texttt{set} anschauen. \texttt{echo \${HOSTNAME}} enthält den Rechnernamen.
 
@@ -190,15 +191,15 @@ Mit den geschweiften Klammern kann man mehrere Wörter aus einem erzeugen, dies 
 
 Das Programm \texttt{cal} zeigt einen Kalendermonat an. Der September 1752 ist etwas anders, als die restlichen Monate, da hier in einigen, leider nicht allen, Ländern der Wechsel zwischen Kalendersystemen vollzogen worden ist.
 
-\subsection{Umgang mit Dateien und Verzeichnissen}
+\section{Umgang mit Dateien und Verzeichnissen}
 
 Hier gibt es wenig zu beschreiben, man muss sein aktuelles Arbeitsverzeichnis im Auge behalten und beachten, dass \texttt{rmdir} nur leere Verzeichnisse löscht.
 
-\subsection{Absolute und relative Pfade}
+\section{Absolute und relative Pfade}
 
 Auch hier muss man sein Arbeitsverzeichnis für die relativen Pfade im Kopf haben, ansonsten ist es alles recht logisch.
 
-\subsection{Wildcards}
+\section{Wildcards}
 
 Die Dateien lassen sich recht einfach erstellen:
 \begin{lstlisting}[caption=Anlegen der Dateien]
@@ -211,21 +212,21 @@ Dann kann man die Datein mit folgenden Befehlen zeigen:
 
 Ich habe hier \texttt{echo} anstelle von \texttt{ls} benutzt, da die Wildcards so oder so von der Bash und nicht vom Befehl aufgelöst werden und \texttt{ls} jede Datei auf eine eigene Zeile schreibt, sofern STOUT kein Terminal ist.
 
-\subsection{Umgang mit Rechten unter Unix}
+\section{Umgang mit Rechten unter Unix}
 
 Jede Datei hat drei grundlegende Rechte, lesen (r), schreiben (w) und ausführen (x). Darüber hinaus gibt es noch drei Kategorien: Eigentümer, Gruppe und Alle. Mit \texttt{chmod -w} entzieht man allen das Schreibrecht, auch sich selbst. Setzt man die Rechte auf \texttt{rw-r--r--}\footnote{mit \texttt{chmod 644}} darf nur der Eigentümer die Datei schreiben, alle sie aber lesen.
 
-\section{Übung 3}
+\chapter{Übung 3}
 
-\subsection{Weitere Unix-Befehle}
+\section{Weitere Unix-Befehle}
 
 Siehe §\ref{commands}.
 
-\subsection{Eingabe- und Ausgabeumleitung}
+\section{Eingabe- und Ausgabeumleitung}
 
 \lstinputlisting[caption=standardausgabe.txt]{../Uebung_03/standardausgabe.txt}
 
-\subsection{Handling von Textdateien Dateien}
+\section{Handling von Textdateien Dateien}
 
 Man kann es sich an dieser Stelle einfach machen und alle Kennzeichen rauswerfen, die mit einer Ziffer beginnen und es bleiben dann nur noch deutsche Kennzeichen übrig. Der Ansatz ist nicht nennenswert robust, erfüllt aber in der kleinen Eingabemenge seinen Zweck.
 
@@ -254,8 +255,8 @@ NDH ND 2000
 @27
 \end{lstlisting}
 
-\subsection{Pipelines}
-\subsubsection{Namen}
+\section{Pipelines}
+\subsection{Namen}
 \lstinputlisting[caption=namen.dat]{../Uebung_03/namen.dat}
 
 Es ist recht sinnfrei \texttt{cat} zu benutzen, um den Inhalt zu in \texttt{sort} zu bekommen, da \texttt{sort} die Datei auch selbst laden kann.
@@ -263,7 +264,7 @@ Es ist recht sinnfrei \texttt{cat} zu benutzen, um den Inhalt zu in \texttt{sort
 \lstinputlisting[caption=namen.sh]{../Uebung_03/namen.sh}
 \lstinputlisting[caption=Ausgabe von namen.sh]{../Uebung_03/namen.sh.out}
 
-\subsubsection{Zahlen}
+\subsection{Zahlen}
 
 \lstinputlisting[caption=zahlen.dat]{../Uebung_03/zahlen.dat}
 
@@ -272,7 +273,7 @@ Bei den Zahlen werden die Zahlen exakt so sortiert, wie ich es erwarte. Und zwar
 \lstinputlisting[caption=zahlen-sort.sh]{../Uebung_03/zahlen-sort.sh}
 \lstinputlisting[caption=Ausgabe von zahlen-sort.sh]{../Uebung_03/zahlen-sort.sh.out}
 
-\subsection{Komprimierung und Archivierung}
+\section{Komprimierung und Archivierung}
 
 Leider war die Datei \texttt{cc++.tar} zum Bearbeitungszeitpunkt nicht verfügbar. So habe ich $\unit[55]{MiB}$ HTML Dateien zum Testen benutzt.
 
@@ -295,7 +296,7 @@ Zip komprimiert lede Datei einzeln und kann so Passagen, die in mehreren Dateien
 Das Skript, das die Zeiten misst, kann in §\ref{listing:compression} gefunden werden.
 
 
-\subsection{Verteiltes Arbeiten}
+\section{Verteiltes Arbeiten}
 
 Die Dateien auf den zwei verschiedenen Rechnern, die allerdings ihr Heimatverzeichnis teilen, ist fast gleich, bis auf die Datei, die auf dem anderen Rechner schon erstellt worden ist.
 
@@ -315,7 +316,7 @@ Kopiert man die Dateien auf einen Rechner\footnote{Der \texttt{scp} Befehl für 
 
 Die Datei, in die die Ausgabe umgeleitet wrid, wird zwar direkt angelegt, weil bash sie öffnet, allerdings hat sie noch keine Größe. Erst nach dem Durchlauf ist die Datei komplett da. Zwischen Physik und Astro CIP-Pool sind natürlich alle Dateien anders, weil es komplett verschiedene Ordner sind. Nur Dateien wie meine \texttt{.bashrc} sind beispielsweise auf beiden Seiten vorhanden und haben die gleiche Größe, jedoch unterscheidet sich das Änderungsdatum.
 
-\subsection{Shell - Skript}
+\section{Shell - Skript}
 
 \lstset{language=bash}
 \lstinputlisting[caption=farben.sh]{../Uebung_03/farben.sh}
@@ -323,7 +324,7 @@ Die Datei, in die die Ausgabe umgeleitet wrid, wird zwar direkt angelegt, weil b
 \lstinputlisting[caption=Ausgabe von farben.sh]{../Uebung_03/farben.sh.out}
 
 
-\paragraph{Zahlen}
+\subsection{Zahlen}
 
 Für die Zahlen kann man entweder \texttt{{1..3}} benutzen, oder eine C-artige for-Schleife benutzen. Die Syntax, die auf dem Übungszettel steht, gibt es nicht, ich weiß nicht, wie Sie die Ausgabe damit erzeugt haben.
 
@@ -343,21 +344,21 @@ Soll von 2 bis 20 gezählt werden und der Vorname ausgegeben werden, wenn der Z�
 \lstinputlisting[caption=Ausgabe von zahlen\_name.sh]{../Uebung_03/zahlen_name.sh.out}
 
 
-\subsection{Analyse von Pipelines}
+\section{Analyse von Pipelines}
 
 Der Befehl \verb#{find /uebung_03 -type f -exec du -k {} \;| sort -n -r# iteriert durch das Verzeichnis \verb#uebung_03# und dessen Unterverzeichnisse, sucht Einträge heraus, die Dateien sind (und keine Ordner, Links, Fifos, …). Auf jede dieser Dateien wird der Befehl \texttt{du -k} ausgeführt. Man erhält eine Liste mit Dateigrößen in kiB. Diese Liste wird dann numerisch und rückwärts sortiert, also die größten Dateien nach vorne.
 
-\paragraph{Teilaufgabe a}
+\subsection{Teilaufgabe a}
 In dieser Aufgabe ist wahrscheinlich ein \verb#ps aux | grep ueding# gefragt. Dies ist allerdings gefährlich, falls jemand anderes ein Programm ausführt, das meinen Namen im Namen hat, oder jemand anders so heißt wie ich, nur mit einer 2 dahinter. Daher wäre es mit einer genauen Suche nach der Position in der Zeile etwas sicherer. Allerdings kann man auch einfach das \texttt{a} weglassen und erhält direkt eine Liste mit seinen eigenen Prozessen.
 
 \begin{lstlisting}[caption=Einschänkung des Suchbereichs]
 ps aux | grep '^ueding\ s '
 \end{lstlisting}
 
-\paragraph{Teilaufgabe b}
+\subsection{Teilaufgabe b}
 Für das Sortieren hat \texttt{ps} auch eine entsprechende Option: \texttt{O+p}. So lässt sich mit \texttt{ps ux O+p} direkt nach Prozess-ID sortieren.
 
-\paragraph{Teilaufgabe c}
+\subsection{Teilaufgabe c}
 Mit \verb#ps ux O+p > myprocesses.txt# lässt sich die entsprechnde Datei erzeugen. \lstinputlisting[caption=myprocesses.txt]{../Uebung_03/myprocesses.txt} 
 
 
@@ -366,8 +367,7 @@ Wenn man mag, kann man natürlich auch diesen Code benutzen:
 ps aux | grep ueding | sort -n > myprocesses.txt
 \end{lstlisting}
 
-
-\section{Übung 4}
+\chapter{Übung 4}
 
 \paragraph{Faust - Der Tragodie erster Teil, Johann Wolfgang von Goethe}
 Quelle: \url{http://de.wikisource.org/}
@@ -425,13 +425,13 @@ Die stets das Böse will und stets das Gute schafft.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Code Listings}
-\subsection{Kompressionsvergleich}
+\chapter{Code Listings}
+\section{Kompressionsvergleich}
 \label{listing:compression}
 \lstset{language=bash}
 \lstinputlisting[caption=compare.sh, language=bash]{/home/mu/Branches/compression_comparison/compare.sh}
 
-\subsection{Alternative Zählschleife}
+\section{Alternative Zählschleife}
 \label{listing:zahlen2}
 
 \lstset{language=bash}
