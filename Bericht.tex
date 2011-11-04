@@ -255,8 +255,22 @@ NDH ND 2000
 \end{lstlisting}
 
 \subsection{Pipelines}
+\subsubsection{Namen}
+\lstinputlisting[caption=namen.dat]{../Uebung_03/namen.dat}
 
-\lstinputlisting[caption=zahlen\_out.dat]{../Uebung_03/zahlen_out.dat}
+Es ist recht sinnfrei \texttt{cat} zu benutzen, um den Inhalt zu in \texttt{sort} zu bekommen, da \texttt{sort} die Datei auch selbst laden kann.
+
+\lstinputlisting[caption=namen.sh]{../Uebung_03/namen.sh}
+\lstinputlisting[caption=Ausgabe von namen.sh]{../Uebung_03/namen.sh.out}
+
+\subsubsection{Zahlen}
+
+\lstinputlisting[caption=zahlen.dat]{../Uebung_03/zahlen.dat}
+
+Bei den Zahlen werden die Zahlen exakt so sortiert, wie ich es erwarte. Und zwar nach ASCII Code Point. Es ist unnatürlich, dass eine 2 vor einer 1 steht, weil \textit{nach} der 1 eine weitere Zahl folgt. Da die Zahlen in der Datei allerdings ohne führende Nullen stehen, muss man die Zahl zuerst interpretieren, damit sie nach Zahlenwert sortiert werden kann. Dafür ist das \texttt{-n} Flag da.
+
+\lstinputlisting[caption=zahlen-sort.sh]{../Uebung_03/zahlen-sort.sh}
+\lstinputlisting[caption=Ausgabe von zahlen-sort.sh]{../Uebung_03/zahlen-sort.sh.out}
 
 \subsection{Komprimierung und Archivierung}
 
