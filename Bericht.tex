@@ -71,55 +71,75 @@
 \subsection{Befehle in der Konsole}
 \label{commands}
 
+\subsubsection{Benutzerverwaltung und -rechte}
 \begin{itemize}
-
-\dd{apropos}{Unscharfe Suche nach Befehlen.}
-\dd{bc}{Einfacher Taschenrechner. Man sollte in der Bash allerdings nicht mit \texttt{\$(echo 5+4 | bc)} rechnen, sondern die neuen, von C übernommenen Funktionen zum direkten Rechnen, \texttt{\$((5+4))}, benutzen.}
-\dd{bzip2}{Komprimiert eine Datei.}
-\dd{cal}{Zeigt einen Kalendermonat an.}
-\dd{cd}{Wechselt in das angegebene Verzeichnis. Dabei ist \texttt{..} das übergeordnete Verzeichnis. Wird als Verzeichnis \texttt{-} angegeben, kommt man in das vorherige Verzeichnis. \texttt{cd} ohne Verzeichnis wechselt in das Heimatverzeichnis\footnote{Meistens \texttt{/home/<benutzername>}.}}
 \dd{chmod}{Ändert Dateirechte.}
-\dd{clear}{Fügt leere Zeilen ein, bis der Bildschirm leer ist.}
-\dd{cp}{Kopiert Dateien.}
-\dd{date}{Zeigt das Datum in einem gewählten Format an.}
-\dd{df}{Listet die Dateisysteme mit Belegungsangabe.}
-\dd{diff}{Vergleicht Dateien miteinander.}
-\dd{du}{Zeigt die Größe von Dateien auf dem Datenträger an. Diese muss nicht unbedingt mit der Größe überstimmen, die \texttt{ls} anzeigt, da die Dateien in Blöcken organisiert sind.}
-\dd{echo}{Gibt Text aus.}
-\dd{emacs}{Texteditor.}
-\dd{find}{Führt eine Dateisystemtraverse nach speziellen Suchvorgaben durch und zeigt standardmäßig alle Dateien und Ordner an.}
-\dd{grep}{Filtert Zeilen nach einem Suchmuster.}
-\dd{gv}{Zeigt eine PDF oder PS Datei an. Normalerweise würde man okular (KDE) oder evince (Gnome) benutzen.}
-\dd{gzip}{Komprimiert eine Datei.}
-\dd{head}{Zeigt die ersten n Zeilen einer Datei an.}
-\dd{history}{Zeigt die letzten Kommandos an.}
 \dd{hostname}{Rechnername.}
 \dd{last}{Letzte logins aller Benutzer.}
-\dd{less}{Zeigt eine Datei an und erlaubt scrollen, suchen, springen. Es können viele Befehle aus \texttt{vi} (gg, G, /, j, k) benutzt werden.}
+\dd{ps}{Prozessliste.}
+\dd{top}{Vorgänger von \texttt{htop}, ein Taskmanager.}
+\dd{uname}{Kernelversion, Rechnername, ...}
+\dd{uptime}{Zeigt, wie viele Nächte der Rechner am Stück durchgemacht hat.}
+\dd{whoami}{Eigener Benutzername.}
+\dd{w}{Wie \texttt{who}, nur ausführlicher.}
+\end{itemize}
+
+\subsubsection{Dateibehandlung}
+\begin{itemize}
+\dd{bzip2}{Komprimiert eine Datei.}
+\dd{cd}{Wechselt in das angegebene Verzeichnis. Dabei ist \texttt{..} das übergeordnete Verzeichnis. Wird als Verzeichnis \texttt{-} angegeben, kommt man in das vorherige Verzeichnis. \texttt{cd} ohne Verzeichnis wechselt in das Heimatverzeichnis\footnote{Meistens \texttt{/home/<benutzername>}.}}
+\dd{cp}{Kopiert Dateien.}
+\dd{df}{Listet die Dateisysteme mit Belegungsangabe.}
+\dd{du}{Zeigt die Größe von Dateien auf dem Datenträger an. Diese muss nicht unbedingt mit der Größe überstimmen, die \texttt{ls} anzeigt, da die Dateien in Blöcken organisiert sind.}
+\dd{find}{Führt eine Dateisystemtraverse nach speziellen Suchvorgaben durch und zeigt standardmäßig alle Dateien und Ordner an.}
+\dd{gzip}{Komprimiert eine Datei.}
 \dd{ls}{Listet den Inhalt des angegebenen oder aktuellen Verzeichnises auf. Dabei werden auch Informationen über Zugriffsrechte und Eigentümer, Größe und Änderungsdatum angezeigt, gibt man \texttt{-l} an.}
-\dd{man}{Zeigt man pages an.}
 \dd{mkdir}{Erstellt ein Verzeichnis.}
 \dd{mv}{Verschiebt Dateien, Umbennen ist ein Spezialfall.}
-\dd{ps}{Prozessliste.}
 \dd{rmdir}{Löscht leere Verzeichnisse.}
 \dd{rm}{Löscht Dateien.}
 \dd{scp}{Kopiert über SSH.}
-\dd{set}{Zeigt das Environment der Shell an.}
-\dd{sort}{Sortiert Zeilen.}
-\dd{ssh}{Öffnete eine Shell auf einem anderen Computer.}
-\dd{tail}{Gegenstück zu \texttt{head}.}
 \dd{tar}{Erstellt ein Archiv mehrerer Dateien. Mit \texttt{tar -xzf archiv.tar.gt datei1 datei2…} erstellt man direkt ein komprimiertes Archiv mehrerer Dateien.}
-\dd{top}{Vorgänger von \texttt{htop}, ein Taskmanager.}
 \dd{touch}{Setzt das Änderungsdatum einer Datei auf den aktuellen Zeitpunkt und erzeugt die Datei, falls sie nicht existiert.}
-\dd{uname}{Kernelversion, Rechnername, ...}
+\end{itemize}
+
+\subsubsection{Informationen zu Programmen}
+\begin{itemize}
+\dd{apropos}{Unscharfe Suche nach Befehlen.}
+\dd{man}{Zeigt man pages an.}
+\dd{whatis}{Zeigt die erste Zeile der man page an.}
+\end{itemize}
+
+\subsubsection{Textdateien}
+\begin{itemize}
+\dd{diff}{Vergleicht Dateien miteinander.}
+\dd{emacs}{Texteditor.}
+\dd{grep}{Filtert Zeilen nach einem Suchmuster.}
+\dd{head}{Zeigt die ersten n Zeilen einer Datei an.}
+\dd{less}{Zeigt eine Datei an und erlaubt scrollen, suchen, springen. Es können viele Befehle aus \texttt{vi} (gg, G, /, j, k) benutzt werden.}
+\dd{sort}{Sortiert Zeilen.}
+\dd{tail}{Gegenstück zu \texttt{head}.}
 \dd{uniq}{Spezialfall von \texttt{sort -u}}
-\dd{uptime}{Zeigt, wie viele Nächte der Rechner am Stück durchgemacht hat.}
 \dd{vim}{Texteditor für Programmierer.}
 \dd{wc}{Zählt Wörter, Zeilen, Buchstaben.}
+\end{itemize}
+
+\subsubsection{Bash built-ins}
+\begin{itemize}
+\dd{clear}{Fügt leere Zeilen ein, bis der Bildschirm leer ist.}
+\dd{set}{Zeigt das Environment der Shell an.}
+\dd{echo}{Gibt Text aus.}
+\dd{history}{Zeigt die letzten Kommandos an.}
+\end{itemize}
+
+\subsubsection{Diverses}
+\begin{itemize}
+\dd{bc}{Einfacher Taschenrechner. Man sollte in der Bash allerdings nicht mit \texttt{\$(echo 5+4 | bc)} rechnen, sondern die neuen, von C übernommenen Funktionen zum direkten Rechnen, \texttt{\$((5+4))}, benutzen.}
+\dd{ssh}{Öffnete eine Shell auf einem anderen Computer.}
 \dd{wget}{Lädt Dateien per http oder ftp.}
-\dd{whatis}{Zeigt die erste Zeile der man page an.}
-\dd{whoami}{Eigener Benutzername.}
-\dd{w}{Wie \texttt{who}, nur ausführlicher.}
+\dd{cal}{Zeigt einen Kalendermonat an.}
+\dd{date}{Zeigt das Datum in einem gewählten Format an.}
+\dd{gv}{Zeigt eine PDF oder PS Datei an. Normalerweise würde man okular (KDE) oder evince (Gnome) benutzen.}
 \end{itemize}
 
 \subsection{absoluter und relativer Pfad}
@@ -241,6 +261,8 @@ Das Skript, das die Zeiten misst, kann in §\ref{listing:compression} gefunden w
 
 Die Dateien auf den zwei verschiedenen Rechnern, die allerdings ihr Heimatverzeichnis teilen, ist fast gleich, bis auf die Datei, die auf dem anderen Rechner schon erstellt worden ist.
 
+Kopiert man die Dateien auf einen Rechner\footnote{Der \texttt{scp} Befehl für Astro nach Physik, der auf dem Übungsblatt angegeben ist funktioniert nicht, weil ein Leerzeichen zwischen dem Doppelpunkt und der Tilde ist.}, kann man sie mit \texttt{diff -u} vergleichen.
+
 \begin{lstlisting}[caption=Unterschied zwischen Ordnerinhalten]
 --- ls-lR.host1 2011-10-30 14:43:46.031286114 +0100
 +++ ls-lR.host2 2011-10-30 14:43:49.275286307 +0100
@@ -254,7 +276,6 @@ Die Dateien auf den zwei verschiedenen Rechnern, die allerdings ihr Heimatverzei
 \end{lstlisting}
 
 Die Datei, in die die Ausgabe umgeleitet wrid, wird zwar direkt angelegt, weil bash sie öffnet, allerdings hat sie noch keine Größe. Erst nach dem Durchlauf ist die Datei komplett da. Zwischen Physik und Astro CIP-Pool sind natürlich alle Dateien anders, weil es komplett verschiedene Ordner sind. Nur Dateien wie meine \texttt{.bashrc} sind beispielsweise auf beiden Seiten vorhanden und haben die gleiche Größe, jedoch unterscheidet sich das Änderungsdatum.
-
 
 \subsection{Shell - Skript}
 
