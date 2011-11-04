@@ -226,9 +226,32 @@ Siehe §\ref{commands}.
 
 \subsection{Handling von Textdateien Dateien}
 
+Man kann es sich an dieser Stelle einfach machen und alle Kennzeichen rauswerfen, die mit einer Ziffer beginnen und es bleiben dann nur noch deutsche Kennzeichen übrig. Der Ansatz ist nicht nennenswert robust, erfüllt aber in der kleinen Eingabemenge seinen Zweck.
+
+\lstinputlisting[caption=auto\_einfach.sh, label=listing:auto-einfach]{../Uebung_03/auto_einfach.sh}
+
+\lstinputlisting[caption=Ausgabe von auto\_einfach.sh]{../Uebung_03/auto_einfach.sh.out}
+
+Allerdings ist es mit den Kennzeichen nicht so ganz einfach, möchte man wirklich nur deutsche Kennzeichen haben:
+
+Es gibt deutsche und Euro-Kennzeichen, alle Neuen sind Letztere. Die alten haben noch einen Bindestrich, die neuen nicht mehr. Außerdem dürfen in den alten die Buchstaben B, F, G, I, O und Q nicht vorkommen.\footnote{\url{https://secure.wikimedia.org/wikipedia/de/wiki/Kfz-Kennzeichen_\%28Deutschland\%29}}
+
+Es gilt das Muster \texttt{XXX XX 0000}, in jeder Gruppe können auch weniger Zeichen sein. Allerdings dürfen es maximal 8 Zeichen sein, solange es kein Saisonkennzeichen ist.
+
+Das führt dazu, dass man im Regex nicht einfach 3, 2 und 4 Zeichen suche lassen kann, ansonsten würden Zeichenketten zugelassen, die 9 Zeichen lang sind. Somit muss man eine Fallunterscheidung benutzten. Darüber hinaus dürfen bei einem alten Kennzeichen -- erkennbar an dem Bindestrich -- einige Buchstaben im mittleren Feld nicht auftauchen.
+
 \lstinputlisting[caption=auto.sh]{../Uebung_03/auto.sh}
 
 \lstinputlisting[caption=Ausgabe von auto.sh]{../Uebung_03/auto.sh.out}
+
+Man sieht, dass die gleiche Liste erzeugt wird, jedoch fällt das zweite Skript nicht auf diverse Gemeinheiten rein, die man sich ausdenken könnte.
+
+\begin{lstlisting}[caption=Gemeinheiten für Listing \ref{listing:auto-einfach}]
+zKeinKennzeichen
+NDH ND 2000
+ 1234 DC 75
+@27
+\end{lstlisting}
 
 \subsection{Pipelines}
 
