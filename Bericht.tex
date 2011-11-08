@@ -207,8 +207,8 @@ touch datei{1..9}.txt logfile{10,10a,11,11a,11b}.txt
 \end{lstlisting}
 
 Dann kann man die Datein mit folgenden Befehlen zeigen:
-\lstinputlisting[caption=ls.sh]{../Uebung_02/wildcards/ls.sh}
-\lstinputlisting[caption=Ausgabe von ls.sh]{../Uebung_02/wildcards/ls.sh.out}
+\lstinputlisting[caption=ls.sh]{Uebung_02/wildcards/ls.sh}
+\lstinputlisting[caption=Ausgabe von ls.sh]{Uebung_02/wildcards/ls.sh.out}
 
 Ich habe hier \texttt{echo} anstelle von \texttt{ls} benutzt, da die Wildcards so oder so von der Bash und nicht vom Befehl aufgelöst werden und \texttt{ls} jede Datei auf eine eigene Zeile schreibt, sofern STOUT kein Terminal ist.
 
@@ -224,15 +224,15 @@ Siehe §\ref{commands}.
 
 \section{Eingabe- und Ausgabeumleitung}
 
-\lstinputlisting[caption=standardausgabe.txt]{../Uebung_03/standardausgabe.txt}
+\lstinputlisting[caption=standardausgabe.txt]{Uebung_03/standardausgabe.txt}
 
 \section{Handling von Textdateien Dateien}
 
 Man kann es sich an dieser Stelle einfach machen und alle Kennzeichen rauswerfen, die mit einer Ziffer beginnen und es bleiben dann nur noch deutsche Kennzeichen übrig. Der Ansatz ist nicht nennenswert robust, erfüllt aber in der kleinen Eingabemenge seinen Zweck.
 
-\lstinputlisting[caption=auto\_einfach.sh, label=listing:auto-einfach]{../Uebung_03/auto_einfach.sh}
+\lstinputlisting[caption=auto\_einfach.sh, label=listing:auto-einfach]{Uebung_03/auto_einfach.sh}
 
-\lstinputlisting[caption=Ausgabe von auto\_einfach.sh]{../Uebung_03/auto_einfach.sh.out}
+\lstinputlisting[caption=Ausgabe von auto\_einfach.sh]{Uebung_03/auto_einfach.sh.out}
 
 Allerdings ist es mit den Kennzeichen nicht so ganz einfach, möchte man wirklich nur deutsche Kennzeichen haben:
 
@@ -242,9 +242,9 @@ Es gilt das Muster \texttt{XXX XX 0000}, in jeder Gruppe können auch weniger Ze
 
 Das führt dazu, dass man im Regex nicht einfach 3, 2 und 4 Zeichen suche lassen kann, ansonsten würden Zeichenketten zugelassen, die 9 Zeichen lang sind. Somit muss man eine Fallunterscheidung benutzten. Darüber hinaus dürfen bei einem alten Kennzeichen -- erkennbar an dem Bindestrich -- einige Buchstaben im mittleren Feld nicht auftauchen.
 
-\lstinputlisting[caption=auto.sh]{../Uebung_03/auto.sh}
+\lstinputlisting[caption=auto.sh]{Uebung_03/auto.sh}
 
-\lstinputlisting[caption=Ausgabe von auto.sh]{../Uebung_03/auto.sh.out}
+\lstinputlisting[caption=Ausgabe von auto.sh]{Uebung_03/auto.sh.out}
 
 Man sieht, dass die gleiche Liste erzeugt wird, jedoch fällt das zweite Skript nicht auf diverse Gemeinheiten rein, die man sich ausdenken könnte.
 
@@ -257,21 +257,21 @@ NDH ND 2000
 
 \section{Pipelines}
 \subsection{Namen}
-\lstinputlisting[caption=namen.dat]{../Uebung_03/namen.dat}
+\lstinputlisting[caption=namen.dat]{Uebung_03/namen.dat}
 
 Es ist recht sinnfrei \texttt{cat} zu benutzen, um den Inhalt zu in \texttt{sort} zu bekommen, da \texttt{sort} die Datei auch selbst laden kann.
 
-\lstinputlisting[caption=namen.sh]{../Uebung_03/namen.sh}
-\lstinputlisting[caption=Ausgabe von namen.sh]{../Uebung_03/namen.sh.out}
+\lstinputlisting[caption=namen.sh]{Uebung_03/namen.sh}
+\lstinputlisting[caption=Ausgabe von namen.sh]{Uebung_03/namen.sh.out}
 
 \subsection{Zahlen}
 
-\lstinputlisting[caption=zahlen.dat]{../Uebung_03/zahlen.dat}
+\lstinputlisting[caption=zahlen.dat]{Uebung_03/zahlen.dat}
 
 Bei den Zahlen werden die Zahlen exakt so sortiert, wie ich es erwarte. Und zwar nach ASCII Code Point. Es ist unnatürlich, dass eine 2 vor einer 1 steht, weil \textit{nach} der 1 eine weitere Zahl folgt. Da die Zahlen in der Datei allerdings ohne führende Nullen stehen, muss man die Zahl zuerst interpretieren, damit sie nach Zahlenwert sortiert werden kann. Dafür ist das \texttt{-n} Flag da.
 
-\lstinputlisting[caption=zahlen-sort.sh]{../Uebung_03/zahlen-sort.sh}
-\lstinputlisting[caption=Ausgabe von zahlen-sort.sh]{../Uebung_03/zahlen-sort.sh.out}
+\lstinputlisting[caption=zahlen-sort.sh]{Uebung_03/zahlen-sort.sh}
+\lstinputlisting[caption=Ausgabe von zahlen-sort.sh]{Uebung_03/zahlen-sort.sh.out}
 
 \section{Komprimierung und Archivierung}
 
@@ -319,9 +319,9 @@ Die Datei, in die die Ausgabe umgeleitet wrid, wird zwar direkt angelegt, weil b
 \section{Shell - Skript}
 
 \lstset{language=bash}
-\lstinputlisting[caption=farben.sh]{../Uebung_03/farben.sh}
+\lstinputlisting[caption=farben.sh]{Uebung_03/farben.sh}
 
-\lstinputlisting[caption=Ausgabe von farben.sh]{../Uebung_03/farben.sh.out}
+\lstinputlisting[caption=Ausgabe von farben.sh]{Uebung_03/farben.sh.out}
 
 
 \subsection{Zahlen}
@@ -329,9 +329,9 @@ Die Datei, in die die Ausgabe umgeleitet wrid, wird zwar direkt angelegt, weil b
 Für die Zahlen kann man entweder \texttt{{1..3}} benutzen, oder eine C-artige for-Schleife benutzen. Die Syntax, die auf dem Übungszettel steht, gibt es nicht, ich weiß nicht, wie Sie die Ausgabe damit erzeugt haben.
 
 \lstset{language=bash}
-\lstinputlisting[caption=zahlen.sh]{../Uebung_03/zahlen.sh}
+\lstinputlisting[caption=zahlen.sh]{Uebung_03/zahlen.sh}
 
-\lstinputlisting[caption=Ausgabe von zahlen.sh]{../Uebung_03/zahlen.sh.out}
+\lstinputlisting[caption=Ausgabe von zahlen.sh]{Uebung_03/zahlen.sh.out}
 
 Ein Beispiel für die \texttt{{1..3}} finden Sie in §\ref{listing:zahlen2}
 
@@ -339,9 +339,9 @@ Soll von 2 bis 20 gezählt werden und der Vorname ausgegeben werden, wenn der Z�
 
 
 \lstset{language=bash}
-\lstinputlisting[caption=zahlen\_name.sh]{../Uebung_03/zahlen_name.sh}
+\lstinputlisting[caption=zahlen\_name.sh]{Uebung_03/zahlen_name.sh}
 
-\lstinputlisting[caption=Ausgabe von zahlen\_name.sh]{../Uebung_03/zahlen_name.sh.out}
+\lstinputlisting[caption=Ausgabe von zahlen\_name.sh]{Uebung_03/zahlen_name.sh.out}
 
 
 \section{Analyse von Pipelines}
@@ -359,7 +359,7 @@ ps aux | grep '^ueding\ s '
 Für das Sortieren hat \texttt{ps} auch eine entsprechende Option: \texttt{O+p}. So lässt sich mit \texttt{ps ux O+p} direkt nach Prozess-ID sortieren.
 
 \subsection{Teilaufgabe c}
-Mit \verb#ps ux O+p > myprocesses.txt# lässt sich die entsprechnde Datei erzeugen. \lstinputlisting[caption=myprocesses.txt]{../Uebung_03/myprocesses.txt} 
+Mit \verb#ps ux O+p > myprocesses.txt# lässt sich die entsprechnde Datei erzeugen. \lstinputlisting[caption=myprocesses.txt]{Uebung_03/myprocesses.txt} 
 
 
 Wenn man mag, kann man natürlich auch diesen Code benutzen:
@@ -438,9 +438,9 @@ Die stets das Böse will und stets das Gute schafft.}
 \label{listing:zahlen2}
 
 \lstset{language=bash}
-\lstinputlisting[caption=zahlen2.sh]{../Uebung_03/zahlen2.sh}
+\lstinputlisting[caption=zahlen2.sh]{Uebung_03/zahlen2.sh}
 
-\lstinputlisting[caption=Ausgabe von zahlen2.sh]{../Uebung_03/zahlen2.sh.out}
+\lstinputlisting[caption=Ausgabe von zahlen2.sh]{Uebung_03/zahlen2.sh.out}
 \end{appendix}
 
 \end{document}
