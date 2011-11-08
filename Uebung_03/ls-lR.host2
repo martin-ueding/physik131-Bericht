@@ -1,0 +1,538 @@
+.:
+insgesamt 184
+drwxr-xr-x 3 ueding studis   4096 19. Okt 15:32 Bericht
+drwxr-xr-x 8 ueding studis   4096 19. Okt 15:32 Bericht.git
+drwxr-xr-x 2 ueding studis   4096 19. Okt 15:22 bin
+drwx------ 2 ueding studis   4096  3. Okt 14:09 Desktop
+drwxr-xr-x 4 ueding studis   4096 19. Okt 13:40 lib
+drwxr-xr-x 3 ueding studis   4096 19. Okt 13:40 libexec
+-rw-r--r-- 1 ueding studis  24614 30. Okt 2011  ls-lR.host1
+-rw-r--r-- 1 ueding studis      0 30. Okt 2011  ls-lR.host2
+drwx------ 2 ueding studis   4096  4. Okt 15:33 public_html
+drwxr-xr-x 7 ueding studis   4096 19. Okt 13:40 share
+-rw-r--r-- 1 ueding studis 116766 19. Okt 13:25 Uebung_01.pdf
+-rw-r--r-- 1 ueding studis    813 12. Okt 19:56 update
+
+./Bericht:
+insgesamt 4
+-rw-r--r-- 1 ueding studis 2687 19. Okt 15:32 Bericht.tex
+
+./Bericht.git:
+insgesamt 40
+drwxr-xr-x  2 ueding studis 4096 19. Okt 13:48 branches
+-rw-r--r--  1 ueding studis   91 19. Okt 15:25 config
+-rw-r--r--  1 ueding studis   73 19. Okt 13:48 description
+-rw-r--r--  1 ueding studis   23 19. Okt 15:32 HEAD
+drwxr-xr-x  2 ueding studis 4096 19. Okt 13:48 hooks
+-rw-r--r--  1 ueding studis  192 19. Okt 15:32 index
+drwxr-xr-x  2 ueding studis 4096 19. Okt 13:48 info
+drwxr-xr-x  3 ueding studis 4096 19. Okt 15:32 logs
+drwxr-xr-x 11 ueding studis 4096 19. Okt 15:24 objects
+drwxr-xr-x  4 ueding studis 4096 19. Okt 13:48 refs
+
+./Bericht.git/branches:
+insgesamt 0
+
+./Bericht.git/hooks:
+insgesamt 36
+-rwxr-xr-x 1 ueding studis  452 19. Okt 13:48 applypatch-msg.sample
+-rwxr-xr-x 1 ueding studis  896 19. Okt 13:48 commit-msg.sample
+-rwxr-xr-x 1 ueding studis  189 19. Okt 13:48 post-update.sample
+-rwxr-xr-x 1 ueding studis  398 19. Okt 13:48 pre-applypatch.sample
+-rwxr-xr-x 1 ueding studis 1578 19. Okt 13:48 pre-commit.sample
+-rwxr-xr-x 1 ueding studis 1239 19. Okt 13:48 prepare-commit-msg.sample
+-rwxr-xr-x 1 ueding studis 4951 19. Okt 13:48 pre-rebase.sample
+-rwxr-xr-x 1 ueding studis 3611 19. Okt 13:48 update.sample
+
+./Bericht.git/info:
+insgesamt 4
+-rw-r--r-- 1 ueding studis 240 19. Okt 13:48 exclude
+
+./Bericht.git/logs:
+insgesamt 8
+-rw-r--r-- 1 ueding studis  175 19. Okt 15:32 HEAD
+drwxr-xr-x 3 ueding studis 4096 19. Okt 15:27 refs
+
+./Bericht.git/logs/refs:
+insgesamt 4
+drwxr-xr-x 2 ueding studis 4096 19. Okt 15:27 heads
+
+./Bericht.git/logs/refs/heads:
+insgesamt 4
+-rw-r--r-- 1 ueding studis 141 19. Okt 15:27 master
+
+./Bericht.git/objects:
+insgesamt 36
+drwxr-xr-x 2 ueding studis 4096 19. Okt 15:24 06
+drwxr-xr-x 2 ueding studis 4096 19. Okt 15:24 66
+drwxr-xr-x 2 ueding studis 4096 19. Okt 15:24 74
+drwxr-xr-x 2 ueding studis 4096 19. Okt 15:24 7d
+drwxr-xr-x 2 ueding studis 4096 19. Okt 15:24 a5
+drwxr-xr-x 2 ueding studis 4096 19. Okt 15:24 cb
+drwxr-xr-x 2 ueding studis 4096 19. Okt 15:24 eb
+drwxr-xr-x 2 ueding studis 4096 19. Okt 13:48 info
+drwxr-xr-x 2 ueding studis 4096 19. Okt 13:48 pack
+
+./Bericht.git/objects/06:
+insgesamt 4
+-r--r--r-- 2 ueding studis 90 19. Okt 15:24 1117c2b00a09e4d487d6f05cab81421978a9b4
+
+./Bericht.git/objects/66:
+insgesamt 4
+-r--r--r-- 2 ueding studis 175 19. Okt 15:24 4fd9b8fff83dd1c70986ecae144330e7e13570
+
+./Bericht.git/objects/74:
+insgesamt 4
+-r--r--r-- 2 ueding studis 1335 19. Okt 15:24 9abb5b1a17c75bca45d64361d6906db6fa6dc1
+
+./Bericht.git/objects/7d:
+insgesamt 4
+-r--r--r-- 2 ueding studis 135 19. Okt 15:24 ea6c3e0e8ff08ed37d3f5bf540ae5245a67d0c
+
+./Bericht.git/objects/a5:
+insgesamt 4
+-r--r--r-- 2 ueding studis 90 19. Okt 15:24 8bc34f7a1ed27600be5df05fc54b62737fc9a7
+
+./Bericht.git/objects/cb:
+insgesamt 4
+-r--r--r-- 2 ueding studis 1336 19. Okt 15:24 3648fbd618fc2d410a00830819b482fe13de92
+
+./Bericht.git/objects/eb:
+insgesamt 4
+-r--r--r-- 2 ueding studis 37 19. Okt 15:24 d676909d2eb1b2c84238451c3bdf4479ad5314
+
+./Bericht.git/objects/info:
+insgesamt 0
+
+./Bericht.git/objects/pack:
+insgesamt 0
+
+./Bericht.git/refs:
+insgesamt 8
+drwxr-xr-x 2 ueding studis 4096 19. Okt 15:27 heads
+drwxr-xr-x 2 ueding studis 4096 19. Okt 13:48 tags
+
+./Bericht.git/refs/heads:
+insgesamt 4
+-rw-r--r-- 1 ueding studis 41 19. Okt 15:27 master
+
+./Bericht.git/refs/tags:
+insgesamt 0
+
+./bin:
+insgesamt 4652
+-rwxr-xr-x   1 ueding studis     161  5. Okt 23:20 colors
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git
+-rwxr-xr-x   2 ueding studis  120941 19. Okt 13:40 git-cvsserver
+-rwxr-xr-x   1 ueding studis  324172 19. Okt 13:40 gitk
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-receive-pack
+-rwxr-xr-x   2 ueding studis  444112 19. Okt 15:22 git-shell
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-upload-archive
+-rwxr-xr-x   2 ueding studis  452376 19. Okt 15:22 git-upload-pack
+
+./Desktop:
+insgesamt 28
+-rw------- 1 ueding studis 1223  3. Okt 14:09 MozillaFirefox.desktop
+-rw------- 1 ueding studis  997  3. Okt 14:09 myComputer.desktop
+-rw------- 1 ueding studis 1588  3. Okt 14:09 Network.desktop
+-rw------- 1 ueding studis  727  3. Okt 14:09 Office.desktop
+-rw------- 1 ueding studis 2901  3. Okt 14:09 Printer.desktop
+-rw------- 1 ueding studis 5066  3. Okt 14:09 trash.desktop
+
+./lib:
+insgesamt 8
+drwxr-xr-x 4 ueding studis 4096 19. Okt 13:40 perl5
+drwxr-xr-x 3 ueding studis 4096 19. Okt 13:40 python2.5
+
+./lib/perl5:
+insgesamt 8
+drwxr-xr-x 3 ueding studis 4096 19. Okt 13:40 5.8.8
+drwxr-xr-x 3 ueding studis 4096 19. Okt 13:40 site_perl
+
+./lib/perl5/5.8.8:
+insgesamt 4
+drwxr-xr-x 2 ueding studis 4096 19. Okt 13:40 i586-linux-thread-multi
+
+./lib/perl5/5.8.8/i586-linux-thread-multi:
+insgesamt 4
+-rw-r--r-- 1 ueding studis 222 19. Okt 13:40 perllocal.pod
+
+./lib/perl5/site_perl:
+insgesamt 4
+drwxr-xr-x 3 ueding studis 4096 19. Okt 13:40 5.8.8
+
+./lib/perl5/site_perl/5.8.8:
+insgesamt 40
+-r--r--r-- 1 ueding studis 36271 30. Sep 23:51 Git.pm
+drwxr-xr-x 3 ueding studis  4096 19. Okt 13:40 i586-linux-thread-multi
+
+./lib/perl5/site_perl/5.8.8/i586-linux-thread-multi:
+insgesamt 4
+drwxr-xr-x 3 ueding studis 4096 19. Okt 13:40 auto
+
+./lib/perl5/site_perl/5.8.8/i586-linux-thread-multi/auto:
+insgesamt 4
+drwxr-xr-x 2 ueding studis 4096 19. Okt 13:40 Git
+
+./lib/perl5/site_perl/5.8.8/i586-linux-thread-multi/auto/Git:
+insgesamt 0
+
+./lib/python2.5:
+insgesamt 4
+drwxr-xr-x 3 ueding studis 4096 19. Okt 13:40 site-packages
+
+./lib/python2.5/site-packages:
+insgesamt 8
+drwxr-xr-x 3 ueding studis 4096 19. Okt 13:40 git_remote_helpers
+-rw-r--r-- 1 ueding studis  271 19. Okt 13:40 git_remote_helpers-0.1.0-py2.5.egg-info
+
+./lib/python2.5/site-packages/git_remote_helpers:
+insgesamt 36
+drwxr-xr-x 2 ueding studis  4096 19. Okt 13:40 git
+-rw-r--r-- 1 ueding studis   512 30. Sep 23:51 __init__.py
+-rw-r--r-- 1 ueding studis   663 19. Okt 13:40 __init__.pyc
+-rw-r--r-- 1 ueding studis  9210 30. Sep 23:51 util.py
+-rw-r--r-- 1 ueding studis 11387 19. Okt 13:40 util.pyc
+
+./lib/python2.5/site-packages/git_remote_helpers/git:
+insgesamt 96
+-rw-r--r-- 1 ueding studis  1700 30. Sep 23:51 exporter.py
+-rw-r--r-- 1 ueding studis  2414 19. Okt 13:40 exporter.pyc
+-rw-r--r-- 1 ueding studis 24708 30. Sep 23:51 git.py
+-rw-r--r-- 1 ueding studis 29164 19. Okt 13:40 git.pyc
+-rw-r--r-- 1 ueding studis  1750 30. Sep 23:51 importer.py
+-rw-r--r-- 1 ueding studis  2466 19. Okt 13:40 importer.pyc
+-rw-r--r-- 1 ueding studis     0 30. Sep 23:51 __init__.py
+-rw-r--r-- 1 ueding studis   162 19. Okt 13:40 __init__.pyc
+-rw-r--r-- 1 ueding studis  1612 30. Sep 23:51 non_local.py
+-rw-r--r-- 1 ueding studis  2556 19. Okt 13:40 non_local.pyc
+-rw-r--r-- 1 ueding studis  1883 30. Sep 23:51 repo.py
+-rw-r--r-- 1 ueding studis  3089 19. Okt 13:40 repo.pyc
+
+./libexec:
+insgesamt 4
+drwxr-xr-x 3 ueding studis 4096 19. Okt 15:19 git-core
+
+./libexec/git-core:
+insgesamt 123540
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-add
+-rwxr-xr-x   1 ueding studis   36369 19. Okt 13:40 git-add--interactive
+-rwxr-xr-x   1 ueding studis   20513 19. Okt 13:40 git-am
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-annotate
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-apply
+-rwxr-xr-x   1 ueding studis   36977 19. Okt 13:40 git-archimport
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-archive
+-rwxr-xr-x   1 ueding studis   11323 19. Okt 13:40 git-bisect
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-bisect--helper
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-blame
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-branch
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-bundle
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-cat-file
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-check-attr
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-checkout
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-checkout-index
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-check-ref-format
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-cherry
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-cherry-pick
+-rwxr-xr-x   2 ueding studis   96822 19. Okt 13:40 git-citool
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-clean
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-clone
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-commit
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-commit-tree
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-config
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-count-objects
+-rwxr-xr-x   1 ueding studis   12767 19. Okt 13:40 git-cvsexportcommit
+-rwxr-xr-x   1 ueding studis   30279 19. Okt 13:40 git-cvsimport
+-rwxr-xr-x   2 ueding studis  120941 19. Okt 13:40 git-cvsserver
+-rwxr-xr-x   1 ueding studis  452464 19. Okt 15:19 git-daemon
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-describe
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-diff
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-diff-files
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-diff-index
+-rwxr-xr-x   1 ueding studis    2764 19. Okt 13:40 git-difftool
+-rwxr-xr-x   1 ueding studis    1759 19. Okt 13:40 git-difftool--helper
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-diff-tree
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-fast-export
+-rwxr-xr-x   1 ueding studis  481188 19. Okt 15:19 git-fast-import
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-fetch
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-fetch-pack
+-rwxr-xr-x   1 ueding studis   12222 19. Okt 13:40 git-filter-branch
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-fmt-merge-msg
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-for-each-ref
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-format-patch
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-fsck
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-fsck-objects
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-gc
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-get-tar-commit-id
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-grep
+-rwxr-xr-x   2 ueding studis   96822 19. Okt 13:40 git-gui
+-rwxr-xr-x   1 ueding studis    1372 19. Okt 13:40 git-gui--askpass
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-hash-object
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-help
+-rwxr-xr-x   1 ueding studis  448388 19. Okt 15:19 git-http-backend
+-rwxr-xr-x   1 ueding studis  469024 19. Okt 15:19 git-http-fetch
+-rwxr-xr-x   1 ueding studis  460724 19. Okt 15:19 git-http-push
+-rwxr-xr-x   1 ueding studis  464856 19. Okt 15:19 git-imap-send
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-index-pack
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-init
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-init-db
+-rwxr-xr-x   1 ueding studis   18275 19. Okt 13:40 git-instaweb
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-log
+-rwxr-xr-x   1 ueding studis     554 19. Okt 13:40 git-lost-found
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-ls-files
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-ls-remote
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-ls-tree
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-mailinfo
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-mailsplit
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-merge
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-merge-base
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-merge-file
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-merge-index
+-rwxr-xr-x   1 ueding studis    2207 19. Okt 13:40 git-merge-octopus
+-rwxr-xr-x   1 ueding studis    3893 19. Okt 13:40 git-merge-one-file
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-merge-ours
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-merge-recursive
+-rwxr-xr-x   1 ueding studis     944 19. Okt 13:40 git-merge-resolve
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-merge-subtree
+-rwxr-xr-x   1 ueding studis    8956 19. Okt 13:40 git-mergetool
+-rw-r--r--   1 ueding studis    4224 19. Okt 13:40 git-mergetool--lib
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-merge-tree
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-mktag
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-mktree
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-mv
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-name-rev
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-notes
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-pack-objects
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-pack-redundant
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-pack-refs
+-rw-r--r--   1 ueding studis    2523 19. Okt 13:40 git-parse-remote
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-patch-id
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-peek-remote
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-prune
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-prune-packed
+-rwxr-xr-x   1 ueding studis    7553 19. Okt 13:40 git-pull
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-push
+-rwxr-xr-x   1 ueding studis    3348 19. Okt 13:40 git-quiltimport
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-read-tree
+-rwxr-xr-x   1 ueding studis   13278 19. Okt 13:40 git-rebase
+-rw-r--r--   1 ueding studis     615 19. Okt 13:40 git-rebase--am
+-rw-r--r--   1 ueding studis   21541 19. Okt 13:40 git-rebase--interactive
+-rw-r--r--   1 ueding studis    3086 19. Okt 13:40 git-rebase--merge
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-receive-pack
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-reflog
+-rwxr-xr-x   1 ueding studis    4214 19. Okt 13:40 git-relink
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-remote
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-remote-ext
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-remote-fd
+-rwxr-xr-x   4 ueding studis  477208 19. Okt 15:19 git-remote-ftp
+-rwxr-xr-x   4 ueding studis  477208 19. Okt 15:19 git-remote-ftps
+-rwxr-xr-x   4 ueding studis  477208 19. Okt 15:19 git-remote-http
+-rwxr-xr-x   4 ueding studis  477208 19. Okt 15:19 git-remote-https
+-rwxr-xr-x   1 ueding studis    6085 19. Okt 13:40 git-remote-testgit
+-rwxr-xr-x   1 ueding studis    4572 19. Okt 13:40 git-repack
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-replace
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-repo-config
+-rwxr-xr-x   1 ueding studis    1621 19. Okt 13:40 git-request-pull
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-rerere
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-reset
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-revert
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-rev-list
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-rev-parse
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-rm
+-rwxr-xr-x   1 ueding studis   39770 19. Okt 13:40 git-send-email
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-send-pack
+-rwxr-xr-x   2 ueding studis  444112 19. Okt 15:22 git-shell
+-rw-r--r--   1 ueding studis     837 19. Okt 13:40 git-sh-i18n
+-rwxr-xr-x   1 ueding studis   18684 19. Okt 15:19 git-sh-i18n--envsubst
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-shortlog
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-show
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-show-branch
+-rwxr-xr-x   1 ueding studis   18708 19. Okt 15:19 git-show-index
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-show-ref
+-rw-r--r--   1 ueding studis    4950 19. Okt 13:40 git-sh-setup
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-stage
+-rwxr-xr-x   1 ueding studis   12859 19. Okt 13:40 git-stash
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-status
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-stripspace
+-rwxr-xr-x   1 ueding studis   20762 19. Okt 13:40 git-submodule
+-rwxr-xr-x   1 ueding studis  190097 19. Okt 13:40 git-svn
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-symbolic-ref
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-tag
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-tar-tree
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-unpack-file
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-unpack-objects
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-update-index
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-update-ref
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-update-server-info
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-upload-archive
+-rwxr-xr-x   2 ueding studis  452376 19. Okt 15:22 git-upload-pack
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-var
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-verify-pack
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-verify-tag
+-rwxr-xr-x   1 ueding studis    4242 19. Okt 13:40 git-web--browse
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-whatchanged
+-rwxr-xr-x 109 ueding studis 1123968 19. Okt 15:22 git-write-tree
+drwxr-xr-x   2 ueding studis    4096 30. Sep 23:51 mergetools
+
+./libexec/git-core/mergetools:
+insgesamt 60
+-rw-r--r-- 1 ueding studis 392 30. Sep 23:51 araxis
+-rw-r--r-- 1 ueding studis 333 30. Sep 23:51 bc3
+-rw-r--r-- 1 ueding studis 695 30. Sep 23:51 defaults
+-rw-r--r-- 1 ueding studis 282 30. Sep 23:51 diffuse
+-rw-r--r-- 1 ueding studis 340 30. Sep 23:51 ecmerge
+-rw-r--r-- 1 ueding studis 415 30. Sep 23:51 emerge
+-rw-r--r-- 1 ueding studis 506 30. Sep 23:51 kdiff3
+-rw-r--r-- 1 ueding studis  83 30. Sep 23:51 kompare
+-rw-r--r-- 1 ueding studis 680 30. Sep 23:51 meld
+-rw-r--r-- 1 ueding studis 301 30. Sep 23:51 opendiff
+-rw-r--r-- 1 ueding studis 191 30. Sep 23:51 p4merge
+-rw-r--r-- 1 ueding studis 224 30. Sep 23:51 tkdiff
+-rw-r--r-- 1 ueding studis 279 30. Sep 23:51 tortoisemerge
+-rw-r--r-- 1 ueding studis 785 30. Sep 23:51 vim
+-rw-r--r-- 1 ueding studis 618 30. Sep 23:51 xxdiff
+
+./public_html:
+insgesamt 0
+-rw------- 1 ueding studis 0  4. Okt 15:33 index.html
+
+./share:
+insgesamt 20
+drwxr-xr-x 3 ueding studis 4096 19. Okt 13:40 git-core
+drwxr-xr-x 3 ueding studis 4096 19. Okt 13:40 git-gui
+drwxr-xr-x 3 ueding studis 4096 19. Okt 13:40 gitk
+drwxr-xr-x 3 ueding studis 4096 19. Okt 13:40 gitweb
+drwxr-xr-x 3 ueding studis 4096 19. Okt 13:40 man
+
+./share/git-core:
+insgesamt 4
+drwxr-xr-x 5 ueding studis 4096 19. Okt 13:39 templates
+
+./share/git-core/templates:
+insgesamt 16
+drwxr-xr-x 2 ueding studis 4096 19. Okt 13:39 branches
+-rw-r--r-- 1 ueding studis   73 19. Okt 13:39 description
+drwxr-xr-x 2 ueding studis 4096 19. Okt 13:39 hooks
+drwxr-xr-x 2 ueding studis 4096 19. Okt 13:39 info
+
+./share/git-core/templates/branches:
+insgesamt 0
+
+./share/git-core/templates/hooks:
+insgesamt 36
+-rwxr-xr-x 1 ueding studis  452 19. Okt 13:39 applypatch-msg.sample
+-rwxr-xr-x 1 ueding studis  896 19. Okt 13:39 commit-msg.sample
+-rwxr-xr-x 1 ueding studis  189 19. Okt 13:39 post-update.sample
+-rwxr-xr-x 1 ueding studis  398 19. Okt 13:39 pre-applypatch.sample
+-rwxr-xr-x 1 ueding studis 1578 19. Okt 13:39 pre-commit.sample
+-rwxr-xr-x 1 ueding studis 1239 19. Okt 13:39 prepare-commit-msg.sample
+-rwxr-xr-x 1 ueding studis 4951 19. Okt 13:39 pre-rebase.sample
+-rwxr-xr-x 1 ueding studis 3611 19. Okt 13:39 update.sample
+
+./share/git-core/templates/info:
+insgesamt 4
+-rw-r--r-- 1 ueding studis 240 19. Okt 13:39 exclude
+
+./share/git-gui:
+insgesamt 4
+drwxr-xr-x 3 ueding studis 4096 19. Okt 13:40 lib
+
+./share/git-gui/lib:
+insgesamt 404
+-rw-r--r-- 1 ueding studis  1929 19. Okt 13:40 about.tcl
+-rw-r--r-- 1 ueding studis 34758 19. Okt 13:40 blame.tcl
+-rw-r--r-- 1 ueding studis  2254 19. Okt 13:40 branch_checkout.tcl
+-rw-r--r-- 1 ueding studis  5438 19. Okt 13:40 branch_create.tcl
+-rw-r--r-- 1 ueding studis  3350 19. Okt 13:40 branch_delete.tcl
+-rw-r--r-- 1 ueding studis  3217 19. Okt 13:40 branch_rename.tcl
+-rw-r--r-- 1 ueding studis   839 19. Okt 13:40 branch.tcl
+-rw-r--r-- 1 ueding studis 12298 19. Okt 13:40 browser.tcl
+-rw-r--r-- 1 ueding studis 14803 19. Okt 13:40 checkout_op.tcl
+-rw-r--r-- 1 ueding studis  4203 19. Okt 13:40 choose_font.tcl
+-rw-r--r-- 1 ueding studis 24720 19. Okt 13:40 choose_repository.tcl
+-rw-r--r-- 1 ueding studis 15183 19. Okt 13:40 choose_rev.tcl
+-rw-r--r-- 1 ueding studis  4511 19. Okt 13:40 class.tcl
+-rw-r--r-- 1 ueding studis 11277 19. Okt 13:40 commit.tcl
+-rw-r--r-- 1 ueding studis  4798 19. Okt 13:40 console.tcl
+-rw-r--r-- 1 ueding studis  3070 19. Okt 13:40 database.tcl
+-rw-r--r-- 1 ueding studis  1057 19. Okt 13:40 date.tcl
+-rw-r--r-- 1 ueding studis 20764 19. Okt 13:40 diff.tcl
+-rw-r--r-- 1 ueding studis 16762 19. Okt 13:40 encoding.tcl
+-rw-r--r-- 1 ueding studis  2541 19. Okt 13:40 error.tcl
+-rw-r--r-- 1 ueding studis  3638 19. Okt 13:40 git-gui.ico
+-rw-r--r-- 1 ueding studis  9921 19. Okt 13:40 index.tcl
+-rw-r--r-- 1 ueding studis  2290 19. Okt 13:40 logo.tcl
+-rw-r--r-- 1 ueding studis  6312 19. Okt 13:40 merge.tcl
+-rw-r--r-- 1 ueding studis 10605 19. Okt 13:40 mergetool.tcl
+drwxr-xr-x 2 ueding studis  4096 19. Okt 13:40 msgs
+-rw-r--r-- 1 ueding studis  9752 19. Okt 13:40 option.tcl
+-rw-r--r-- 1 ueding studis  4597 19. Okt 13:40 remote_add.tcl
+-rw-r--r-- 1 ueding studis  8514 19. Okt 13:40 remote_branch_delete.tcl
+-rw-r--r-- 1 ueding studis  7206 19. Okt 13:40 remote.tcl
+-rw-r--r-- 1 ueding studis  4269 19. Okt 13:40 search.tcl
+-rw-r--r-- 1 ueding studis  3467 19. Okt 13:40 shortcut.tcl
+-rw-r--r-- 1 ueding studis  9626 19. Okt 13:40 spellcheck.tcl
+-rw-r--r-- 1 ueding studis  3415 19. Okt 13:40 sshkey.tcl
+-rw-r--r-- 1 ueding studis  2576 19. Okt 13:40 status_bar.tcl
+-rw-r--r-- 1 ueding studis 13877 19. Okt 13:40 tclIndex
+-rw-r--r-- 1 ueding studis  4891 19. Okt 13:40 themed.tcl
+-rw-r--r-- 1 ueding studis 10051 19. Okt 13:40 tools_dlg.tcl
+-rw-r--r-- 1 ueding studis  3668 19. Okt 13:40 tools.tcl
+-rw-r--r-- 1 ueding studis  5811 19. Okt 13:40 transport.tcl
+-rw-r--r-- 1 ueding studis   888 19. Okt 13:40 win32_shortcut.js
+-rw-r--r-- 1 ueding studis   596 19. Okt 13:40 win32.tcl
+
+./share/git-gui/lib/msgs:
+insgesamt 700
+-rw-r--r-- 1 ueding studis  51179 19. Okt 13:40 de.msg
+-rw-r--r-- 1 ueding studis  96387 19. Okt 13:40 el.msg
+-rw-r--r-- 1 ueding studis  50695 19. Okt 13:40 fr.msg
+-rw-r--r-- 1 ueding studis  53760 19. Okt 13:40 hu.msg
+-rw-r--r-- 1 ueding studis  48196 19. Okt 13:40 it.msg
+-rw-r--r-- 1 ueding studis  72248 19. Okt 13:40 ja.msg
+-rw-r--r-- 1 ueding studis  38787 19. Okt 13:40 nb.msg
+-rw-r--r-- 1 ueding studis  50713 19. Okt 13:40 pt_br.msg
+-rw-r--r-- 1 ueding studis 118097 19. Okt 13:40 ru.msg
+-rw-r--r-- 1 ueding studis  48648 19. Okt 13:40 sv.msg
+-rw-r--r-- 1 ueding studis  40795 19. Okt 13:40 zh_cn.msg
+
+./share/gitk:
+insgesamt 4
+drwxr-xr-x 3 ueding studis 4096 19. Okt 13:40 lib
+
+./share/gitk/lib:
+insgesamt 4
+drwxr-xr-x 2 ueding studis 4096 19. Okt 13:40 msgs
+
+./share/gitk/lib/msgs:
+insgesamt 244
+-rw-r--r-- 1 ueding studis 23449 19. Okt 13:40 de.msg
+-rw-r--r-- 1 ueding studis 16177 19. Okt 13:40 es.msg
+-rw-r--r-- 1 ueding studis 22890 19. Okt 13:40 fr.msg
+-rw-r--r-- 1 ueding studis 25033 19. Okt 13:40 hu.msg
+-rw-r--r-- 1 ueding studis 22528 19. Okt 13:40 it.msg
+-rw-r--r-- 1 ueding studis 30970 19. Okt 13:40 ja.msg
+-rw-r--r-- 1 ueding studis 24093 19. Okt 13:40 pt_br.msg
+-rw-r--r-- 1 ueding studis 45121 19. Okt 13:40 ru.msg
+-rw-r--r-- 1 ueding studis 22754 19. Okt 13:40 sv.msg
+
+./share/gitweb:
+insgesamt 236
+-rwxr-xr-x 1 ueding studis 231136 19. Okt 13:40 gitweb.cgi
+drwxr-xr-x 2 ueding studis   4096 19. Okt 13:40 static
+
+./share/gitweb/static:
+insgesamt 68
+-rw-r--r-- 1 ueding studis   115 19. Okt 13:40 git-favicon.png
+-rw-r--r-- 1 ueding studis   207 19. Okt 13:40 git-logo.png
+-rw-r--r-- 1 ueding studis  9918 19. Okt 13:40 gitweb.css
+-rw-r--r-- 1 ueding studis 48805 19. Okt 13:40 gitweb.js
+
+./share/man:
+insgesamt 4
+drwxr-xr-x 2 ueding studis 4096 19. Okt 13:40 man3
+
+./share/man/man3:
+insgesamt 28
+-r--r--r-- 1 ueding studis 25499 19. Okt 13:39 Git.3pm

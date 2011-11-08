@@ -1,0 +1,4 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+ueding   26464  0.0  0.1   9576  1784 ?        S    15:36   0:00 sshd: ueding@pts/0                                 
+ueding   26465  0.0  0.1   4760  2048 pts/0    Ss   15:36   0:00 -bash
+ueding   26725  0.0  0.0   2700   816 pts/0    R+   15:47   0:00 ps ux O+p

@@ -1,0 +1,5 @@
+Autokennzeichen.txt
+namen.dat
+standardausgabe.txt
+Uebung_03.pdf
+zahlen.dat
