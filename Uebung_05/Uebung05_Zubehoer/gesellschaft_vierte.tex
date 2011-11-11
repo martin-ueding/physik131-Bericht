@@ -8,6 +8,7 @@
 \documentclass[a4paper]{article}
 \usepackage[ngerman]{babel}
 \usepackage{graphicx}
+\usepackage[utf8]{inputenc}
 %
 \title{Der Kleine Hobbit}
 \author{J.~R.~R. Tolkien}
@@ -55,13 +56,27 @@ oder gem"utlich fr"uhst"ucken konnte. Es war eine Hobbith"ohle, und das
 bedeutet \textsc{Behaglichkeit.}
 
 Diese H"ohle hatte eine kreisrunde T"ur wie ein Bullauge. Sie war 
-\texttt{gr"un} gestrichen, und in der Mitte sa"s ein gl"anzend \texttt{gelber}
+\texttt{gr"un}\footnote{Weitere Farbangaben sind Tabelle \ref{602c20fc-040b-4292-aea0-d2c393222937} zu entnehmen. Bitte zurückstellen.} gestrichen, und in der Mitte sa"s ein gl"anzend \texttt{gelber}
 Messingknopf. Die T"ur f"uhrte zu einer r"ohrenf"ormig langen Halle, zu einer 
 Art Tunnel, einem Tunnel mit get"afelten W"anden.
 
 [\dots]
 
-Alles, was also der keineswegs mi"strauische Bilbo an diesem Morgen sah, war 
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.85\textwidth]{zwerg}
+\caption[gemeiner Zwerg]{Der gemeine Zwerg erwägt UTF-8 zu benutzen, kann sich aber nicht ganz für diese neumodische Zeug begeistern.}
+\label{43cb4f4f-3315-44a6-9f11-4d8a9710fd21}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.85\textwidth]{gandalf}
+\caption[\TeX\ Benutzer]{Der Typ mit den grauen Haaren benutzt kein \LaTeX, sondern \TeX.}
+\label{fig:texuser}
+\end{figure}
+
+Alles, was also der keineswegs mi"strauische Bilbo (noch schlimmer als auf Bild \ref{43cb4f4f-3315-44a6-9f11-4d8a9710fd21}) an diesem Morgen sah, war 
 ein kleiner, alter Mann mit einem Stab, hohem, spitzem \texttt{blauen} Hut, 
 einem langen, \texttt{grauen} Mantel, mit einer silbernen Sch"arpe, "uber die 
 sein langer, silberner Bart hing, ein kleiner, alter Mann mit riesigen 
@@ -69,7 +84,7 @@ sein langer, silberner Bart hing, ein kleiner, alter Mann mit riesigen
 Abb.~\ref{fig:besuch} zu sehen.}
 \subsection{Der Zauberer Gandalf}
 %
-Der Unbekannte
+Der Unbekannte\footnote{Abbild \ref{fig:texuser} zeigt das Phantombild.}
 sprach den Hobbit an und stellte sich in folgendem Dialog
 vor:
 \begin{itemize}
@@ -113,6 +128,7 @@ gekommen war.
 Bevor Gandalf am folgenden Nachmittag erschien wurde der arme Hobbit
 von 13 ungebetenen G\"asten, es waren Zwerge, heimgesucht.
 %
+\begin{table}
 \begin{center}
 \begin{tabular}{l||l|l|l|l|l}
 Name & Bart & G"urtel & Kapuze & Instrument & Sonstiges \\\hline
@@ -131,7 +147,11 @@ Bombur & & & bla"sgr"un & Trommel & fett \\
 Thorin & & & himmelblau mit & Harfe & sehr ber"uhmt \\
  & & & silberner Sch"arpe & &
 \end{tabular}
+\caption{Diese Liste war schon seit einigen Wochen bekannt.}
+\label{602c20fc-040b-4292-aea0-d2c393222937}
 \end{center}
+
+\end{table}
 %
 \section{Gebratenes Hammelfleisch}
 [\dots]
