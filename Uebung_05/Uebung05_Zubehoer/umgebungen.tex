@@ -1,0 +1,65 @@
+%
+% Quellcode zu 'umebungen.tex'
+%
+\documentclass[a4paper]{article}
+\usepackage[ngerman]{babel}
+%
+\begin{document}
+\title{Mathematische Formelsammlung \\
+(Zur Demonstration der mathematischen Umgebungen)}
+\author{Thomas Erben, Klaus Lehnertz,Oliver Cordes}
+\maketitle
+
+%
+% Der folgende Text demonstriert die verschiedenen mathematischen Modi.
+% - $ ... $ fuer Formeln innerhalb des laufenden Textes
+% - \[ ... \] fuer vom Text abgesetzte Formeln
+% - \begin{equation} ... \end{equation} fuer vom Text abgesetzte Formeln
+%   mit fortlaufender Numerierung
+% - \begin{eqnarray} ... \end{eqnarray} fuer vom Text abgesetzte, mehrzeilige
+%   Formeln mit fortlaufender Numerierung. Die einzelnen Zeilen sehen so aus:
+%
+%   linker Formelteil 1 & = & rechter Formelteil 1 \\
+%   linker Formelteil 2 & = & rechter Formelteil 2 \nonumber \\
+%
+%   Ein '\nonumber' in einer der Zeilen heisst, dass diese Zeile nicht
+%   numeriert wird!
+\section{Die Summenformel von Gau"s}
+Die Summe der Zahlen $1\ldots n$ berechnen wir mit einer bekannten Formel
+von Gau"s mit $1+2+3+\ldots+n=\frac{n(n+1)}{2}$. Vom Text abgesetzt sieht 
+das Ganze so aus:
+%
+\[
+  1+2+3+\ldots+n=\frac{n(n+1)}{2}.
+\]
+%
+Nat"urlich k"onnen wir Gleichungen auch Nummern geben:
+%
+\begin{equation}
+  1+2+3+\ldots+n=\frac{n(n+1)}{2}.
+\end{equation}
+%
+\section{Darstellungen der {\sc Euler}schen Zahl $e$}
+Diese Gleichungen werden dann automatisch fortlaufend nummeriert, z. B. wenn wir
+die \textsc{Euler}sche Zahl $e$ mit einer unendlichen Summe berechnen:
+%
+\begin{equation}
+  e=\sum_{n=1}^{\infty}\frac{1}{n!}.
+\end{equation}
+%
+Eine andere Darstellung dieser Zahl ist:
+%
+\begin{equation}
+  e=\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^{n}.
+\end{equation}
+%
+\section{Die Binomischen Formeln}
+Die drei binomischen Formeln lauten:
+%
+\begin{eqnarray}
+  (a+b)^{2} & = & a^{2}+2ab+b^{2} \nonumber \\
+  (a-b)^{2} & = & a^{2}-2ab+b^{2}  \\
+  (a+b)(a-b) & = & a^{2}-b^{2} \nonumber
+\end{eqnarray}
+%
+\end{document}
