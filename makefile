@@ -3,3 +3,6 @@ Bericht.pdf: Bericht.tex Uebung_03/farben.sh.out Uebung_03/zahlen.sh.out Uebung_
 
 %.sh.out: %.sh
 	cd $$(dirname $<) && bash $$(basename $<) > $$(basename $@)
+
+clean:
+	$(RM) *.log *.aux *.toc Bericht.pdf *.out
