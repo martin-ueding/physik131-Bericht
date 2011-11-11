@@ -282,6 +282,7 @@ Bei den Zahlen werden die Zahlen exakt so sortiert, wie ich es erwarte. Und zwar
 Leider war die Datei \texttt{cc++.tar} zum Bearbeitungszeitpunkt nicht verfügbar. So habe ich $\unit[55]{MiB}$ HTML Dateien zum Testen benutzt.
 
 \begin{tabular}{llll}
+\label{table:compression-results}
 Programm & Option & Zeit [s] & Dateigröße [KiB] \\
 \hline
 tar + bzip2 &  & 4.29 + 11.02 & 12701 \\
@@ -577,6 +578,17 @@ Die Summenschreibweise für die $i$-te Zeile dieser Matrix ist dann:
 Siehe \url{Uebung_05/Uebung05_Zubehoer/gesellschaft_vierte.pdf}.
 
 \section{Weiteres zur Textstrukturierung}
+Anstelle die Datei \texttt{gliederung.tex} zu formatieren, habe ich Verweise in diesen Bericht eingebracht, so wie durchaus nützlich sind.
+
+Ein Anhang mit Code Listings ist auch schon vorhanden.
+
+Ein Inhaltsverzeichnis hat dieses Dokument natürlich auch.
+
+Auf der Titelseite habe ich allerdings nur einen Autor. Würde man zwei haben wollen, kann man sie mit \verb#\\# trennen, so wie überall sonst auch.
+
+\section{Berichtaufgaben}
+
+Die Linuxbefehle (§\ref{commands}) habe ich als \texttt{itemize} gehalten, was ich übersichtlicher finde. Eine Tabelle kann als Tabelle \ref{table:compression-results} auf Seite \pageref{table:compression-results} gefunden werden. Offensichtlicherweise hat diese Tabelle schon ein Label.
 
 
 
