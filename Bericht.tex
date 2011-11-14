@@ -104,7 +104,7 @@
 \dd{rmdir}{Löscht leere Verzeichnisse.}
 \dd{rm}{Löscht Dateien.}
 \dd{scp}{Kopiert über SSH.}
-\dd{tar}{Erstellt ein Archiv mehrerer Dateien. Mit \texttt{tar -xzf archiv.tar.gt datei1 datei2…} erstellt man direkt ein komprimiertes Archiv mehrerer Dateien.}
+\dd{tar}{Erstellt ein Archiv mehrerer Dateien. Mit \texttt{tar -xzf archiv.tar.gt datei1 datei2…}\cite{man-tar} erstellt man direkt ein komprimiertes Archiv mehrerer Dateien.}
 \dd{touch}{Setzt das Änderungsdatum einer Datei auf den aktuellen Zeitpunkt und erzeugt die Datei, falls sie nicht existiert.}
 \end{itemize}
 
@@ -240,7 +240,7 @@ Man kann es sich an dieser Stelle einfach machen und alle Kennzeichen rauswerfen
 
 Allerdings ist es mit den Kennzeichen nicht so ganz einfach, möchte man wirklich nur deutsche Kennzeichen haben:
 
-Es gibt deutsche und Euro-Kennzeichen, alle Neuen sind Letztere. Die alten haben noch einen Bindestrich, die neuen nicht mehr. Außerdem dürfen in den alten die Buchstaben B, F, G, I, O und Q nicht vorkommen.\footnote{\url{https://secure.wikimedia.org/wikipedia/de/wiki/Kfz-Kennzeichen_\%28Deutschland\%29}}
+Es gibt deutsche und Euro-Kennzeichen, alle Neuen sind Letztere. Die alten haben noch einen Bindestrich, die neuen nicht mehr. Außerdem dürfen in den alten die Buchstaben B, F, G, I, O und Q nicht vorkommen.\cite{wiki-kfz}
 
 Es gilt das Muster \texttt{XXX XX 0000}, in jeder Gruppe können auch weniger Zeichen sein. Allerdings dürfen es maximal 8 Zeichen sein, solange es kein Saisonkennzeichen ist.
 
@@ -586,6 +586,8 @@ Ein Inhaltsverzeichnis hat dieses Dokument natürlich auch.
 
 Auf der Titelseite habe ich allerdings nur einen Autor. Würde man zwei haben wollen, kann man sie mit \verb#\\# trennen, so wie überall sonst auch.
 
+Das Literaturverzeichnis habe ich diesem Artikel hinzugefügt.
+
 \section{Berichtaufgaben}
 
 Die Linuxbefehle (§\ref{commands}) habe ich als \texttt{itemize} gehalten, was ich übersichtlicher finde. Eine Tabelle kann als Tabelle \ref{table:compression-results} auf Seite \pageref{table:compression-results} gefunden werden. Offensichtlicherweise hat diese Tabelle schon ein Label.
@@ -619,5 +621,10 @@ Die Linuxbefehle (§\ref{commands}) habe ich als \texttt{itemize} gehalten, was 
 \lstinputlisting[caption=Ausgabe von zahlen2.sh]{Uebung_03/zahlen2.sh.out}
 
 \end{appendix}
+
+\begin{thebibliography}{n}
+\bibitem{man-tar} Manual Page von \texttt{tar}.
+\bibitem{wiki-kfz} \gqq{Kfz-Kennzeichen}, deutsche Wikipedia \url{https://secure.wikimedia.org/wikipedia/de/wiki/Kfz-Kennzeichen_\%28Deutschland\%29}
+\end{thebibliography}
 
 \end{document}
