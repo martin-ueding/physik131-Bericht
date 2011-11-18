@@ -615,6 +615,17 @@ Die Ausgabe des Programms \ref{code:hello} ist in Listing \ref{code:hello.out} z
 
 Die Optionen \texttt{-Wall und --pedantic} zeigen deutlich mehr Unstimmigkeiten im Code auf und sind damit zu empfehlen. Das im Beispiel benutzte \texttt{int a;}, das allerdings nie verwendet wird, ist meistens ein Fehler und man hat an einer anderen Stelle nicht \texttt{a}, sondern versehentlich eine andere Zahl benutzt.
 
+\section{Äthiopische Multiplikation}
+
+Das Program (Listing \ref{code:ethiopian}) habe ich aus dem Skript kopiert und entsprechend wieder mit Makefile (Listing \ref{code:ethiopian-make}) versehen. Damit es von der Makefile allerdings nicht-interaktiv kompiliert werden kann, übernehme ich die Eingabezahlen von der Kommandozeile.
+
+\lstinputlisting[caption=ethiopian.cpp, language=c++, label=code:ethiopian, float=htb]{Uebung_06/ethiopian/ethiopian.cpp}
+\lstinputlisting[caption=makefile, language=make, label=code:ethiopian-make, float=htb]{Uebung_06/ethiopian/makefile}
+
+Die Ausgabe für $14 \cdot 36$ ist in Listing \ref{code:ethiopian.out} gezeigt.
+
+\lstinputlisting[caption=Ausgabe von ethiopian, label=code:ethiopian.out, float=htb]{Uebung_06/ethiopian/ethiopian.out}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                Ende Inhalte                                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
