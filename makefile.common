@@ -1,0 +1,2 @@
+%.sh.out: %.sh
+	cd $$(dirname $<) && bash $$(basename $<) > $$(basename $@)
