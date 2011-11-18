@@ -609,7 +609,6 @@ Um das ganze zu kompilieren braucht man einen C++-Compiler, in diesem Fall ist e
 
 Ich möchte nicht immer den Compilerbefehl erneut eintippen\footnote{Wobei in Bash der letzte Compiliervorgang mit \texttt{!g++} noch recht schnell zu wiederholen ist.}, so dass ich hier eine Makefile benutze (Listing \ref{code:hello-make}) um das Programm mit einem einfachen \texttt{make} kompilieren zu können. Außerdem wird hier auch direkt die Ausgabe des Programs in eine Datei gefügt, die dann wiederum in dieses \LaTeX\ Dokument eingefügt wird.
 
-\lstinputlisting[caption=makefile, language=make, label=code:hello-make, float=htb]{Uebung_06/hello/makefile}
 
 Die Ausgabe des Programms \ref{code:hello} ist in Listing \ref{code:hello.out} zu sehen.
 
@@ -622,7 +621,6 @@ Die Optionen \texttt{-Wall und --pedantic} zeigen deutlich mehr Unstimmigkeiten 
 Das Program (Listing \ref{code:ethiopian}) habe ich aus dem Skript kopiert und entsprechend wieder mit Makefile (Listing \ref{code:ethiopian-make}) versehen. Damit es von der Makefile allerdings nicht-interaktiv kompiliert werden kann, übernehme ich die Eingabezahlen von der Kommandozeile.
 
 \lstinputlisting[caption=ethiopian.cpp, language=c++, label=code:ethiopian, float=htb]{Uebung_06/ethiopian/ethiopian.cpp}
-\lstinputlisting[caption=makefile, language=make, label=code:ethiopian-make, float=htb]{Uebung_06/ethiopian/makefile}
 
 Die Ausgabe für $14 \cdot 36$ ist in Listing \ref{code:ethiopian.out} gezeigt.
 
@@ -631,11 +629,16 @@ Die Ausgabe für $14 \cdot 36$ ist in Listing \ref{code:ethiopian.out} gezeigt.
 Möchte man nun eine Art Multiplikationstabelle von eins bis zehn erhalten, muss man zwei ineinander geschachtelte Schleifen bauen. \texttt{a} und \texttt{b} können nicht als Schleifenindizes verwendet werden, da sie vom Algorithmus verwendet werden. Entweder kapselt man den Algorithmus in eine Funktion, oder man benutzt einfach andere Variablen. Das geänderte Program ist in Listing \ref{code:ethiopian-ng} zu sehen. Die Ausgabe  ist sehr lang, daher ist an dieser Stelle nur ein Ausschnitt (Listing \ref{code:ethiopian-ng.short.out}) gezeigt, die komplette Ausgabe kann in Listing \ref{code:ethiopian-ng.out} gefunden werden.
 
 
-\lstinputlisting[caption=ethiopian.cpp, language=c++, label=code:ethiopian-ng, float=htb]{Uebung_06/ethiopian-ng/ethiopian.cpp}
-\lstinputlisting[caption=makefile, language=make, label=code:ethiopian-ng-make, float=htb]{Uebung_06/ethiopian-ng/makefile}
-\lstinputlisting[caption=Ausgabe von ethiopian (erste 15 Zeilen), label=code:ethiopian-ng.short.out, float=htb]{Uebung_06/ethiopian-ng/ethiopian.short.out}
+\lstinputlisting[caption=ethiopian-ng.cpp, language=c++, label=code:ethiopian-ng, float=htb]{Uebung_06/ethiopian-ng/ethiopian.cpp}
+
+\lstinputlisting[caption=Ausgabe von ethiopian-ng (erste 15 Zeilen), label=code:ethiopian-ng.short.out, float=htb]{Uebung_06/ethiopian-ng/ethiopian.short.out}
 
 Möchte man alle Multiplikationen haben, lässt man die Indizes von 1 bis 10 laufen. Um kommutativ äquivalente Rechunungen zu unterdrücken, lässt man den inneren Index beim äußeren Index starten.
+
+\section{Heron}
+
+\lstinputlisting[caption=heron.cpp, language=c++, label=code:ethiopian-ng, float=htb]{Uebung_06/heron/heron.cpp}
+\lstinputlisting[caption=Ausgabe von heron, label=code:heron.out, float=htb]{Uebung_06/heron/heron.out}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                Ende Inhalte                                 %
@@ -663,6 +666,12 @@ Möchte man alle Multiplikationen haben, lässt man die Indizes von 1 bis 10 lau
 
 \section{Ausgabe von \texttt{ethiopian}}
 \lstinputlisting[caption=Ausgabe von ethiopian, label=code:ethiopian-ng.out]{Uebung_06/ethiopian-ng/ethiopian.out}
+
+\section{Makefiles}
+\lstinputlisting[caption=makefile, language=make, label=code:hello-make, float=htb]{Uebung_06/hello/makefile}
+\lstinputlisting[caption=makefile zu ethiopian, language=make, label=code:ethiopian-make, float=htb]{Uebung_06/ethiopian/makefile}
+\lstinputlisting[caption=makefile zu ethiopian-ng, language=make, label=code:ethiopian-ng-make, float=htb]{Uebung_06/ethiopian-ng/makefile}
+\lstinputlisting[caption=makefile zu heron, language=make, label=code:ethiopian-ng-make, float=htb]{Uebung_06/heron/makefile}
 
 \end{appendix}
 
