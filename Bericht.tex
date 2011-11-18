@@ -80,9 +80,9 @@
 \begin{itemize}
 \dd{chmod}{Ändert Dateirechte.}
 \dd{hostname}{Rechnername.}
-\dd{last}{Letzte logins aller Benutzer.}
+\dd{last}{Letzte Anmeldungen aller Benutzer.}
 \dd{ps}{Prozessliste.}
-\dd{top}{Vorgänger von \texttt{htop}, ein Taskmanager.}
+\dd{top}{Vorgänger von \texttt{htop}, eine interaktive Prozessverwaltung.}
 \dd{uname}{Kernelversion, Rechnername, ...}
 \dd{uptime}{Zeigt, wie viele Nächte der Rechner am Stück durchgemacht hat.}
 \dd{whoami}{Eigener Benutzername.}
@@ -92,15 +92,15 @@
 \subsection{Dateibehandlung}
 \begin{itemize}
 \dd{bzip2}{Komprimiert eine Datei.}
-\dd{cd}{Wechselt in das angegebene Verzeichnis. Dabei ist \texttt{..} das übergeordnete Verzeichnis. Wird als Verzeichnis \texttt{-} angegeben, kommt man in das vorherige Verzeichnis. \texttt{cd} ohne Verzeichnis wechselt in das Heimatverzeichnis\footnote{Meistens \texttt{/home/<benutzername>}.}}
+\dd{cd}{Wechselt in das angegebene Verzeichnis. Dabei ist \texttt{..} das übergeordnete Verzeichnis. Wird als Verzeichnis \texttt{-} angegeben, kommt man in das vorherige Verzeichnis. \texttt{cd} ohne Verzeichnis wechselt in das Heimatverzeichnis\footnote{Meistens \texttt{/home/<benutzername>}.}.}
 \dd{cp}{Kopiert Dateien.}
 \dd{df}{Listet die Dateisysteme mit Belegungsangabe.}
 \dd{du}{Zeigt die Größe von Dateien auf dem Datenträger an. Diese muss nicht unbedingt mit der Größe überstimmen, die \texttt{ls} anzeigt, da die Dateien in Blöcken organisiert sind.}
 \dd{find}{Führt eine Dateisystemtraverse nach speziellen Suchvorgaben durch und zeigt standardmäßig alle Dateien und Ordner an.}
 \dd{gzip}{Komprimiert eine Datei.}
-\dd{ls}{Listet den Inhalt des angegebenen oder aktuellen Verzeichnises auf. Dabei werden auch Informationen über Zugriffsrechte und Eigentümer, Größe und Änderungsdatum angezeigt, gibt man \texttt{-l} an.}
+\dd{ls}{Listet den Inhalt des angegebenen oder aktuellen Verzeichnisses auf. Dabei werden auch Informationen über Zugriffsrechte und Eigentümer, Größe und Änderungsdatum angezeigt, gibt man \texttt{-l} an.}
 \dd{mkdir}{Erstellt ein Verzeichnis.}
-\dd{mv}{Verschiebt Dateien, Umbennen ist ein Spezialfall.}
+\dd{mv}{Verschiebt Dateien, Umbenennen ist ein Spezialfall.}
 \dd{rmdir}{Löscht leere Verzeichnisse.}
 \dd{rm}{Löscht Dateien.}
 \dd{scp}{Kopiert über SSH.}
@@ -111,8 +111,8 @@
 \subsection{Informationen zu Programmen}
 \begin{itemize}
 \dd{apropos}{Unscharfe Suche nach Befehlen.}
-\dd{man}{Zeigt man pages an.}
-\dd{whatis}{Zeigt die erste Zeile der man page an.}
+\dd{man}{Zeigt Handbücher zu Programmen an.}
+\dd{whatis}{Zeigt die erste Zeile des Handbuchs an.}
 \end{itemize}
 
 \subsection{Textdateien}
@@ -159,6 +159,8 @@ Gemeinerweise können absolute Pfade auch \texttt{..} enthalten, so wäre \\
 
 \section{grundlegende Emacs Steuerung}
 
+\begin{table}[htb]
+\begin{center}
 \begin{tabular}{ll}
 Aktion & Tasten \\
 \hline
@@ -172,6 +174,9 @@ Hilfe aufrufen & C-h t \\
 Seite rauf & M-v \\
 Seite runter & C-v \\
 \end{tabular}
+\end{center}
+\caption{Grundlegende Emacs Tastenkombinationen.}
+\end{table}
 
 \chapter{Übung 2}
 
@@ -179,15 +184,15 @@ Neue Befehle sind in §\ref{commands} mit den Befehlen aus vorherigen Übungen z
 
 \section{Das Unix-Hilfe-System -- der \texttt{man} Befehl}
 
-Generell sollte jedes Programm eine man page haben, die genauso wie das Programm selbst heißt. So kann man mit \texttt{man programm} diese Seite aufrufen.
+Generell sollte jedes Programm eine Handbuchseite haben, die genauso wie das Programm selbst heißt. So kann man mit \texttt{man Programm} diese Seite aufrufen.
 
-Bash Builtins haben keine solche Hilfeseite, sie werden mit \texttt{help command} dokumentiert, oder können in \texttt{bash.1} nachgeschaut werden.
+Bash Builtins haben keine solche Hilfeseite, sie werden mit \texttt{help Kommando} dokumentiert, oder können in \texttt{bash.1} nachgeschaut werden.
 
 Darüber hinaus gibt es noch die info Dokumente.
 
-Meistens haben Programme auch noch eine eigene Hilfe dabei, die mit \texttt{programm -h} oder \texttt{programm --help} aufgerufen werden kann.
+Meistens haben Programme auch noch eine eigene Hilfe dabei, die mit \texttt{Programm -h} oder \texttt{Programm --help} aufgerufen werden kann.
 
-\section{Datums und Kalenderangaben}
+\section{Datums- und Kalenderangaben}
 
 \section{Bash Variablen}
 
@@ -207,17 +212,18 @@ Auch hier muss man sein Arbeitsverzeichnis für die relativen Pfade im Kopf habe
 
 \section{Wildcards}
 
-Die Dateien lassen sich recht einfach erstellen:
-\begin{lstlisting}[caption=Anlegen der Dateien]
+Die Dateien lassen sich recht einfach mit dem Code aus Listing \ref{code:touch} erstellen. Dabei werden die geschweiften Klammern benutzt, um mehrere Dateien, die Namensbestandteile gemeinsam haben, zu erzeugen.
+
+\begin{lstlisting}[caption=Anlegen der Dateien, language=bash, label=code:touch, float=htb]
 touch datei{1..9}.txt logfile{10,10a,11,11a,11b}.txt
 \end{lstlisting}
 
-Listing \ref{code:ls} zeigt, wie man diese Dateien ausgeben kann.
+Listing \ref{code:ls} zeigt, wie man diese Dateien ausgeben (Ausgabe in Listing \ref{code:ls.out}) kann.
 
 \lstinputlisting[caption=ls.sh, language=bash, label=code:ls, float=htb]{Uebung_02/wildcards/ls.sh}
 \lstinputlisting[caption=Ausgabe von ls.sh, label=code:ls.out, float=htb]{Uebung_02/wildcards/ls.sh.out}
 
-Ich habe hier \texttt{echo} anstelle von \texttt{ls} benutzt, da die Wildcards so oder so von der Bash und nicht vom Befehl aufgelöst werden und \texttt{ls} jede Datei auf eine eigene Zeile schreibt, sofern STOUT kein Terminal ist. Dies spart ein klein wenig Platz und erzeugt letztlich die gleiche Ausgabe.
+Ich habe hier \texttt{echo} anstelle von \texttt{ls} benutzt, da die Wildcards so oder so von der Bash und nicht vom Befehl aufgelöst werden und \texttt{ls} jede Datei auf eine eigene Zeile schreibt, sofern \texttt{STDOUT} kein Terminal ist. Dies spart ein klein wenig Platz und erzeugt letztlich die gleiche Ausgabe.
 
 \section{Umgang mit Rechten unter Unix}
 
@@ -237,15 +243,15 @@ Siehe §\ref{commands}.
 
 Man kann es sich an dieser Stelle einfach machen und alle Kennzeichen rauswerfen, die mit einer Ziffer beginnen und es bleiben dann nur noch deutsche Kennzeichen übrig. Der Ansatz (Listing \ref{code:auto-einfach}) ist nicht nennenswert robust, erfüllt aber in der kleinen Eingabemenge seinen Zweck (Ausgabe in Listing \ref{code:auto-einfach.out}).
 
-\lstinputlisting[caption=auto\_einfach.sh, label=listing:auto-einfach, language=bash, float=htb]{Uebung_03/auto_einfach.sh}
+\lstinputlisting[caption=auto\_einfach.sh, label=code:auto-einfach, language=bash, float=htb]{Uebung_03/auto_einfach.sh}
 
-\lstinputlisting[caption=Ausgabe von auto\_einfach.sh, label=listing:auto-einfach.out, float=htb]{Uebung_03/auto_einfach.sh.out}
+\lstinputlisting[caption=Ausgabe von auto\_einfach.sh, label=code:auto-einfach.out, float=htb]{Uebung_03/auto_einfach.sh.out}
 
 Allerdings ist es mit den Kennzeichen nicht so ganz einfach, möchte man wirklich nur deutsche Kennzeichen haben. Es gibt deutsche und Euro-Kennzeichen, alle Neuen sind Letztere. Die alten haben noch einen Bindestrich, die neuen nicht mehr. Außerdem dürfen in den alten die Buchstaben B, F, G, I, O und Q nicht vorkommen.\cite{wiki-kfz}
 
 Es gilt das Muster \texttt{XXX XX 0000}, in jeder Gruppe können auch weniger Zeichen sein. Allerdings dürfen es maximal 8 Zeichen sein, solange es kein Saisonkennzeichen ist.
 
-Das führt dazu, dass man im Regex nicht einfach 3, 2 und 4 Zeichen suche lassen kann, ansonsten würden Zeichenketten zugelassen, die 9 Zeichen lang sind. Somit muss man eine Fallunterscheidung benutzten. Darüber hinaus dürfen bei einem alten Kennzeichen -- erkennbar an dem Bindestrich -- einige Buchstaben im mittleren Feld nicht auftauchen. Der komplexe Regex ist in Listing \ref{code:auto} gezeigt.
+Das führt dazu, dass man im regulären Ausdruck (RegEx) nicht einfach 3, 2 und 4 Zeichen suche lassen kann, ansonsten würden Zeichenketten zugelassen, die 9 Zeichen lang sind. Somit muss man eine Fallunterscheidung benutzten. Darüber hinaus dürfen bei einem alten Kennzeichen -- erkennbar an dem Bindestrich -- einige Buchstaben im mittleren Feld nicht auftauchen. Der komplexe reguläre Ausdruck ist in Listing \ref{code:auto} gezeigt.
 
 \lstinputlisting[caption=auto.sh, language=bash, label=code:auto, float=htb]{Uebung_03/auto.sh}
 
@@ -253,7 +259,7 @@ Das führt dazu, dass man im Regex nicht einfach 3, 2 und 4 Zeichen suche lassen
 
 Man sieht, dass die gleiche Liste (Listing \ref{code:auto.out}) erzeugt wird, jedoch fällt das zweite Skript nicht auf diverse Gemeinheiten (Listing \ref{code:gemeinheiten}) rein, die man sich ausdenken könnte.
 
-\begin{lstlisting}[caption=Gemeinheiten für Listing \ref{listing:auto-einfach}, label=code:gemeinheiten, float=htb]
+\begin{lstlisting}[caption=Gemeinheiten für Listing \ref{code:auto-einfach}, label=code:gemeinheiten, float=htb]
 zKeinKennzeichen
 NDH ND 2000
  1234 DC 75
@@ -262,11 +268,11 @@ NDH ND 2000
 
 \section{Pipelines}
 \subsection{Namen}
-\lstinputlisting[caption=namen.dat, float=htb]{Uebung_03/namen.dat}
+\lstinputlisting[caption=namen.dat, float=htb, label=code:namen.dat]{Uebung_03/namen.dat}
 
 Es ist recht sinnfrei \texttt{cat} zu benutzen, um den Inhalt zu in \texttt{sort} zu bekommen, da \texttt{sort} die Datei auch selbst laden kann.
 
-Mit dem entsprechenden Befehl (Listing \ref{code:namen}) bekommt man die gewünschte Ausgabe (Listing \ref{code:namen.out}).
+Mit dem entsprechenden Befehl (Listing \ref{code:namen}) bekommt man die gewünschte sortierte und gefiltere Ausgabe (Listing \ref{code:namen.out}) der Originaldatei (Listing \ref{code:namen.dat}).
 
 \lstinputlisting[caption=namen.sh, language=bash, float=htb, label=code:namen]{Uebung_03/namen.sh}
 \lstinputlisting[caption=Ausgabe von namen.sh, float=htb, label=code:namen.out]{Uebung_03/namen.sh.out}
@@ -275,19 +281,19 @@ Mit dem entsprechenden Befehl (Listing \ref{code:namen}) bekommt man die gewüns
 
 \lstinputlisting[caption=zahlen.dat, float=htb, label=code:zahlen.dat]{Uebung_03/zahlen.dat}
 
-Bei den Zahlen werden die Zahlen (Eingabedatei in Listing \ref{code:zahlen.dat}) exakt so sortiert, wie ich es erwarte. Und zwar nach ASCII Code Point. Es ist unnatürlich, dass eine 2 vor einer 1 steht, weil \textit{nach} der 1 eine weitere Zahl folgt. Da die Zahlen in der Datei allerdings ohne führende Nullen stehen, muss man die Zahl zuerst interpretieren, damit sie nach Zahlenwert sortiert werden kann. Dafür ist das \texttt{-n} Flag da. Der komplette Befehl ist in \ref{code:zahlen-sort} gezeigt. Die Ausgabe (Listing \ref{zahlen-sort.out}) ist wirklich nach Zahlenwert sortiert.
+Bei den Zahlen werden die Zahlen (Eingabedatei in Listing \ref{code:zahlen.dat}) exakt so sortiert, wie ich es erwarte. Und zwar nach ASCII Code Point. Es ist unnatürlich, dass eine 2 vor einer 1 steht, weil \textit{nach} der 1 eine weitere Zahl folgt. Da die Zahlen in der Datei allerdings ohne führende Nullen stehen, muss man die Zahl zuerst interpretieren, damit sie nach Zahlenwert sortiert werden kann. Dafür ist das \texttt{-n} Flag da. Der komplette Befehl ist in \ref{code:zahlen-sort} gezeigt. Die Ausgabe (Listing \ref{code:zahlen-sort.out}) ist wirklich nach Zahlenwert sortiert.
 
-\lstinputlisting[caption=zahlen-sort.sh, float=htb, label=zahlen-sort]{Uebung_03/zahlen-sort.sh}
-\lstinputlisting[caption=Ausgabe von zahlen-sort.sh, float=htb, label=zahlen-sort.out]{Uebung_03/zahlen-sort.sh.out}
+\lstinputlisting[caption=zahlen-sort.sh, float=htb, label=code:zahlen-sort]{Uebung_03/zahlen-sort.sh}
+\lstinputlisting[caption=Ausgabe von zahlen-sort.sh, float=htb, label=code:zahlen-sort.out]{Uebung_03/zahlen-sort.sh.out}
 
 \section{Komprimierung und Archivierung}
 
 Leider war die Datei \texttt{cc++.tar} zum Bearbeitungszeitpunkt nicht verfügbar. So habe ich $\unit[55]{MiB}$ HTML Dateien zum Testen benutzt.
 
-\begin{table}[htbp]
-\label{table:compression-results}
+\begin{table}[h!]
 \begin{center}
 \begin{tabular}{llll}
+\label{table:compression-results}
 Programm & Option & Zeit [s] & Dateigröße [KiB] \\
 \hline
 tar + bzip2 &  & 4.29 + 11.02 & 12701 \\
@@ -302,9 +308,9 @@ zip &  & 2.29 & 16694\\
 \caption{Zeiten und Dateigrößen verschiedener Kompressionsprogramme}
 \end{table}
 
-Man sieht an den Daten (Tabelle \ref{table:compression-results}), dass bzip2 etwas besser komprimiert, allerdings deutlich länger braucht. Zip ist am schnellsten, schafft allerdings auch am wenigsten Kompression.
+Man sieht an den Daten in Tabelle \ref{table:compression-results}, dass bzip2 etwas besser komprimiert, allerdings deutlich länger braucht. Zip ist am schnellsten, schafft allerdings auch am wenigsten Kompression.
 
-Zip komprimiert lede Datei einzeln und kann so Passagen, die in mehreren Dateien vorkommen, nicht effizient komprimieren. Jedoch können einzelne Dateien aus dem Archiv genommen werden, bei einem komprimierten tar muss erst alles expandiert werden, damit eine einzelne Datei entnommen werden kann.
+Zip komprimiert jede Datei einzeln und kann so Passagen, die in mehreren Dateien vorkommen, nicht effizient komprimieren. Jedoch können einzelne Dateien aus dem Archiv genommen werden, bei einem komprimierten tar muss erst alles expandiert werden, damit eine einzelne Datei entnommen werden kann.
 
 Das Skript, das die Zeiten misst, kann in §\ref{listing:compression} gefunden werden.
 
@@ -313,7 +319,7 @@ Das Skript, das die Zeiten misst, kann in §\ref{listing:compression} gefunden w
 
 Die Dateien auf den zwei verschiedenen Rechnern, die allerdings ihr Heimatverzeichnis teilen, ist fast gleich, bis auf die Datei, die auf dem anderen Rechner schon erstellt worden ist.
 
-Kopiert man die Dateien auf einen Rechner\footnote{Der \texttt{scp} Befehl für Astro nach Physik, der auf dem Übungsblatt angegeben ist funktioniert nicht, weil ein Leerzeichen zwischen dem Doppelpunkt und der Tilde ist.}, kann man sie mit \texttt{diff -u} vergleichen. (Ausgabe in Listing \ref{code:diff}.)
+Kopiert man die Dateien auf einen Rechner, kann man sie mit \texttt{diff -u} vergleichen. Die Unterschiede sind Listing \ref{code:diff} gezeigt.
 
 \begin{lstlisting}[caption=Unterschied zwischen Ordnerinhalten, float=htb, label=code:diff]
 --- ls-lR.host1 2011-10-30 14:43:46.031286114 +0100
@@ -327,7 +333,7 @@ Kopiert man die Dateien auf einen Rechner\footnote{Der \texttt{scp} Befehl für 
 +-rw-r--r-- 1 ueding studis      0 30. Okt 2011  ls-lR.host2
 \end{lstlisting}
 
-Die Datei, in die die Ausgabe umgeleitet wrid, wird zwar direkt angelegt, weil bash sie öffnet, allerdings hat sie noch keine Größe. Erst nach dem Durchlauf ist die Datei komplett da. Zwischen Physik und Astro CIP-Pool sind natürlich alle Dateien anders, weil es komplett verschiedene Ordner sind. Nur Dateien wie meine \texttt{.bashrc} sind beispielsweise auf beiden Seiten vorhanden und haben die gleiche Größe, jedoch unterscheidet sich das Änderungsdatum.
+Die Datei, in die die Ausgabe umgeleitet wird, wird zwar direkt angelegt, weil bash sie öffnet, allerdings hat sie noch keine Größe. Erst nach dem Durchlauf ist die Datei komplett da. Zwischen Physik und Astro CIP-Pool sind natürlich alle Dateien anders, weil es komplett verschiedene Ordner sind. Nur Dateien wie meine \texttt{.bashrc} sind beispielsweise auf beiden Seiten vorhanden und haben die gleiche Größe, jedoch unterscheidet sich das Änderungsdatum.
 
 \section{Shell - Skript}
 
@@ -340,7 +346,7 @@ Für die Farben kann man eine einfache \texttt{for}-Schleife benutzen, wie in Li
 
 \subsection{Zahlen}
 
-Für die Zahlen kann man entweder \texttt{{1..3}}\footnote{Ein Beispiel für die \texttt{{1..3}} finden Sie in §\ref{listing:zahlen2}} benutzen, oder eine C-artige for-Schleife benutzen (Listing \ref{code:zahlen}, Ausgabe in Listing \ref{code:zahlen.out}). Die Syntax, die auf dem Übungszettel steht, gibt es nicht, ich weiß nicht, wie Sie die Ausgabe damit erzeugt haben.
+Für die Zahlen kann man entweder \texttt{{1..3}} benutzen\footnote{Ein Beispiel für die \texttt{{1..3}} finden Sie in §\ref{listing:zahlen2}}, oder eine C-artige for-Schleife benutzen (Listing \ref{code:zahlen}, Ausgabe in Listing \ref{code:zahlen.out}). Die Syntax, die auf dem Übungszettel steht, gibt es nicht, ich weiß nicht, wie Sie die Ausgabe auf dem Übungszettel damit erzeugt haben.
 
 \lstinputlisting[caption=zahlen.sh, language=bash, label=code:zahlen, float=htb]{Uebung_03/zahlen.sh}
 \lstinputlisting[caption=Ausgabe von zahlen.sh, label=code:zahlen.out, float=htb]{Uebung_03/zahlen.sh.out}
@@ -355,17 +361,19 @@ Soll von 2 bis 20 gezählt werden und der Vorname ausgegeben werden, wenn der Z�
 Der Befehl \verb#find /uebung_03 -type f -exec du -k {} \;| sort -n -r#\ iteriert durch das Verzeichnis \verb#uebung_03# und dessen Unterverzeichnisse, sucht Einträge heraus, die Dateien sind (und keine Ordner, Links, Fifos, …). Auf jede dieser Dateien wird der Befehl \texttt{du -k} ausgeführt. Man erhält eine Liste mit Dateigrößen in kiB. Diese Liste wird dann numerisch und rückwärts sortiert, also die größten Dateien nach vorne.
 
 \subsection{Teilaufgabe a}
-In dieser Aufgabe ist wahrscheinlich ein \verb#ps aux | grep ueding# gefragt. Dies ist allerdings gefährlich, falls jemand anderes ein Programm ausführt, das meinen Namen im Namen hat, oder jemand anders so heißt wie ich, nur mit einer 2 dahinter. Daher wäre es mit einer genauen Suche nach der Position in der Zeile etwas sicherer (Listing \ref{code:psauxgrep-beginning}). Allerdings kann man auch einfach das \texttt{a} weglassen und erhält direkt eine Liste mit seinen eigenen Prozessen.
+In dieser Aufgabe ist wahrscheinlich ein \verb#ps aux | grep ueding# gefragt. Dies ist allerdings gefährlich, falls jemand anderes ein Programm ausführt, das meinen Namen im Namen hat, oder jemand anders so heißt wie ich, nur mit einer 2 dahinter. Außerdem wird \texttt{grep} auch sich selbst in der Ausgabe von \texttt{ps} finden, weil mein Name auch Teil des Kommandos ist und somit dieser wieder in der Prozessliste auftaucht. Daher wäre es mit einer genauen Suche nach der Position in der Zeile etwas sicherer (Listing \ref{code:psauxgrep-beginning}). So hätte man beide Probleme aus dem Weg.
+
+Allerdings kann man auch einfach das \texttt{a} weglassen und erhält direkt eine Liste mit seinen eigenen Prozessen und vermeidet an dieser Stelle die Benutzung von \texttt{grep} komplett.
 
 \begin{lstlisting}[caption=Einschänkung des Suchbereichs, float=htb, label=code:psauxgrep-beginning]
-ps aux | grep '^ueding\ s '
+ps aux | grep '^ueding '
 \end{lstlisting}
 
 \subsection{Teilaufgabe b}
 Für das Sortieren hat \texttt{ps} auch eine entsprechende Option: \texttt{O+p}. So lässt sich mit \texttt{ps ux O+p} direkt nach Prozess-ID sortieren.
 
 \subsection{Teilaufgabe c}
-Mit \verb#ps ux O+p > myprocesses.txt# lässt sich die entsprechnde Datei (Listing \ref{code:myprocesses}) erzeugen.
+Mit \verb#ps ux O+p > myprocesses.txt# lässt sich die entsprechende Datei (Listing \ref{code:myprocesses}) erzeugen.
 
 \lstinputlisting[caption=myprocesses.txt, label=code:myprocesses, float=htb]{Uebung_03/myprocesses.txt} 
 
@@ -380,7 +388,7 @@ ps aux | grep ueding | sort -n > myprocesses.txt
 
 \chapter{Übung 4}
 
-\textbf{Faust - Der Tragodie erster Teil, Johann Wolfgang von Goethe}
+\textbf{Faust - Der Tragödie erster Teil, Johann Wolfgang von Goethe}
 
 Quelle: \url{http://de.wikisource.org/}
 
@@ -454,7 +462,7 @@ a^2 + b^2 = c^2
 4x^2 + 2xv + v^2 = (2x + v)^2 - 2xv
 \end{equation}
 
-\paragraph{Zweites Beispiel (Gleichung uber mehrere Zeilen)}
+\paragraph{Zweites Beispiel (Gleichung über mehrere Zeilen)}
 \begin{eqnarray}
 (2x + 1)(2x - 1) &=& 7 \nonumber \\
 4x^2 - 1 &=& 7 \nonumber \\
@@ -471,7 +479,7 @@ x &=& \pm 2
 \frac{1-x^4}{(x^3)^2}-\left(\frac{1}{x}\right)^2=\frac{1-2x^4}{x^6}
 \end{equation}
 
-\paragraph{Fünftes Beispiel (Mathe im Fliesstext )}
+\paragraph{Fünftes Beispiel (Mathe im Fließtext )}
 \begin{equation}
 m=\frac{v^2r}{G}
 \end{equation}
@@ -609,7 +617,7 @@ Dies ist das einfache \gqq{Hello, World!}-Programm (Listing \ref{code:hello}), d
 
 Um das ganze zu kompilieren braucht man einen C++-Compiler, in diesem Fall ist es \texttt{g++}. Man kann aber genauso gut \texttt{MSVC++} benutzen.
 
-Ich möchte nicht immer den Compilerbefehl erneut eintippen\footnote{Wobei in Bash der letzte Compiliervorgang mit \texttt{!g++} noch recht schnell zu wiederholen ist.}, so dass ich hier eine Makefile benutze (Listing \ref{code:hello-make}) um das Programm mit einem einfachen \texttt{make} kompilieren zu können. Außerdem wird hier auch direkt die Ausgabe des Programs in eine Datei gefügt, die dann wiederum in dieses \LaTeX\ Dokument eingefügt wird.
+Ich möchte nicht immer den Compilerbefehl erneut eintippen\footnote{Wobei in Bash der letzte Kompiliervorgang mit \texttt{!g++} noch recht schnell zu wiederholen ist.}, so dass ich hier eine Makefile benutze (Listing \ref{code:hello-make}) um das Programm mit einem einfachen \texttt{make} kompilieren zu können. Außerdem wird hier auch direkt die Ausgabe des Programms in eine Datei gefügt, die dann wiederum in dieses \LaTeX\ Dokument eingefügt wird.
 
 
 Die Ausgabe des Programms \ref{code:hello} ist in Listing \ref{code:hello.out} zu sehen.
@@ -628,14 +636,14 @@ Die Ausgabe für $14 \cdot 36$ ist in Listing \ref{code:ethiopian.out} gezeigt.
 
 \lstinputlisting[caption=Ausgabe von ethiopian, label=code:ethiopian.out, float=htb]{Uebung_06/ethiopian/ethiopian.out}
 
-Möchte man nun eine Art Multiplikationstabelle von eins bis zehn erhalten, muss man zwei ineinander geschachtelte Schleifen bauen. \texttt{a} und \texttt{b} können nicht als Schleifenindizes verwendet werden, da sie vom Algorithmus verwendet werden. Entweder kapselt man den Algorithmus in eine Funktion, oder man benutzt einfach andere Variablen. Das geänderte Program ist in Listing \ref{code:ethiopian-ng} zu sehen. Die Ausgabe  ist sehr lang, daher ist an dieser Stelle nur ein Ausschnitt (Listing \ref{code:ethiopian-ng.short.out}) gezeigt, die komplette Ausgabe kann in Listing \ref{code:ethiopian-ng.out} gefunden werden.
+Möchte man nun eine Art Multiplikationstabelle von eins bis zehn erhalten, muss man zwei ineinander geschachtelte Schleifen bauen. \texttt{a} und \texttt{b} können nicht als Schleifenindizes verwendet werden, da sie vom Algorithmus verwendet werden. Entweder kapselt man den Algorithmus in eine Funktion, oder man benutzt einfach andere Variablen. Das geänderte Programm ist in Listing \ref{code:ethiopian-ng} zu sehen. Die Ausgabe  ist sehr lang, daher ist an dieser Stelle nur ein Ausschnitt (Listing \ref{code:ethiopian-ng.short.out}) gezeigt, die komplette Ausgabe kann in Listing \ref{code:ethiopian-ng.out} gefunden werden.
 
 
 \lstinputlisting[caption=ethiopian-ng.cpp, language=c++, label=code:ethiopian-ng, float=htb]{Uebung_06/ethiopian-ng/ethiopian.cpp}
 
 \lstinputlisting[caption=Ausgabe von ethiopian-ng (erste 15 Zeilen), label=code:ethiopian-ng.short.out, float=htb]{Uebung_06/ethiopian-ng/ethiopian.short.out}
 
-Möchte man alle Multiplikationen haben, lässt man die Indizes von 1 bis 10 laufen. Um kommutativ äquivalente Rechunungen zu unterdrücken, lässt man den inneren Index beim äußeren Index starten.
+Möchte man alle Multiplikationen haben, lässt man die Indizes von 1 bis 10 laufen. Um kommutativ äquivalente Rechnungen zu unterdrücken, lässt man den inneren Index beim äußeren Index starten.
 
 \section{Heron}
 
@@ -701,4 +709,4 @@ Ich lasse $\sqrt{2} \approx 1.41421356237309504880168872421$\footnote{Mit \textt
 
 
 
-\end{document}
+end{document}
