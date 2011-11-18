@@ -637,6 +637,14 @@ Möchte man alle Multiplikationen haben, lässt man die Indizes von 1 bis 10 lau
 
 \section{Heron}
 
+Der Algorithmus ist recht einfach umzusetzen, man benötigt die Formel, die auf dem Übungsblatt angegeben ist.
+
+\begin{equation}
+x_{n+1}=\frac{x_n+a/x_n}{2}
+\end{equation}
+
+Dabei ist $a$ die Zahl, von der die Wurzel bestimmt werden soll. Diese Formel braucht noch ein $x_0$, damit sie funktioniert. Hier kann man einfach 
+
 \lstinputlisting[caption=heron.cpp, language=c++, label=code:ethiopian-ng, float=htb]{Uebung_06/heron/heron.cpp}
 \lstinputlisting[caption=Ausgabe von heron, label=code:heron.out, float=htb]{Uebung_06/heron/heron.out}
 
@@ -668,7 +676,7 @@ Möchte man alle Multiplikationen haben, lässt man die Indizes von 1 bis 10 lau
 \lstinputlisting[caption=Ausgabe von ethiopian, label=code:ethiopian-ng.out]{Uebung_06/ethiopian-ng/ethiopian.out}
 
 \section{Makefiles}
-\lstinputlisting[caption=makefile, language=make, label=code:hello-make, float=htb]{Uebung_06/hello/makefile}
+\lstinputlisting[caption=makefile zu hello, language=make, label=code:hello-make, float=htb]{Uebung_06/hello/makefile}
 \lstinputlisting[caption=makefile zu ethiopian, language=make, label=code:ethiopian-make, float=htb]{Uebung_06/ethiopian/makefile}
 \lstinputlisting[caption=makefile zu ethiopian-ng, language=make, label=code:ethiopian-ng-make, float=htb]{Uebung_06/ethiopian-ng/makefile}
 \lstinputlisting[caption=makefile zu heron, language=make, label=code:ethiopian-ng-make, float=htb]{Uebung_06/heron/makefile}
