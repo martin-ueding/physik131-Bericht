@@ -29,7 +29,7 @@ int main(int argc, char **argv) {
 	previous = -1 - smallest_change;
 	current = input;
 
-	while (fabs(current - previous) > smallest_change) {
+	while (fabs(current - previous) > smallest_change * input) {
 		previous = current;
 		current = iterate(current, input);
 	}
