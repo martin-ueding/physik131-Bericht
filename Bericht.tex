@@ -626,6 +626,13 @@ Die Ausgabe für $14 \cdot 36$ ist in Listing \ref{code:ethiopian.out} gezeigt.
 
 \lstinputlisting[caption=Ausgabe von ethiopian, label=code:ethiopian.out, float=htb]{Uebung_06/ethiopian/ethiopian.out}
 
+Möchte man nun eine Art Multiplikationstabelle von eins bis zehn erhalten, muss man zwei ineinander geschachtelte Schleifen bauen. \texttt{a} und \texttt{b} können nicht als Schleifenindizes verwendet werden, da sie vom Algorithmus verwendet werden. Entweder kapselt man den Algorithmus in eine Funktion, oder man benutzt einfach andere Variablen. Das geänderte Program ist in Listing \ref{code:ethiopian-ng} zu sehen. Die Ausgabe  ist sehr lang, daher ist an dieser Stelle nur ein Ausschnitt (Listing \ref{code:ethiopian-ng.short.out}) gezeigt, die komplette Ausgabe kann in Listing \ref{code:ethiopian-ng.out} gefunden werden.
+
+
+\lstinputlisting[caption=ethiopian.cpp, language=c++, label=code:ethiopian-ng, float=htb]{Uebung_06/ethiopian-ng/ethiopian.cpp}
+\lstinputlisting[caption=makefile, language=make, label=code:ethiopian-ng-make, float=htb]{Uebung_06/ethiopian-ng/makefile}
+\lstinputlisting[caption=Ausgabe von ethiopian (erste 15 Zeilen), label=code:ethiopian-ng.short.out, float=htb]{Uebung_06/ethiopian-ng/ethiopian.short.out}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                Ende Inhalte                                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -651,6 +658,9 @@ Die Ausgabe für $14 \cdot 36$ ist in Listing \ref{code:ethiopian.out} gezeigt.
 \lstinputlisting[caption=zahlen2.sh]{Uebung_03/zahlen2.sh}
  
 \lstinputlisting[caption=Ausgabe von zahlen2.sh]{Uebung_03/zahlen2.sh.out}
+
+\section{Ausgabe von \texttt{ethiopian}}
+\lstinputlisting[caption=Ausgabe von ethiopian, label=code:ethiopian-ng.short.out]{Uebung_06/ethiopian-ng/ethiopian.out}
 
 \end{appendix}
 
