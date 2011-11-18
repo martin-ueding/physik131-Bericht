@@ -645,9 +645,14 @@ x_{n+1}=\frac{x_n+a/x_n}{2}
 
 Dabei ist $a$ die Zahl, von der die Wurzel bestimmt werden soll. Diese Formel braucht noch ein $x_0$, damit sie funktioniert. Hier kann man einfach jede beliebige Zahl benutzen. Allerdings ist $x_0=a$ keine allzu schlechte Wahl.
 
-Eine Abbruchbedingung kann verschieden aussehen. Man kann nach einer gewissen Anzahl von Iterationen abbrechen. Ich habe mich dafür entschieden, abzubrechen, sobald sich die Zahl nur noch wenig verändert.
+Eine Abbruchbedingung kann verschieden aussehen. Man kann nach einer gewissen Anzahl von Iterationen abbrechen. Ich habe mich dafür entschieden, abzubrechen, sobald sich die Zahl nur noch wenig verändert. Dazu muss man sich merken, welchen Wert die Zahl vorher hatte, um vergleichen zu können.
 
-\lstinputlisting[caption=heron.cpp, language=c++, label=code:ethiopian-ng, float=htb]{Uebung_06/heron/heron.cpp}
+Das ganze Programm könnte man rekursiv implementieren, allerdings spricht hier nichts gegen eine iterative Variante, daher habe ich mich für letzteres entschieden. Mein Programm ist in Listing \ref{code:heron} zu sehen.
+
+\lstinputlisting[caption=heron.cpp, language=c++, label=code:heron, float=htb]{Uebung_06/heron/heron.cpp}
+
+Ich lasse $\sqrt{2} \approx 1.41421356237309504880168872421$\footnote{Mit \texttt{N[Sqrt[2], 30]} in Mathematica berechnet.} berechnen, die Ausgabe ist in Listing \ref{code:heron.out} zu sehen.
+
 \lstinputlisting[caption=Ausgabe von heron, label=code:heron.out, float=htb]{Uebung_06/heron/heron.out}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
