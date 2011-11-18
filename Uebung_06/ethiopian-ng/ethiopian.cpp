@@ -7,10 +7,14 @@ int main(int argc, char *argv[]) {
 	int b;
 	int res;
 
-	for (a = 0; a <= 10; a++) {
-		for (b = a; b <= 10; b++) {
-			printf("Calculating %d times %d: \n", a, b);
+	int i, j;
+	for (i = 1; i <= 10; i++) {
+		for (j = i; j <= 10; j++) {
+			a = i;
+			b = j;
 			res = 0;
+
+			printf("Calculating %d times %d: \n", a, b);
 
 			while (a >= 1) {
 				printf("-> %6d %6d\n", a, b);
@@ -25,7 +29,7 @@ int main(int argc, char *argv[]) {
 			std::cout << "Result: " << res << std::endl;
 			std::cout << std::endl;
 		}
+	}
 
 		return 0;
-	}
 }
