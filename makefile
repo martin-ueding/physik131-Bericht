@@ -7,4 +7,11 @@ Bericht.pdf: Bericht.tex
 	pdflatex $<
 
 clean:
-	$(RM) *.log *.aux *.toc Bericht.pdf *.out
+	$(RM) *.aux
+	$(RM) *.lof
+	$(RM) *.log
+	$(RM) *.lol
+	$(RM) *.lot
+	$(RM) *.out
+	$(RM) *.toc
+	$(RM) Bericht.pdf
