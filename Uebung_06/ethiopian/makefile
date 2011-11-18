@@ -1,10 +1,6 @@
-CXX=g++
-CFLAGS=-Wall --pedantic
+include ../../makefile.common
 
 ethiopian.out: ethiopian
 	./$^ 14 36 > $@
 
 ethiopian: ethiopian.cpp
-
-%: %.cpp
-	$(CXX) $(CFLAGS) $^ -o $@

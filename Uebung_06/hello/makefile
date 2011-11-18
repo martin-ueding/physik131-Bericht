@@ -1,5 +1,4 @@
-CXX=g++
-CFLAGS=-Wall --pedantic
+include ../../makefile.common
 
 hello.out: hello
 	./$^ > $@

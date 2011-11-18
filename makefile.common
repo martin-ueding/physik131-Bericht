@@ -1,2 +1,8 @@
+CXX=g++
+CFLAGS=-Wall --pedantic
+
 %.sh.out: %.sh
 	cd $$(dirname $<) && bash $$(basename $<) > $$(basename $@)
+
+%: %.cpp
+	$(CXX) $(CFLAGS) $^ -o $@
