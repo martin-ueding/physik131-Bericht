@@ -599,7 +599,15 @@ Die Linuxbefehle (§\ref{commands}) habe ich als \texttt{itemize} gehalten, was 
 
 \section{Das \gqq{Hello, World!}-Programm}
 
-\lstinputlisting[caption=hello.cpp, language=c++]{Uebung_06/hello.cpp}
+Dies ist das einfache \gqq{Hello, World!}-Programm (Listing \ref{code:hello}), das Kerningham und Ritchie zum Einstieg empfehlen um seine Entwicklungsumgebung entsprechend einzurichten.
+
+\lstinputlisting[caption=hello.cpp, language=c++, label=code:hello]{Uebung_06/hello.cpp}
+
+Um das ganze zu kompilieren braucht man einen C++-Compiler, in diesem Fall ist es \texttt{g++}. Man kann aber genauso gut \texttt{MSVC++} benutzen.
+
+Ich möchte nicht immer den Compilerbefehl erneut eintippen\footnote{Wobei in Bash der letzte Compiliervorgang mit \texttt{!g++} noch recht schnell zu wiederholen ist.}, so dass ich hier eine Makefile benutze:
+
+\lstinputlisting[caption=makefile, language=make]{Uebung_06/makefile}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
