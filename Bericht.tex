@@ -640,7 +640,7 @@ Möchte man alle Multiplikationen haben, lässt man die Indizes von 1 bis 10 lau
 Der Algorithmus ist recht einfach umzusetzen, man benötigt die Formel, die auf dem Übungsblatt angegeben ist.
 
 \begin{equation}
-x_{n+1}=\frac{x_n+a/x_n}{2}
+x_{n+1}=\frac{x_n+\frac{a}{x_n}}{2}
 \end{equation}
 
 Dabei ist $a$ die Zahl, von der die Wurzel bestimmt werden soll. Diese Formel braucht noch ein $x_0$, damit sie funktioniert. Hier kann man einfach jede beliebige Zahl benutzen. Allerdings ist $x_0=a$ keine allzu schlechte Wahl.
@@ -651,7 +651,7 @@ Das ganze Programm könnte man rekursiv implementieren, allerdings spricht hier 
 
 \lstinputlisting[caption=heron.cpp, language=c++, label=code:heron, float=htb]{Uebung_06/heron/heron.cpp}
 
-Ich lasse $\sqrt{2} \approx 1.41421356237309504880168872421$\footnote{Mit \texttt{N[Sqrt[2], 30]} in Mathematica berechnet.} berechnen, die Ausgabe ist in Listing \ref{code:heron.out} zu sehen.
+Ich lasse $\sqrt{2} \approx 1.41421356237309504880168872421$\footnote{Mit \texttt{N[Sqrt[2], 30]} in Mathematica berechnet.} berechnen, die Ausgabe ist in Listing \ref{code:heron.out} zu sehen. Man kann sehen, dass das Programm schnell zu einem brauchbaren Ergebnis kommt, der Algorithmus also leistungsfähig ist.
 
 \lstinputlisting[caption=Ausgabe von heron, label=code:heron.out, float=htb]{Uebung_06/heron/heron.out}
 
