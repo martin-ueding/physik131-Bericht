@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
 		a /= 2;
 		b *= 2;
 	}
-	std::cout << "Ergebnis: " << res << std::endl;
+	std::cout << "Result: " << res << std::endl;
 
 	return 0;
 }
