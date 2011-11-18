@@ -1,6 +1,6 @@
 % Copyright (c) 2011 Martin Ueding <dev@martin-ueding.de>
 %
-\documentclass[12pt]{report}
+\documentclass[11pt]{report}
 \usepackage{geometry}
 \geometry{a4paper}
 \usepackage{graphicx}
@@ -40,7 +40,7 @@
 	frame=b,
 	xleftmargin=0pt,
 	xrightmargin=0pt,
-	basicstyle=\footnotesize\ttfamily,
+	basicstyle=\small\ttfamily,
 	keywordstyle=\color{black}\bfseries,
 	tabsize=4
 	}
@@ -592,7 +592,7 @@ Das Literaturverzeichnis habe ich diesem Artikel hinzugefügt.
 
 \section{Berichtaufgaben}
 
-Die Linuxbefehle (§\ref{commands}) habe ich als \texttt{itemize} gehalten, was ich übersichtlicher finde. Eine Tabelle kann als Tabelle \ref{table:compression-results} auf Seite \pageref{table:compression-results} gefunden werden. Offensichtlicherweise hat diese Tabelle schon ein Label.
+Die Linuxbefehle (§\ref{commands}) habe ich als \texttt{itemize} gehalten, was ich übersichtlicher finde. Eine Tabelle kann als Tabelle \ref{table:compression-results} auf Seite \pageref{table:compression-results} gefunden werden. Diese Tabelle hat schon ein Label.
 
 
 \part{C++}
@@ -680,7 +680,7 @@ Ich lasse $\sqrt{2} \approx 1.41421356237309504880168872421$\footnote{Mit \textt
 \lstinputlisting[caption=Ausgabe von zahlen2.sh]{Uebung_03/zahlen2.sh.out}
 
 \section{Ausgabe von \texttt{ethiopian}}
-\lstinputlisting[caption=Ausgabe von ethiopian, label=code:ethiopian-ng.out]{Uebung_06/ethiopian-ng/ethiopian.out}
+\lstinputlisting[caption=Ausgabe von ethiopian-ng, label=code:ethiopian-ng.out]{Uebung_06/ethiopian-ng/ethiopian.out}
 
 \section{Makefiles}
 \lstinputlisting[caption=makefile zu hello, language=make, label=code:hello-make, float=htb]{Uebung_06/hello/makefile}
@@ -688,11 +688,15 @@ Ich lasse $\sqrt{2} \approx 1.41421356237309504880168872421$\footnote{Mit \textt
 \lstinputlisting[caption=makefile zu ethiopian-ng, language=make, label=code:ethiopian-ng-make, float=htb]{Uebung_06/ethiopian-ng/makefile}
 \lstinputlisting[caption=makefile zu heron, language=make, label=code:ethiopian-ng-make, float=htb]{Uebung_06/heron/makefile}
 
+\lstlistoflistings
+
 \end{appendix}
 
 \begin{thebibliography}{n}
 \bibitem{man-tar} Manual Page von \texttt{tar}.
 \bibitem{wiki-kfz} \gqq{Kfz-Kennzeichen}, deutsche Wikipedia \url{https://secure.wikimedia.org/wikipedia/de/wiki/Kfz-Kennzeichen_\%28Deutschland\%29}
 \end{thebibliography}
+
+
 
 \end{document}
