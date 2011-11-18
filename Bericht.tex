@@ -605,7 +605,7 @@ Dies ist das einfache \gqq{Hello, World!}-Programm (Listing \ref{code:hello}), d
 
 Um das ganze zu kompilieren braucht man einen C++-Compiler, in diesem Fall ist es \texttt{g++}. Man kann aber genauso gut \texttt{MSVC++} benutzen.
 
-Ich möchte nicht immer den Compilerbefehl erneut eintippen\footnote{Wobei in Bash der letzte Compiliervorgang mit \texttt{!g++} noch recht schnell zu wiederholen ist.}, so dass ich hier eine Makefile benutze (Listing \ref{code:hello-make}).
+Ich möchte nicht immer den Compilerbefehl erneut eintippen\footnote{Wobei in Bash der letzte Compiliervorgang mit \texttt{!g++} noch recht schnell zu wiederholen ist.}, so dass ich hier eine Makefile benutze (Listing \ref{code:hello-make}) um das Programm mit einem einfachen \texttt{make} kompilieren zu können. Außerdem wird hier auch direkt die Ausgabe des Programs in eine Datei gefügt, die dann wiederum in dieses \LaTeX\ Dokument eingefügt wird.
 
 \lstinputlisting[caption=makefile, language=make, label=code:hello-make, float=htb]{Uebung_06/hello/makefile}
 
