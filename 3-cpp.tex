@@ -1,0 +1,59 @@
+\part{C++}
+
+\chapter{Übung 6}
+
+\section{Das \gqq{Hello, World!}-Programm}
+
+Dies ist das einfache \gqq{Hello, World!}-Programm (Listing \ref{code:hello}), das Kerningham und Ritchie zum Einstieg empfehlen um seine Entwicklungsumgebung entsprechend einzurichten.
+
+\lstinputlisting[caption=hello.cpp, language=c++, label=code:hello, float=htb]{Uebung_06/hello/hello.cpp}
+
+Um das ganze zu kompilieren braucht man einen C++-Compiler, in diesem Fall ist es \texttt{g++}. Man kann aber genauso gut \texttt{MSVC++} benutzen.
+
+Ich möchte nicht immer den Compilerbefehl erneut eintippen\footnote{Wobei in Bash der letzte Kompiliervorgang mit \texttt{!g++} noch recht schnell zu wiederholen ist.}, so dass ich hier eine Makefile benutze (Listing \ref{code:hello-make}) um das Programm mit einem einfachen \texttt{make} kompilieren zu können. Außerdem wird hier auch direkt die Ausgabe des Programms in eine Datei gefügt, die dann wiederum in dieses \LaTeX\ Dokument eingefügt wird.
+
+
+Die Ausgabe des Programms \ref{code:hello} ist in Listing \ref{code:hello.out} zu sehen.
+
+\lstinputlisting[caption=Ausgabe von hello, label=code:hello.out, float=htb]{Uebung_06/hello/hello.out}
+
+Die Optionen \texttt{-Wall und --pedantic} zeigen deutlich mehr Unstimmigkeiten im Code auf und sind damit zu empfehlen. Das im Beispiel benutzte \texttt{int a;}, das allerdings nie verwendet wird, ist meistens ein Fehler und man hat an einer anderen Stelle nicht \texttt{a}, sondern versehentlich eine andere Zahl benutzt.
+
+\section{Äthiopische Multiplikation}
+
+Das Program (Listing \ref{code:ethiopian}) habe ich aus dem Skript kopiert und entsprechend wieder mit Makefile (Listing \ref{code:ethiopian-make}) versehen. Damit es von der Makefile allerdings nicht-interaktiv kompiliert werden kann, übernehme ich die Eingabezahlen von der Kommandozeile.
+
+\lstinputlisting[caption=ethiopian.cpp, language=c++, label=code:ethiopian, float=htb]{Uebung_06/ethiopian/ethiopian.cpp}
+
+Die Ausgabe für $14 \cdot 36$ ist in Listing \ref{code:ethiopian.out} gezeigt.
+
+\lstinputlisting[caption=Ausgabe von ethiopian, label=code:ethiopian.out, float=htb]{Uebung_06/ethiopian/ethiopian.out}
+
+Möchte man nun eine Art Multiplikationstabelle von eins bis zehn erhalten, muss man zwei ineinander geschachtelte Schleifen bauen. \texttt{a} und \texttt{b} können nicht als Schleifenindizes verwendet werden, da sie vom Algorithmus verwendet werden. Entweder kapselt man den Algorithmus in eine Funktion, oder man benutzt einfach andere Variablen. Das geänderte Programm ist in Listing \ref{code:ethiopian-ng} zu sehen. Die Ausgabe  ist sehr lang, daher ist an dieser Stelle nur ein Ausschnitt (Listing \ref{code:ethiopian-ng.short.out}) gezeigt, die komplette Ausgabe kann in Listing \ref{code:ethiopian-ng.out} gefunden werden.
+
+
+\lstinputlisting[caption=ethiopian-ng.cpp, language=c++, label=code:ethiopian-ng, float=htb]{Uebung_06/ethiopian-ng/ethiopian.cpp}
+
+\lstinputlisting[caption=Ausgabe von ethiopian-ng (erste 15 Zeilen), label=code:ethiopian-ng.short.out, float=htb]{Uebung_06/ethiopian-ng/ethiopian.short.out}
+
+Möchte man alle Multiplikationen haben, lässt man die Indizes von 1 bis 10 laufen. Um kommutativ äquivalente Rechnungen zu unterdrücken, lässt man den inneren Index beim äußeren Index starten.
+
+\section{Heron}
+
+Der Algorithmus ist recht einfach umzusetzen, man benötigt die Formel, die auf dem Übungsblatt angegeben ist.
+
+\begin{equation}
+x_{n+1}=\frac{x_n+\frac{a}{x_n}}{2}
+\end{equation}
+
+Dabei ist $a$ die Zahl, von der die Wurzel bestimmt werden soll. Diese Formel braucht noch ein $x_0$, damit sie funktioniert. Hier kann man einfach jede beliebige Zahl benutzen. Allerdings ist $x_0=a$ keine allzu schlechte Wahl.
+
+Eine Abbruchbedingung kann verschieden aussehen. Man kann nach einer gewissen Anzahl von Iterationen abbrechen. Ich habe mich dafür entschieden, abzubrechen, sobald sich die Zahl nur noch wenig verändert. Dazu muss man sich merken, welchen Wert die Zahl vorher hatte, um vergleichen zu können.
+
+Das ganze Programm könnte man rekursiv implementieren, allerdings spricht hier nichts gegen eine iterative Variante, daher habe ich mich für letzteres entschieden. Mein Programm ist in Listing \ref{code:heron} zu sehen.
+
+\lstinputlisting[caption=heron.cpp, language=c++, label=code:heron, float=htb]{Uebung_06/heron/heron.cpp}
+
+Ich lasse $\sqrt{2} \approx 1.41421356237309504880168872421$\footnote{Mit \texttt{N[Sqrt[2], 30]} in Mathematica berechnet.} berechnen, die Ausgabe ist in Listing \ref{code:heron.out} zu sehen. Man kann sehen, dass das Programm schnell zu einem brauchbaren Ergebnis kommt, der Algorithmus also leistungsfähig ist.
+
+\lstinputlisting[caption=Ausgabe von heron, label=code:heron.out, float=htb]{Uebung_06/heron/heron.out}
