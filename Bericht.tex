@@ -212,11 +212,12 @@ Die Dateien lassen sich recht einfach erstellen:
 touch datei{1..9}.txt logfile{10,10a,11,11a,11b}.txt
 \end{lstlisting}
 
-Dann kann man die Datein mit folgenden Befehlen zeigen:
-\lstinputlisting[caption=ls.sh]{Uebung_02/wildcards/ls.sh}
-\lstinputlisting[caption=Ausgabe von ls.sh]{Uebung_02/wildcards/ls.sh.out}
+Listing \ref{code:ls} zeigt, wie man diese Dateien ausgeben kann.
 
-Ich habe hier \texttt{echo} anstelle von \texttt{ls} benutzt, da die Wildcards so oder so von der Bash und nicht vom Befehl aufgelöst werden und \texttt{ls} jede Datei auf eine eigene Zeile schreibt, sofern STOUT kein Terminal ist.
+\lstinputlisting[caption=ls.sh, language=bash, label=code:ls, float=htb]{Uebung_02/wildcards/ls.sh}
+\lstinputlisting[caption=Ausgabe von ls.sh, label=code:ls.out, float=htb]{Uebung_02/wildcards/ls.sh.out}
+
+Ich habe hier \texttt{echo} anstelle von \texttt{ls} benutzt, da die Wildcards so oder so von der Bash und nicht vom Befehl aufgelöst werden und \texttt{ls} jede Datei auf eine eigene Zeile schreibt, sofern STOUT kein Terminal ist. Dies spart ein klein wenig Platz und erzeugt letztlich die gleiche Ausgabe.
 
 \section{Umgang mit Rechten unter Unix}
 
@@ -230,31 +231,29 @@ Siehe §\ref{commands}.
 
 \section{Eingabe- und Ausgabeumleitung}
 
-\lstinputlisting[caption=standardausgabe.txt]{Uebung_03/standardausgabe.txt}
+\lstinputlisting[caption=standardausgabe.txt, label=code:standardausgabe, float=htb]{Uebung_03/standardausgabe.txt}
 
-\section{Handling von Textdateien Dateien}
+\section{Handling von Textdateien}
 
-Man kann es sich an dieser Stelle einfach machen und alle Kennzeichen rauswerfen, die mit einer Ziffer beginnen und es bleiben dann nur noch deutsche Kennzeichen übrig. Der Ansatz ist nicht nennenswert robust, erfüllt aber in der kleinen Eingabemenge seinen Zweck.
+Man kann es sich an dieser Stelle einfach machen und alle Kennzeichen rauswerfen, die mit einer Ziffer beginnen und es bleiben dann nur noch deutsche Kennzeichen übrig. Der Ansatz (Listing \ref{code:auto-einfach}) ist nicht nennenswert robust, erfüllt aber in der kleinen Eingabemenge seinen Zweck (Ausgabe in Listing \ref{code:auto-einfach.out}).
 
-\lstinputlisting[caption=auto\_einfach.sh, label=listing:auto-einfach]{Uebung_03/auto_einfach.sh}
+\lstinputlisting[caption=auto\_einfach.sh, label=listing:auto-einfach, language=bash, float=htb]{Uebung_03/auto_einfach.sh}
 
-\lstinputlisting[caption=Ausgabe von auto\_einfach.sh]{Uebung_03/auto_einfach.sh.out}
+\lstinputlisting[caption=Ausgabe von auto\_einfach.sh, label=listing:auto-einfach.out, float=htb]{Uebung_03/auto_einfach.sh.out}
 
-Allerdings ist es mit den Kennzeichen nicht so ganz einfach, möchte man wirklich nur deutsche Kennzeichen haben:
-
-Es gibt deutsche und Euro-Kennzeichen, alle Neuen sind Letztere. Die alten haben noch einen Bindestrich, die neuen nicht mehr. Außerdem dürfen in den alten die Buchstaben B, F, G, I, O und Q nicht vorkommen.\cite{wiki-kfz}
+Allerdings ist es mit den Kennzeichen nicht so ganz einfach, möchte man wirklich nur deutsche Kennzeichen haben. Es gibt deutsche und Euro-Kennzeichen, alle Neuen sind Letztere. Die alten haben noch einen Bindestrich, die neuen nicht mehr. Außerdem dürfen in den alten die Buchstaben B, F, G, I, O und Q nicht vorkommen.\cite{wiki-kfz}
 
 Es gilt das Muster \texttt{XXX XX 0000}, in jeder Gruppe können auch weniger Zeichen sein. Allerdings dürfen es maximal 8 Zeichen sein, solange es kein Saisonkennzeichen ist.
 
-Das führt dazu, dass man im Regex nicht einfach 3, 2 und 4 Zeichen suche lassen kann, ansonsten würden Zeichenketten zugelassen, die 9 Zeichen lang sind. Somit muss man eine Fallunterscheidung benutzten. Darüber hinaus dürfen bei einem alten Kennzeichen -- erkennbar an dem Bindestrich -- einige Buchstaben im mittleren Feld nicht auftauchen.
+Das führt dazu, dass man im Regex nicht einfach 3, 2 und 4 Zeichen suche lassen kann, ansonsten würden Zeichenketten zugelassen, die 9 Zeichen lang sind. Somit muss man eine Fallunterscheidung benutzten. Darüber hinaus dürfen bei einem alten Kennzeichen -- erkennbar an dem Bindestrich -- einige Buchstaben im mittleren Feld nicht auftauchen. Der komplexe Regex ist in Listing \ref{code:auto} gezeigt.
 
-\lstinputlisting[caption=auto.sh]{Uebung_03/auto.sh}
+\lstinputlisting[caption=auto.sh, language=bash, label=code:auto, float=htb]{Uebung_03/auto.sh}
 
-\lstinputlisting[caption=Ausgabe von auto.sh]{Uebung_03/auto.sh.out}
+\lstinputlisting[caption=Ausgabe von auto.sh, label=code:auto.out, float=htb]{Uebung_03/auto.sh.out}
 
-Man sieht, dass die gleiche Liste erzeugt wird, jedoch fällt das zweite Skript nicht auf diverse Gemeinheiten rein, die man sich ausdenken könnte.
+Man sieht, dass die gleiche Liste (Listing \ref{code:auto.out}) erzeugt wird, jedoch fällt das zweite Skript nicht auf diverse Gemeinheiten (Listing \ref{code:gemeinheiten}) rein, die man sich ausdenken könnte.
 
-\begin{lstlisting}[caption=Gemeinheiten für Listing \ref{listing:auto-einfach}]
+\begin{lstlisting}[caption=Gemeinheiten für Listing \ref{listing:auto-einfach}, label=code:gemeinheiten, float=htb]
 zKeinKennzeichen
 NDH ND 2000
  1234 DC 75
@@ -263,28 +262,32 @@ NDH ND 2000
 
 \section{Pipelines}
 \subsection{Namen}
-\lstinputlisting[caption=namen.dat]{Uebung_03/namen.dat}
+\lstinputlisting[caption=namen.dat, float=htb]{Uebung_03/namen.dat}
 
 Es ist recht sinnfrei \texttt{cat} zu benutzen, um den Inhalt zu in \texttt{sort} zu bekommen, da \texttt{sort} die Datei auch selbst laden kann.
 
-\lstinputlisting[caption=namen.sh]{Uebung_03/namen.sh}
-\lstinputlisting[caption=Ausgabe von namen.sh]{Uebung_03/namen.sh.out}
+Mit dem entsprechenden Befehl (Listing \ref{code:namen}) bekommt man die gewünschte Ausgabe (Listing \ref{code:namen.out}).
+
+\lstinputlisting[caption=namen.sh, language=bash, float=htb, label=code:namen]{Uebung_03/namen.sh}
+\lstinputlisting[caption=Ausgabe von namen.sh, float=htb, label=code:namen.out]{Uebung_03/namen.sh.out}
 
 \subsection{Zahlen}
 
-\lstinputlisting[caption=zahlen.dat]{Uebung_03/zahlen.dat}
+\lstinputlisting[caption=zahlen.dat, float=htb, label=code:zahlen.dat]{Uebung_03/zahlen.dat}
 
-Bei den Zahlen werden die Zahlen exakt so sortiert, wie ich es erwarte. Und zwar nach ASCII Code Point. Es ist unnatürlich, dass eine 2 vor einer 1 steht, weil \textit{nach} der 1 eine weitere Zahl folgt. Da die Zahlen in der Datei allerdings ohne führende Nullen stehen, muss man die Zahl zuerst interpretieren, damit sie nach Zahlenwert sortiert werden kann. Dafür ist das \texttt{-n} Flag da.
+Bei den Zahlen werden die Zahlen (Eingabedatei in Listing \ref{code:zahlen.dat}) exakt so sortiert, wie ich es erwarte. Und zwar nach ASCII Code Point. Es ist unnatürlich, dass eine 2 vor einer 1 steht, weil \textit{nach} der 1 eine weitere Zahl folgt. Da die Zahlen in der Datei allerdings ohne führende Nullen stehen, muss man die Zahl zuerst interpretieren, damit sie nach Zahlenwert sortiert werden kann. Dafür ist das \texttt{-n} Flag da. Der komplette Befehl ist in \ref{code:zahlen-sort} gezeigt. Die Ausgabe (Listing \ref{zahlen-sort.out}) ist wirklich nach Zahlenwert sortiert.
 
-\lstinputlisting[caption=zahlen-sort.sh]{Uebung_03/zahlen-sort.sh}
-\lstinputlisting[caption=Ausgabe von zahlen-sort.sh]{Uebung_03/zahlen-sort.sh.out}
+\lstinputlisting[caption=zahlen-sort.sh, float=htb, label=zahlen-sort]{Uebung_03/zahlen-sort.sh}
+\lstinputlisting[caption=Ausgabe von zahlen-sort.sh, float=htb, label=zahlen-sort.out]{Uebung_03/zahlen-sort.sh.out}
 
 \section{Komprimierung und Archivierung}
 
 Leider war die Datei \texttt{cc++.tar} zum Bearbeitungszeitpunkt nicht verfügbar. So habe ich $\unit[55]{MiB}$ HTML Dateien zum Testen benutzt.
 
-\begin{tabular}{llll}
+\begin{table}[htbp]
 \label{table:compression-results}
+\begin{center}
+\begin{tabular}{llll}
 Programm & Option & Zeit [s] & Dateigröße [KiB] \\
 \hline
 tar + bzip2 &  & 4.29 + 11.02 & 12701 \\
@@ -295,8 +298,11 @@ tar + gzip & -1 & 4.29 + 1.51 & 15514 \\
 tar + gzip & -9 & 4.29 + 4.30 & 14073 \\
 zip &  & 2.29 & 16694\\
 \end{tabular}
+\end{center}
+\caption{Zeiten und Dateigrößen verschiedener Kompressionsprogramme}
+\end{table}
 
-Man sieht, dass bzip2 etwas besser komprimiert, allerdings deutlich länger braucht. Zip ist am schnellsten, schafft allerdings auch am wenigsten Kompression.
+Man sieht an den Daten (Tabelle \ref{table:compression-results}), dass bzip2 etwas besser komprimiert, allerdings deutlich länger braucht. Zip ist am schnellsten, schafft allerdings auch am wenigsten Kompression.
 
 Zip komprimiert lede Datei einzeln und kann so Passagen, die in mehreren Dateien vorkommen, nicht effizient komprimieren. Jedoch können einzelne Dateien aus dem Archiv genommen werden, bei einem komprimierten tar muss erst alles expandiert werden, damit eine einzelne Datei entnommen werden kann.
 
@@ -307,9 +313,9 @@ Das Skript, das die Zeiten misst, kann in §\ref{listing:compression} gefunden w
 
 Die Dateien auf den zwei verschiedenen Rechnern, die allerdings ihr Heimatverzeichnis teilen, ist fast gleich, bis auf die Datei, die auf dem anderen Rechner schon erstellt worden ist.
 
-Kopiert man die Dateien auf einen Rechner\footnote{Der \texttt{scp} Befehl für Astro nach Physik, der auf dem Übungsblatt angegeben ist funktioniert nicht, weil ein Leerzeichen zwischen dem Doppelpunkt und der Tilde ist.}, kann man sie mit \texttt{diff -u} vergleichen.
+Kopiert man die Dateien auf einen Rechner\footnote{Der \texttt{scp} Befehl für Astro nach Physik, der auf dem Übungsblatt angegeben ist funktioniert nicht, weil ein Leerzeichen zwischen dem Doppelpunkt und der Tilde ist.}, kann man sie mit \texttt{diff -u} vergleichen. (Ausgabe in Listing \ref{code:diff}.)
 
-\begin{lstlisting}[caption=Unterschied zwischen Ordnerinhalten]
+\begin{lstlisting}[caption=Unterschied zwischen Ordnerinhalten, float=htb, label=code:diff]
 --- ls-lR.host1 2011-10-30 14:43:46.031286114 +0100
 +++ ls-lR.host2 2011-10-30 14:43:49.275286307 +0100
 @@ -2 +2 @@
@@ -325,40 +331,33 @@ Die Datei, in die die Ausgabe umgeleitet wrid, wird zwar direkt angelegt, weil b
 
 \section{Shell - Skript}
 
-\lstset{language=bash}
-\lstinputlisting[caption=farben.sh]{Uebung_03/farben.sh}
+Für die Farben kann man eine einfache \texttt{for}-Schleife benutzen, wie in Listing \ref{code:farben} gezeigt. Dies erzeugt die gewünschte Ausgabe (Listing \ref{code:farben.out}).
 
-\lstinputlisting[caption=Ausgabe von farben.sh]{Uebung_03/farben.sh.out}
+\lstinputlisting[caption=farben.sh, language=bash, float=htb, label=code:farben]{Uebung_03/farben.sh}
+
+\lstinputlisting[caption=Ausgabe von farben.sh, float=htb, label=code:farben.out]{Uebung_03/farben.sh.out}
 
 
 \subsection{Zahlen}
 
-Für die Zahlen kann man entweder \texttt{{1..3}} benutzen, oder eine C-artige for-Schleife benutzen. Die Syntax, die auf dem Übungszettel steht, gibt es nicht, ich weiß nicht, wie Sie die Ausgabe damit erzeugt haben.
+Für die Zahlen kann man entweder \texttt{{1..3}}\footnote{Ein Beispiel für die \texttt{{1..3}} finden Sie in §\ref{listing:zahlen2}} benutzen, oder eine C-artige for-Schleife benutzen (Listing \ref{code:zahlen}, Ausgabe in Listing \ref{code:zahlen.out}). Die Syntax, die auf dem Übungszettel steht, gibt es nicht, ich weiß nicht, wie Sie die Ausgabe damit erzeugt haben.
 
-\lstset{language=bash}
-\lstinputlisting[caption=zahlen.sh]{Uebung_03/zahlen.sh}
+\lstinputlisting[caption=zahlen.sh, language=bash, label=code:zahlen, float=htb]{Uebung_03/zahlen.sh}
+\lstinputlisting[caption=Ausgabe von zahlen.sh, label=code:zahlen.out, float=htb]{Uebung_03/zahlen.sh.out}
 
-\lstinputlisting[caption=Ausgabe von zahlen.sh]{Uebung_03/zahlen.sh.out}
+Soll von 2 bis 20 gezählt werden und der Vorname ausgegeben werden, wenn der Zähler auf 10 steht, sieht das Skript so aus wie in Listing \ref{code:zahlen-name}. (Ausgabe in Listing \ref{code:zahlen-name.out}.)
 
-Ein Beispiel für die \texttt{{1..3}} finden Sie in §\ref{listing:zahlen2}
-
-Soll von 2 bis 20 gezählt werden und der Vorname ausgegeben werden, wenn der Zähler auf 10 steht, sieht das Skript so aus:
-
-
-\lstset{language=bash}
-\lstinputlisting[caption=zahlen\_name.sh]{Uebung_03/zahlen_name.sh}
-
-\lstinputlisting[caption=Ausgabe von zahlen\_name.sh]{Uebung_03/zahlen_name.sh.out}
-
+\lstinputlisting[caption=zahlen\_name.sh, language=bash, label=code:zahlen-name, float=htb]{Uebung_03/zahlen_name.sh}
+\lstinputlisting[caption=Ausgabe von zahlen\_name.sh, label=code:zahlen-name.out, float=htb]{Uebung_03/zahlen_name.sh.out}
 
 \section{Analyse von Pipelines}
 
-Der Befehl \verb#find /uebung_03 -type f -exec du -k {} \;| sort -n -r# iteriert durch das Verzeichnis \verb#uebung_03# und dessen Unterverzeichnisse, sucht Einträge heraus, die Dateien sind (und keine Ordner, Links, Fifos, …). Auf jede dieser Dateien wird der Befehl \texttt{du -k} ausgeführt. Man erhält eine Liste mit Dateigrößen in kiB. Diese Liste wird dann numerisch und rückwärts sortiert, also die größten Dateien nach vorne.
+Der Befehl \verb#find /uebung_03 -type f -exec du -k {} \;| sort -n -r#\ iteriert durch das Verzeichnis \verb#uebung_03# und dessen Unterverzeichnisse, sucht Einträge heraus, die Dateien sind (und keine Ordner, Links, Fifos, …). Auf jede dieser Dateien wird der Befehl \texttt{du -k} ausgeführt. Man erhält eine Liste mit Dateigrößen in kiB. Diese Liste wird dann numerisch und rückwärts sortiert, also die größten Dateien nach vorne.
 
 \subsection{Teilaufgabe a}
-In dieser Aufgabe ist wahrscheinlich ein \verb#ps aux | grep ueding# gefragt. Dies ist allerdings gefährlich, falls jemand anderes ein Programm ausführt, das meinen Namen im Namen hat, oder jemand anders so heißt wie ich, nur mit einer 2 dahinter. Daher wäre es mit einer genauen Suche nach der Position in der Zeile etwas sicherer. Allerdings kann man auch einfach das \texttt{a} weglassen und erhält direkt eine Liste mit seinen eigenen Prozessen.
+In dieser Aufgabe ist wahrscheinlich ein \verb#ps aux | grep ueding# gefragt. Dies ist allerdings gefährlich, falls jemand anderes ein Programm ausführt, das meinen Namen im Namen hat, oder jemand anders so heißt wie ich, nur mit einer 2 dahinter. Daher wäre es mit einer genauen Suche nach der Position in der Zeile etwas sicherer (Listing \ref{code:psauxgrep-beginning}). Allerdings kann man auch einfach das \texttt{a} weglassen und erhält direkt eine Liste mit seinen eigenen Prozessen.
 
-\begin{lstlisting}[caption=Einschänkung des Suchbereichs]
+\begin{lstlisting}[caption=Einschänkung des Suchbereichs, float=htb, label=code:psauxgrep-beginning]
 ps aux | grep '^ueding\ s '
 \end{lstlisting}
 
@@ -366,11 +365,14 @@ ps aux | grep '^ueding\ s '
 Für das Sortieren hat \texttt{ps} auch eine entsprechende Option: \texttt{O+p}. So lässt sich mit \texttt{ps ux O+p} direkt nach Prozess-ID sortieren.
 
 \subsection{Teilaufgabe c}
-Mit \verb#ps ux O+p > myprocesses.txt# lässt sich die entsprechnde Datei erzeugen. \lstinputlisting[caption=myprocesses.txt]{Uebung_03/myprocesses.txt} 
+Mit \verb#ps ux O+p > myprocesses.txt# lässt sich die entsprechnde Datei (Listing \ref{code:myprocesses}) erzeugen.
+
+\lstinputlisting[caption=myprocesses.txt, label=code:myprocesses, float=htb]{Uebung_03/myprocesses.txt} 
 
 
-Wenn man mag, kann man natürlich auch diesen Code benutzen:
-\begin{lstlisting}[caption=verkettete Pipes]
+Wenn man mag, kann man natürlich auch den Code aus Listing \ref{code:chain-pipe} benutzen.
+
+\begin{lstlisting}[caption=verkettete Pipes, label=code:chain-pipe, float=htb]
 ps aux | grep ueding | sort -n > myprocesses.txt
 \end{lstlisting}
 
