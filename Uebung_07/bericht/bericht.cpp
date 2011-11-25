@@ -1,52 +1,74 @@
 // Copyright (c) 2011 Martin Ueding <dev@martin-ueding.de>
 
-#include <cstdio>
+#include <cmath>
 #include <fstream>
 #include <iostream>
 
 #define LENGTH 50
 
-double mult(double a, double b) {
-	return a * b;
-}
-
-double add(double a, double b) {
-	return a + b;
-}
-
-double div(double a, double b) {
-	return a / b;
-}
+struct measurement {
+	double voltage;
+	double current;
+};
 
 int main() {
 	std::ifstream infile;
-	infile.open("data2.dat");
+	infile.open("data_bericht.dat");
 
 	std::ofstream outfile;
 	outfile.open("out.dat", std::ofstream::out);
 
-	double x[LENGTH], y[LENGTH];
-	double results_add[LENGTH];
-	double results_mult[LENGTH];
-	double results_div[LENGTH];
+	struct measurement cur, sum, average;
+	sum.voltage = 0.0;
+	sum.current = 0.0;
 
-	for (int n = 0; n < LENGTH && infile.good(); n++) {
-		infile >> x[n] >> y[n];
+	double sum_power = 0.0;
+	double sum_voltage_squared = 0.0;
+
+	int n = 0;
+
+	for (; n < LENGTH && infile.good();) {
+		infile >> cur.voltage >> cur.current;
+
 		if (!infile.good()) {
 			break;
 		}
 
-		results_add[n] = add(x[n], y[n]);
-		results_mult[n] = mult(x[n], y[n]);
-		results_div[n] = div(x[n], y[n]);
+		n++;
 
-		outfile << x[n] << " + " << y[n] << " = " << results_add[n] << std::endl;
-		outfile << x[n] << " * " << y[n] << " = " << results_mult[n] << std::endl;
-		outfile << x[n] << " / " << y[n] << " = " << results_div[n] << std::endl;
+		sum.voltage += cur.voltage;
+		sum.current += cur.current;
+
+		sum_power += cur.voltage * cur.current;
+		sum_voltage_squared += pow(cur.voltage, 2);
+
+		outfile << cur.voltage << " " << cur.current << " " << cur.voltage / cur.current << std::endl;
 	}
 
 	infile.close();
 	outfile.close();
+
+	average.voltage = sum.voltage / n;
+	average.current = sum.current / n;
+
+	double average_power = sum_power / n;
+	double average_voltage_squared = sum_voltage_squared / n;
+
+	double m = (average_power - average.voltage * average.current) / (average_voltage_squared - pow(average.voltage, 2));
+	double c = average.current - m * average.current;
+
+	std::cout << "Means: " << average.voltage << " V, " << average.current << " A" << std::endl;
+	std::cout << "Means: " << average_power << " V^2, " << average_voltage_squared << " W" << std::endl ;
+	std::cout << "m: " << m << ", c: " << c << std::endl ;
+
+	std::ofstream means;
+	means.open("means.dat", std::ofstream::out);
+
+	means << "Means: " << average.voltage << " V, " << average.current << " A" << std::endl;
+	means << "Means: " << average_power << " V^2, " << average_voltage_squared << " W" << std::endl ;
+	means << "m: " << m << ", c: " << c << std::endl ;
+
+	means.close();
 
 	return 0;
 }
