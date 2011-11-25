@@ -3,12 +3,20 @@
 #include <iostream>
 #include <fstream>
 
+#define LENGTH 50
+
 int main() {
-	ifstream infile;
-	infile.open("data.dat");
+	std::ifstream infile;
+	infile.open("data2.dat");
 
-	while (infile.good()) {
+	double x[LENGTH], y[LENGTH];
+
+	for (int n = 0; n < LENGTH && infile.good(); n++) {
 		infile >> x[n] >> y[n];
-
-		return 0;
+		if (!infile.good())
+			break;
+		std::cout << x[n] << y[n] << std::endl;
 	}
+
+	return 0;
+}
