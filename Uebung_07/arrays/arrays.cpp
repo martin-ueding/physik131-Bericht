@@ -22,6 +22,9 @@ int main() {
 	std::ifstream infile;
 	infile.open("data2.dat");
 
+	std::ofstream outfile;
+	outfile.open("out.dat", std::ofstream::out);
+
 	double x[LENGTH], y[LENGTH];
 	double results_add[LENGTH];
 	double results_mult[LENGTH];
@@ -37,10 +40,13 @@ int main() {
 		results_mult[n] = mult(x[n], y[n]);
 		results_div[n] = div(x[n], y[n]);
 
-		printf("%10.3f + %10.3f = %10.3f\n", x[n], y[n], results_add[n]);
-		printf("%10.3f * %10.3f = %10.3f\n", x[n], y[n], results_mult[n]);
-		printf("%10.3f / %10.3f = %10.3f\n", x[n], y[n], results_div[n]);
+		outfile << x[n] << " + " << y[n] << " = " << results_add[n] << std::endl;
+		outfile << x[n] << " * " << y[n] << " = " << results_mult[n] << std::endl;
+		outfile << x[n] << " / " << y[n] << " = " << results_div[n] << std::endl;
 	}
+
+	infile.close();
+	outfile.close();
 
 	return 0;
 }
