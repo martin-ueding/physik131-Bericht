@@ -4,6 +4,7 @@ Bericht.pdf: Bericht.tex 1-linux.tex 2-latex.tex 3-cpp.tex
 	make -C Uebung_06/ethiopian
 	make -C Uebung_06/hello
 	make -C Uebung_06/heron
+	make -C Uebung_07
 	pdflatex $<
 
 clean:
