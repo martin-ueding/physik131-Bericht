@@ -5,22 +5,22 @@
 using namespace std;
 
 int main(void) {
-	Student studi;
+	Student student;
 	string temp_vorname;
 
-	cout << "Standardvorname und -nachname des Studenten: " << studi.getVorname() << " " <<  studi.getNachname() << endl;
+	cout << "Standardvorname und -nachname des Studenten: " << student.getVorname() << " " <<  student.getNachname() << endl;
 
 	cout << "Setze einen Vornamen: ";
 	cin >> temp_vorname;
-	studi.setVorname(temp_vorname);
-	cout << endl << "Neuer Voname des Studenten: " << studi.getVorname() << endl;
+	student.setVorname(temp_vorname);
+	cout << endl << "Neuer Voname des Studenten: " << student.getVorname() << endl;
 
 	int tag, monat, jahr;
 	cout << "Hier bitte die Geburtsdaten im Format <Tag Monat Jahr> eingeben (ab 1970)." << endl;
 	cin >> tag >> monat >> jahr;
 	cout << "Das Geburtsdatum lautet: " << tag << " " << monat << " " << jahr << endl;
-	studi.setGeburtstag(tag, monat, jahr);
-	cout <<  "Das Alter des Studenten ist: " << studi.getAlter() << endl;
+	student.setGeburtstag(tag, monat, jahr);
+	cout <<  "Das Alter des Studenten ist: " << student.getAlter() << endl;
 
 	return 0;
 }
