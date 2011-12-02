@@ -8,7 +8,7 @@ int main(void) {
 	Student studi;
 	string temp_vorname;
 
-	cout << "Default Voname und Nachname  des Studenten: " << studi.getVorname() << " " <<  studi.getNachname() << endl;
+	cout << "Standardvorname und -nachname des Studenten: " << studi.getVorname() << " " <<  studi.getNachname() << endl;
 
 	cout << "Setze einen Vornamen: ";
 	cin >> temp_vorname;
