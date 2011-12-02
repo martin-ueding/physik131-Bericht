@@ -54,5 +54,4 @@ Student::Student() {
 }
 
 Student::~Student() {
-	cout << "Destructor!!!" << endl;
 }
