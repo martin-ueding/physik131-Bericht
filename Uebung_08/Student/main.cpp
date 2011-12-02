@@ -20,6 +20,8 @@ int main(void) {
 	student.setNachname(temp_vorname);
 	cout << endl << "Neuer Nachnamen des Studenten: " << student.getNachname() << endl;
 
+	cout << "Neuer Name des Studenten: " << student.getVorname() << " " <<  student.getNachname() << endl;
+
 	int tag, monat, jahr;
 	cout << "Hier bitte die Geburtsdaten im Format <Tag Monat Jahr> eingeben (ab 1970)." << endl;
 	cin >> tag >> monat >> jahr;
