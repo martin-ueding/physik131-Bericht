@@ -28,6 +28,8 @@ public:
 	int getAlter();
 	void setGeburtstag(int geb_tag, int geb_monat, int geb_jahr);
 
+	int getGeburtstag();
+
 };
 
 #endif

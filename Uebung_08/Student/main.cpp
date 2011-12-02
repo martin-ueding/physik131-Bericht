@@ -28,6 +28,7 @@ int main(void) {
 	cout << "Das Geburtsdatum lautet: " << tag << " " << monat << " " << jahr << endl;
 	student.setGeburtstag(tag, monat, jahr);
 	cout <<  "Das Alter des Studenten ist: " << student.getAlter() << endl;
+	cout <<  "Der Geburtstag des Studenten ist (YYYYMMDD): " << student.getGeburtstag() << endl;
 
 	return 0;
 }
