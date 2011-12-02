@@ -9,17 +9,16 @@
 
 using namespace std;
 
-int main(void)
-{
+int main(void) {
 	// Lege ein Studenten  mit dem Standard-Konstruktor an.
 	Student studi;
 	// Diesen String benötigen wir um den Vornamen zu übergeben
-	string temp_vorname; 
+	string temp_vorname;
 
 	cout << "\nHier wird der Student getestet!" << endl;
 	// teste die Methoden der Instanz a von Student
-	cout << "Default Voname und Nachname  des Studenten: " << studi.getVorname() << " "<<  studi.getNachname() << endl;
-	
+	cout << "Default Voname und Nachname  des Studenten: " << studi.getVorname() << " " <<  studi.getNachname() << endl;
+
 	cout << "--------------------------------" << endl;
 	cout << "Nun werden neue Paramter des Studenten gesetzt." << endl;
 	cout << "--------------------------------" << endl;
@@ -31,13 +30,13 @@ int main(void)
 	cout << endl << "Neuer Voname des Studenten: " << studi.getVorname() << endl;
 
 	cout << "--------------------------------" << endl;
-	int tag,monat,jahr;
+	int tag, monat, jahr;
 	cout << "Hier bitte die Geburtsdaten im Format <Tag Monat Jahr> eingeben (ab 1970)." << endl;
 	cin >> tag >> monat >> jahr;
-	cout << "\nDas Geburtsdatum lautet: " << tag << " " << monat <<" " << jahr <<endl;
-	studi.setGeburtstag(tag,monat,jahr);
+	cout << "\nDas Geburtsdatum lautet: " << tag << " " << monat << " " << jahr << endl;
+	studi.setGeburtstag(tag, monat, jahr);
 	cout <<  "Das Alter des Studenten ist: " << studi.getAlter() << endl;
-	cout << "--------------------------------" << endl;	
+	cout << "--------------------------------" << endl;
 
 	cout << endl << "...beende main...." << endl;
 
