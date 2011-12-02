@@ -17,4 +17,17 @@ int main() {
 
     std::string s_sub = s.substr(1, 4);
     std::cout << s_sub << std::endl;
+
+    // Test whether the stings are equal.
+    if (s.compare(s1) == 0) {
+        std::cout << "s and s1 are equal" << std::endl;
+    }
+
+    if (s1.compare(s2) == 0) {
+        std::cout << "s1 and s2 are equal" << std::endl;
+    }
+
+    if (s.compare(s2) == 0) {
+        std::cout << "s and s2 are equal" << std::endl;
+    }
 }
