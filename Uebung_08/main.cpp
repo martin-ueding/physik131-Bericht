@@ -13,7 +13,7 @@ int main(void)
 {
 	// Lege ein Studenten  mit dem Standard-Konstruktor an.
 	Student studi;
-	// Diesen String benötigen wir um den Vornamen zu übergeben
+	// Diesen String benÃ¶tigen wir um den Vornamen zu Ã¼bergeben
 	string temp_vorname; 
 
 	cout << "\nHier wird der Student getestet!" << endl;
@@ -24,7 +24,7 @@ int main(void)
 	cout << "Nun werden neue Paramter des Studenten gesetzt." << endl;
 	cout << "--------------------------------" << endl;
 	cout << "Setze einen Vornamen: ";
-	// Eingabe des neuen vornamens und temporär speichern in temp_vorname
+	// Eingabe des neuen vornamens und temporÃ¤r speichern in temp_vorname
 	cin >> temp_vorname;
 	// Setzt den Namen das angelegten Studenten (Objekt std)
 	studi.setVorname(temp_vorname);
@@ -41,6 +41,6 @@ int main(void)
 
 	cout << endl << "...beende main...." << endl;
 
-	// Rückgabe 0 an das Betriebssystem soll heißen, erfolgreich beendet
+	// RÃ¼ckgabe 0 an das Betriebssystem soll heiÃŸen, erfolgreich beendet
 	return 0;
 }

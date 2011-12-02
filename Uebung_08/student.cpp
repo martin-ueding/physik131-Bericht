@@ -10,13 +10,13 @@ using namespace std;
 
 /*************************************************************************
    Diese Methode der Klasse Student setzt den Vornamen des Studenten auf den  
-   übergebenen Vornamen 
+   Ã¼bergebenen Vornamen 
    Parameter:
 		vorname - die der zu setzende Vorname
 */
 void Student::setVorname(string vorname)
 {	// setze den Vornamen des Studenten (dessen Methode 
-	// setVorname() gerade aufgerufen wird) auf den übergebenen Vornamen
+	// setVorname() gerade aufgerufen wird) auf den Ã¼bergebenen Vornamen
 	this->vorname = vorname;
 }
 /*ebenso der Nachname*/
@@ -44,7 +44,7 @@ string Student::getNachname(){
  Mehr hierzu z.B. unter www.cplusplus.com
 */
 int Student::getAlter(){
-  //Schaltjahre nicht berücksichtigt!
+  //Schaltjahre nicht berÃ¼cksichtigt!
 
   struct tm * timeinfo;
   time_t rawtime;
@@ -75,7 +75,7 @@ void Student::setGeburtstag(int tag, int monat, int jahr){
 /*************************************************************************
    Konstruktor zum Erzeugen eines Studenten ;-)
    Es wird dabei der Vorname des Studenten 
-   standardmäßig auf "Vorname"  gesetzt usw.
+   standardmÃ¤ÃŸig auf "Vorname"  gesetzt usw.
 */
 Student::Student()
 {	
@@ -90,7 +90,7 @@ Student::Student()
 /*************************************************************************
    Der Destruktor eines Studenten wird automatisch aufgerufen, wenn das 
    Programm beendet wird oder wenn explizit das Objekt/die Instanz mit 
-   delete verworfen wird oder wenn anderweitig der Gültigkeitsraum einer
+   delete verworfen wird oder wenn anderweitig der GÃ¼ltigkeitsraum einer
    Variablen vom Typ Student endet. 
 */
 Student::~Student()

@@ -3,17 +3,17 @@
 */
 
 /* Damit eine mehrfache Deklaration der Klasse durch mehrfaches Einbinden 
-   dieser Headerdatei verhindert wird, wird über die Präprozessor-Anweisung
+   dieser Headerdatei verhindert wird, wird Ã¼ber die PrÃ¤prozessor-Anweisung
    "#define AUTO_H" ein Wert gesetzt, den man mittels "ifdef" bzw.
-   "ifndef" abprüfen kann. Dieser gibt Auskunft, ob diese Headerdatei bereits 
+   "ifndef" abprÃ¼fen kann. Dieser gibt Auskunft, ob diese Headerdatei bereits 
    eingebunden wurde.
 */
 #ifndef STUDENT_H
 #define STUDENT_H
 
-#include <iostream>	// für cout
-#include <string>	// für string Operationen
-#include <time.h>       // für datums und Zeitinforationen
+#include <iostream>	// fÃ¼r cout
+#include <string>	// fÃ¼r string Operationen
+#include <time.h>       // fÃ¼r datums und Zeitinforationen
 using namespace std;
 
 /*
@@ -36,12 +36,12 @@ class Student
 		int geb_monat;
 		int geb_jahr;
 
-	// öffentlicher Teil der Klasse (alles darunter angegebene kann von 
+	// Ã¶ffentlicher Teil der Klasse (alles darunter angegebene kann von 
 	// jedem verwendet werden)
 	public:
 		/* Ein Konstruktor zum Generieren eines Student-Objektes */
 		Student();
-		/* Ein Destruktor zum Zerstören eines Student-Objektes */
+		/* Ein Destruktor zum ZerstÃ¶ren eines Student-Objektes */
 		~Student();			
 
 		/* Eine Methode, mit der man den Vornamen des Studenten setzen kann */
