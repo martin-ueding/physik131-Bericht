@@ -30,4 +30,15 @@ int main() {
     if (s.compare(s2) == 0) {
         std::cout << "s and s2 are equal" << std::endl;
     }
+
+    // Position of substring "ef".
+    size_t pos_ef = s.find_first_of("ef");
+    std::cout << "Position of \"ef\" is: " << pos_ef << std::endl;
+
+    // Replace "cd" with "ZZ".
+    size_t pos_cd = s.find_first_of("cd");
+    s = s.replace(pos_cd, 2, "ZZ");
+
+    std::cout << "s is now " << s << std::endl;
+
 }
