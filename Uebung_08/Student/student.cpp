@@ -51,6 +51,9 @@ Student::Student() {
 	geb_tag = 1;
 	geb_monat = 1;
 	geb_jahr = 1950;
+
+	matrikelnummer = 0;
+	studienfach = 0;
 }
 
 Student::~Student() {

@@ -12,6 +12,9 @@ private:
 	string vorname;
 	string nachname;
 
+	int studienfach;
+	int matrikelnummer;
+
 	int geb_tag;
 	int geb_monat;
 	int geb_jahr;
