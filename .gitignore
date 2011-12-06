@@ -1,9 +1,9 @@
 *.aux
-*.lol
 *.lof
 *.log
+*.lol
 *.lot
 *.out
-Bericht.pdf
 *.toc
+Bericht.pdf
 Bericht.pyg
