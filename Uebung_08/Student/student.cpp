@@ -60,5 +60,5 @@ Student::~Student() {
 }
 
 int Student::getGeburtstag() {
-	return geb_tag+geb_monat*100+geb_jahr*10000;
+	return geb_tag + geb_monat * 100 + geb_jahr * 10000;
 }
