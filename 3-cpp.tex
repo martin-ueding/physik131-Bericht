@@ -22,6 +22,7 @@ Die Ausgabe des Programms \ref{code:hello} ist in Listing \ref{code:hello.out} z
 Die Optionen \texttt{-Wall und --pedantic} zeigen deutlich mehr Unstimmigkeiten im Code auf und sind damit zu empfehlen. Das im Beispiel benutzte \texttt{int a;}, das allerdings nie verwendet wird, ist meistens ein Fehler und man hat an einer anderen Stelle nicht \texttt{a}, sondern versehentlich eine andere Zahl benutzt.
 
 \section{Äthiopische Multiplikation}
+\label{section:ethiopian}
 
 Das Program (Listing \ref{code:ethiopian}) habe ich aus dem Skript kopiert und entsprechend wieder mit Makefile (Listing \ref{code:ethiopian-make}) versehen. Damit es von der Makefile allerdings nicht-interaktiv kompiliert werden kann, übernehme ich die Eingabezahlen von der Kommandozeile.
 
@@ -95,7 +96,7 @@ Dies ist das Programm, das die Spannungs- und Stromdaten einließt und entsprech
 
 \section{vollständige Ausgabe von \texttt{ethiopian}}
 
-Die komplette Multiplikationstabelle für 1 bis 10 ist im folgenden Listing gezeigt.
+Die komplette Multiplikationstabelle des Programms in §\ref{section:ethiopian} für 1 bis 10 ist im folgenden Listing gezeigt.
 \lstinputlisting[caption=Ausgabe von ethiopian-ng, label=code:ethiopian-ng.out]{Uebung_06/ethiopian-ng/ethiopian.out}
 
 \section{Makefiles}
