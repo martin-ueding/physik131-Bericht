@@ -8,7 +8,7 @@
 
 Dies ist das einfache \gqq{Hello, World!}-Programm (Listing \ref{code:hello}), das Kerningham und Ritchie zum Einstieg empfehlen um seine Entwicklungsumgebung entsprechend einzurichten.
 
-\lstinputlisting[caption=hello.cpp, language=c++, label=code:hello, float=htb]{Uebung_06/hello/hello.cpp}
+\code{c++}{Uebung_06/hello/hello.cpp}{hello.cpp}{code:hello}
 
 Um das ganze zu kompilieren braucht man einen C++-Compiler, in diesem Fall ist es \texttt{g++}. Man kann aber genauso gut \texttt{MSVC++} benutzen.
 
@@ -17,7 +17,7 @@ Ich möchte nicht immer den Compilerbefehl erneut eintippen\footnote{Wobei in Ba
 
 Die Ausgabe des Programms \ref{code:hello} ist in Listing \ref{code:hello.out} zu sehen.
 
-\lstinputlisting[caption=Ausgabe von hello, label=code:hello.out, float=htb]{Uebung_06/hello/hello.out}
+\code{}{Uebung_06/hello/hello.out}{Ausgabe von hello}{code:hello.out}
 
 Die Optionen \texttt{-Wall und --pedantic} zeigen deutlich mehr Unstimmigkeiten im Code auf und sind damit zu empfehlen. Das im Beispiel benutzte \texttt{int a;}, das allerdings nie verwendet wird, ist meistens ein Fehler und man hat an einer anderen Stelle nicht \texttt{a}, sondern versehentlich eine andere Zahl benutzt.
 
@@ -26,7 +26,7 @@ Die Optionen \texttt{-Wall und --pedantic} zeigen deutlich mehr Unstimmigkeiten 
 
 Das Program (Listing \ref{code:ethiopian}) habe ich aus dem Skript kopiert und entsprechend wieder mit Makefile (Listing \ref{code:ethiopian-make}) versehen. Damit es von der Makefile allerdings nicht-interaktiv kompiliert werden kann, übernehme ich die Eingabezahlen von der Kommandozeile.
 
-\lstinputlisting[caption=ethiopian.cpp, language=c++, label=code:ethiopian, float=htb]{Uebung_06/ethiopian/ethiopian.cpp}
+\code{c++}{Uebung_06/ethiopian/ethiopian.cpp}{ethiopian.cpp}{code:ethiopian}
 
 Die Ausgabe für $14 \cdot 36$ ist in Listing \ref{code:ethiopian.out} gezeigt.
 
