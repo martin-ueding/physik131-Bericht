@@ -252,17 +252,7 @@ Die Dateien auf den zwei verschiedenen Rechnern, die allerdings ihr Heimatverzei
 
 Kopiert man die Dateien auf einen Rechner, kann man sie mit \texttt{diff -u} vergleichen. Die Unterschiede sind Listing \ref{code:diff} gezeigt.
 
-\begin{lstlisting}[caption=Unterschied zwischen Ordnerinhalten, float=htb, label=code:diff]
---- ls-lR.host1 2011-10-30 14:43:46.031286114 +0100
-+++ ls-lR.host2 2011-10-30 14:43:49.275286307 +0100
-@@ -2 +2 @@
--insgesamt 156
-+insgesamt 184
-@@ -9 +9,2 @@
---rw-r--r-- 1 ueding studis      0 30. Okt 2011  ls-lR.host1
-+-rw-r--r-- 1 ueding studis  24614 30. Okt 2011  ls-lR.host1
-+-rw-r--r-- 1 ueding studis      0 30. Okt 2011  ls-lR.host2
-\end{lstlisting}
+\code{Uebung_03/pools.diff}{Unterschied zwischen Ordnerinhalten}{code:diff}
 
 Die Datei, in die die Ausgabe umgeleitet wird, wird zwar direkt angelegt, weil bash sie öffnet, allerdings hat sie noch keine Größe. Erst nach dem Durchlauf ist die Datei komplett da. Zwischen Physik und Astro CIP-Pool sind natürlich alle Dateien anders, weil es komplett verschiedene Ordner sind. Nur Dateien wie meine \texttt{.bashrc} sind beispielsweise auf beiden Seiten vorhanden und haben die gleiche Größe, jedoch unterscheidet sich das Änderungsdatum.
 
