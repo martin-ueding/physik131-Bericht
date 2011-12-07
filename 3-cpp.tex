@@ -8,7 +8,7 @@
 
 Dies ist das einfache \gqq{Hello, World!}-Programm, das Kerningham und Ritchie zum Einstieg empfehlen um seine Entwicklungsumgebung entsprechend einzurichten.
 
-\code{c++}{Uebung_06/hello/hello.cpp}{hello.cpp}{code:hello}
+\code[c++]{Uebung_06/hello/hello.cpp}{hello.cpp}{code:hello}
 
 Um das ganze zu kompilieren braucht man einen C++-Compiler, in diesem Fall ist es \texttt{g++}. Man kann aber genauso gut \texttt{MSVC++} benutzen.
 
@@ -17,7 +17,7 @@ Ich möchte nicht immer den Compilerbefehl erneut eintippen\footnote{Wobei in Ba
 
 Die Ausgabe des Programms \ref{code:hello} ist in Listing \ref{code:hello.out} zu sehen.
 
-\code{text}{Uebung_06/hello/hello.out}{Ausgabe von hello}{code:hello.out}
+\code{Uebung_06/hello/hello.out}{Ausgabe von hello}{code:hello.out}
 
 Die Optionen \texttt{-Wall und --pedantic} zeigen deutlich mehr Unstimmigkeiten im Code auf und sind damit zu empfehlen. Das im Beispiel benutzte \texttt{int a;}, das allerdings nie verwendet wird, ist meistens ein Fehler und man hat an einer anderen Stelle nicht \texttt{a}, sondern versehentlich eine andere Zahl benutzt.
 
@@ -26,16 +26,16 @@ Die Optionen \texttt{-Wall und --pedantic} zeigen deutlich mehr Unstimmigkeiten 
 
 Das Program (Listing \ref{code:ethiopian}) habe ich aus dem Skript kopiert und entsprechend wieder mit Makefile (Listing \ref{code:ethiopian-make}) versehen. Damit es von der Makefile allerdings nicht-interaktiv kompiliert werden kann, übernehme ich die Eingabezahlen von der Kommandozeile.
 
-\code{c++}{Uebung_06/ethiopian/ethiopian.cpp}{ethiopian.cpp}{code:ethiopian}
+\code[c++]{Uebung_06/ethiopian/ethiopian.cpp}{ethiopian.cpp}{code:ethiopian}
 
 Die Ausgabe für $14 \cdot 36$ ist in Listing \ref{code:ethiopian.out} gezeigt.
 
-\lstinputlisting[caption=Ausgabe von ethiopian, label=code:ethiopian.out, float=htb]{Uebung_06/ethiopian/ethiopian.out}
+\code{Uebung_06/ethiopian/ethiopian.out}{Ausgabe von ethiopian}{code:ethiopian.out}
 
 Möchte man nun eine Art Multiplikationstabelle von eins bis zehn erhalten, muss man zwei ineinander geschachtelte Schleifen bauen. \texttt{a} und \texttt{b} können nicht als Schleifenindizes verwendet werden, da sie vom Algorithmus verwendet werden. Entweder kapselt man den Algorithmus in eine Funktion, oder man benutzt einfach andere Variablen. Das geänderte Programm ist in Listing \ref{code:ethiopian-ng} zu sehen. Die Ausgabe  ist sehr lang, daher ist an dieser Stelle nur ein Ausschnitt (Listing \ref{code:ethiopian-ng.short.out}) gezeigt, die komplette Ausgabe kann in Listing \ref{code:ethiopian-ng.out} gefunden werden.
 
 
-\lstinputlisting[caption=ethiopian-ng.cpp, language=c++, label=code:ethiopian-ng, float=htb]{Uebung_06/ethiopian-ng/ethiopian.cpp}
+\code[c++]{Uebung_06/ethiopian-ng/ethiopian.cpp}{ethiopian-ng.cpp}{code:ethiopian-ng}
 
 \lstinputlisting[caption=Ausgabe von ethiopian-ng (erste 15 Zeilen), label=code:ethiopian-ng.short.out, float=htb]{Uebung_06/ethiopian-ng/ethiopian.short.out}
 
@@ -55,7 +55,7 @@ Eine Abbruchbedingung kann verschieden aussehen. Man kann nach einer gewissen An
 
 Das ganze Programm könnte man rekursiv implementieren, allerdings spricht hier nichts gegen eine iterative Variante, daher habe ich mich für letzteres entschieden. Mein Programm ist in Listing \ref{code:heron} zu sehen.
 
-\lstinputlisting[caption=heron.cpp, language=c++, label=code:heron, float=htb]{Uebung_06/heron/heron.cpp}
+\code[c++]{Uebung_06/heron/heron.cpp}{heron.cpp}{code:heron}
 
 Ich lasse $\sqrt{2} \approx 1.41421356237309504880168872421$\footnote{Mit \texttt{N[Sqrt[2], 30]} in Mathematica berechnet.} berechnen, die Ausgabe ist in Listing \ref{code:heron.out} zu sehen. Man kann sehen, dass das Programm schnell zu einem brauchbaren Ergebnis kommt, der Algorithmus also leistungsfähig ist.
 
@@ -65,8 +65,8 @@ Ich lasse $\sqrt{2} \approx 1.41421356237309504880168872421$\footnote{Mit \textt
 
 Mein Programm, dass die Daten einließt und wieder speichert ist in Listing \ref{code:arrays.cpp} zu finden. Die Aufgabe ist in Listing \ref{code:arrays.out}.
 
-\lstinputlisting[caption=arrays.cpp, label=code:arrays.cpp, language=c++]{Uebung_07/arrays/arrays.cpp}
-\lstinputlisting[caption=Ausgabe von arrays, label=code:arrays.out]{Uebung_07/arrays/out.dat}
+\code[c++]{Uebung_07/arrays/arrays.cpp}{arrays.cpp}{code:arrays.cpp}
+\code{Uebung_07/arrays/out.dat}{Ausgabe von arrays}{code:arrays.out}
 
 \subsection{Versuchsergebnisse}
 
