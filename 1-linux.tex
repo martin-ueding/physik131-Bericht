@@ -184,9 +184,9 @@ Es gilt das Muster \texttt{XXX XX 0000}, in jeder Gruppe können auch weniger Ze
 
 Das führt dazu, dass man im regulären Ausdruck (RegEx) nicht einfach 3, 2 und 4 Zeichen suche lassen kann, ansonsten würden Zeichenketten zugelassen, die 9 Zeichen lang sind. Somit muss man eine Fallunterscheidung benutzten. Darüber hinaus dürfen bei einem alten Kennzeichen -- erkennbar an dem Bindestrich -- einige Buchstaben im mittleren Feld nicht auftauchen. Der komplexe reguläre Ausdruck ist in Listing \ref{code:auto} gezeigt.
 
-\lstinputlisting[caption=auto.sh, language=bash, label=code:auto, float=htb]{Uebung_03/auto.sh}
+\code[bash]{Uebung_03/auto.sh}{auto.sh}{code:auto}
 
-\lstinputlisting[caption=Ausgabe von auto.sh, label=code:auto.out, float=htb]{Uebung_03/auto.sh.out}
+\code{Uebung_03/auto.sh.out}{Ausgabe von auto.sh}{code:auto.out}
 
 Man sieht, dass die gleiche Liste (Listing \ref{code:auto.out}) erzeugt wird, jedoch fällt das zweite Skript nicht auf diverse Gemeinheiten (Listing \ref{code:gemeinheiten}) rein, die man sich ausdenken könnte.
 
@@ -199,23 +199,23 @@ NDH ND 2000
 
 \section{Pipelines}
 \subsection{Namen}
-\lstinputlisting[caption=namen.dat, float=htb, label=code:namen.dat]{Uebung_03/namen.dat}
+\code{Uebung_03/namen.dat}{namen.dat}{code:namen.dat}
 
 Es ist recht sinnfrei \texttt{cat} zu benutzen, um den Inhalt zu in \texttt{sort} zu bekommen, da \texttt{sort} die Datei auch selbst laden kann.
 
 Mit dem entsprechenden Befehl (Listing \ref{code:namen}) bekommt man die gewünschte sortierte und gefiltere Ausgabe (Listing \ref{code:namen.out}) der Originaldatei (Listing \ref{code:namen.dat}).
 
-\lstinputlisting[caption=namen.sh, language=bash, float=htb, label=code:namen]{Uebung_03/namen.sh}
-\lstinputlisting[caption=Ausgabe von namen.sh, float=htb, label=code:namen.out]{Uebung_03/namen.sh.out}
+\code[bash]{Uebung_03/namen.sh}{namen.sh}{code:namen}
+\code{Uebung_03/namen.sh.out}{Ausgabe von namen.sh}{code:namen.out}{
 
 \subsection{Zahlen}
 
-\lstinputlisting[caption=zahlen.dat, float=htb, label=code:zahlen.dat]{Uebung_03/zahlen.dat}
+\code{Uebung_03/zahlen.dat}{zahlen.dat}{code:zahlen.dat}
 
 Bei den Zahlen werden die Zahlen (Eingabedatei in Listing \ref{code:zahlen.dat}) exakt so sortiert, wie ich es erwarte. Und zwar nach ASCII Code Point. Es ist unnatürlich, dass eine 2 vor einer 1 steht, weil \textit{nach} der 1 eine weitere Zahl folgt. Da die Zahlen in der Datei allerdings ohne führende Nullen stehen, muss man die Zahl zuerst interpretieren, damit sie nach Zahlenwert sortiert werden kann. Dafür ist das \texttt{-n} Flag da. Der komplette Befehl ist in \ref{code:zahlen-sort} gezeigt. Die Ausgabe (Listing \ref{code:zahlen-sort.out}) ist wirklich nach Zahlenwert sortiert.
 
-\lstinputlisting[caption=zahlen-sort.sh, float=htb, label=code:zahlen-sort]{Uebung_03/zahlen-sort.sh}
-\lstinputlisting[caption=Ausgabe von zahlen-sort.sh, float=htb, label=code:zahlen-sort.out]{Uebung_03/zahlen-sort.sh.out}
+\code[bash]{Uebung_03/zahlen-sort.sh}{zahlen-sort.sh}{code:zahlen-sort}
+\code{Uebung_03/zahlen-sort.sh.out}{Ausgabe von zahlen-sort.sh}{code:zahlen-sort.out}
 
 \section{Komprimierung und Archivierung}
 
@@ -296,7 +296,7 @@ Für das Sortieren hat \texttt{ps} auch eine entsprechende Option: \texttt{O+p}.
 \subsection{Teilaufgabe c}
 Mit \verb#ps ux O+p > myprocesses.txt# lässt sich die entsprechende Datei (Listing \ref{code:myprocesses}) erzeugen.
 
-\lstinputlisting[caption=myprocesses.txt, label=code:myprocesses, float=htb]{Uebung_03/myprocesses.txt} 
+\code{Uebung_03/myprocesses.txt}{myprocesses.txt}{code:myprocesses}
 
 
 Wenn man mag, kann man natürlich auch den Code aus Listing \ref{code:chain-pipe} benutzen.
@@ -310,11 +310,11 @@ ps aux | grep ueding | sort -n > myprocesses.txt
 
 \section{Kompressionsvergleich}
 \label{listing:compression}
-\lstinputlisting[caption=compare.sh, language=bash]{Uebung_03/compare.sh}
+\code[bash]{Uebung_03/compare.sh}{compare.sh}{}
 
 \section{Alternative Zählschleife}
 \label{listing:zahlen2}
 
-\lstinputlisting[caption=zahlen2.sh, language=bash]{Uebung_03/zahlen2.sh}
+\code[bash]{Uebung_03/zahlen2.sh}{zahlen2.sh}{}
  
-\lstinputlisting[caption=Ausgabe von zahlen2.sh]{Uebung_03/zahlen2.sh.out}
+\code{Uebung_03/zahlen2.sh.out}{Ausgabe von zahlen2.sh}{}
