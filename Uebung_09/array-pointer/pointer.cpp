@@ -3,7 +3,7 @@
 #include <iostream>
 
 int main() {
-	int* pointer;
+	int *pointer;
 	pointer = (int*) 0xDEADBEEF;
 	int array[10];
 
@@ -11,6 +11,14 @@ int main() {
 	array = pointer;
 	pointer = &array[3];
 	array[3] = pointer[5];
+
+	int *p1, *p2, i;
+
+	p1 = p2 + i;
+	p1 = i + p2;
+	i = p1 * p2;
+	i = p1 - p2;
+	i = p1 + p2;
 
 	return 0;
 }
