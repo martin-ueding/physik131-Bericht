@@ -3,3 +3,6 @@
 include ../../makefile.common
 
 bericht: bericht.cpp
+
+clean:
+	$(RM) bericht

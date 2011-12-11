@@ -18,3 +18,8 @@ clean:
 	$(RM) Bericht.pdf
 	$(RM) Bericht.pyg
 	$(RM) Bericht.toc
+	make clean -C Uebung_02
+	make clean -C Uebung_03
+	make clean -C Uebung_06
+	make clean -C Uebung_07
+	make clean -C Uebung_09

@@ -3,3 +3,7 @@
 all:
 	make -C arrays
 	make -C bericht
+
+clean:
+	make clean -C arrays
+	make clean -C bericht

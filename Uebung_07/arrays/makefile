@@ -3,3 +3,6 @@
 include ../../makefile.common
 
 arrays: arrays.cpp
+
+clean:
+	$(RM) arrays
