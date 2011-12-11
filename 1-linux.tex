@@ -145,9 +145,7 @@ Auch hier muss man sein Arbeitsverzeichnis für die relativen Pfade im Kopf habe
 
 Die Dateien lassen sich recht einfach mit dem Code aus Listing \ref{code:touch} erstellen. Dabei werden die geschweiften Klammern benutzt, um mehrere Dateien, die Namensbestandteile gemeinsam haben, zu erzeugen.
 
-\begin{lstlisting}[caption=Anlegen der Dateien, language=bash, label=code:touch, float=htb]
-touch datei{1..9}.txt logfile{10,10a,11,11a,11b}.txt
-\end{lstlisting}
+\code[bash]{Uebung_02/anlegen.sh}{Anlegen der Dateien}{code:touch}
 
 Listing \ref{code:ls} zeigt, wie man diese Dateien ausgeben (Ausgabe in Listing \ref{code:ls.out}) kann.
 
@@ -190,12 +188,7 @@ Das führt dazu, dass man im regulären Ausdruck (RegEx) nicht einfach 3, 2 und 
 
 Man sieht, dass die gleiche Liste (Listing \ref{code:auto.out}) erzeugt wird, jedoch fällt das zweite Skript nicht auf diverse Gemeinheiten (Listing \ref{code:gemeinheiten}) rein, die man sich ausdenken könnte.
 
-\begin{lstlisting}[caption=Gemeinheiten für Listing \ref{code:auto-einfach}, label=code:gemeinheiten, float=htb]
-zKeinKennzeichen
-NDH ND 2000
- 1234 DC 75
-@27
-\end{lstlisting}
+\code{Uebung_03/gemeinheiten.txt}{Gemeinheiten für Listing \ref{code:auto-einfach}}{code:gemeinheiten}
 
 \section{Pipelines}
 \subsection{Namen}
@@ -286,9 +279,7 @@ In dieser Aufgabe ist wahrscheinlich ein \verb#ps aux | grep ueding# gefragt. Di
 
 Allerdings kann man auch einfach das \texttt{a} weglassen und erhält direkt eine Liste mit seinen eigenen Prozessen und vermeidet an dieser Stelle die Benutzung von \texttt{grep} komplett.
 
-\begin{lstlisting}[caption=Einschänkung des Suchbereichs, float=htb, label=code:psauxgrep-beginning]
-ps aux | grep '^ueding '
-\end{lstlisting}
+\code[bash]{Uebung_03/psauxgrep-beginning.sh}{Einschänkung des Suchbereichs}{code:psauxgrep-beginning}
 
 \subsection{Teilaufgabe b}
 Für das Sortieren hat \texttt{ps} auch eine entsprechende Option: \texttt{O+p}. So lässt sich mit \texttt{ps ux O+p} direkt nach Prozess-ID sortieren.
@@ -301,9 +292,7 @@ Mit \verb#ps ux O+p > myprocesses.txt# lässt sich die entsprechende Datei (List
 
 Wenn man mag, kann man natürlich auch den Code aus Listing \ref{code:chain-pipe} benutzen.
 
-\begin{lstlisting}[caption=verkettete Pipes, label=code:chain-pipe, float=htb]
-ps aux | grep ueding | sort -n > myprocesses.txt
-\end{lstlisting}
+\code[bash]{Uebung_03/chain-pipe.sh}{verkettete Pipes}{code:chain-pipe}
 
 \chapter{Anhang}
 
