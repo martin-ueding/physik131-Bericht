@@ -3,7 +3,7 @@ Bericht.pdf: Bericht.tex 1-linux.tex 2-latex.tex 3-cpp.tex
 	make -C Uebung_03
 	make -C Uebung_06
 	make -C Uebung_07
-	make -C Uebung_09/swap
+	make -C Uebung_09
 	pdflatex $<
 
 clean:
