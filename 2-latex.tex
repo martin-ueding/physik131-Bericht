@@ -79,17 +79,17 @@ a^2 + b^2 = c^2
 \end{equation}
 
 \paragraph{Zweites Beispiel (Gleichung über mehrere Zeilen)}
-\begin{eqnarray}
-(2x + 1)(2x - 1) &=& 7 \nonumber \\
-4x^2 - 1 &=& 7 \nonumber \\
-x^2 &=& 2  \nonumber\\
+\begin{align}
+(2x + 1)(2x - 1) &= 7 \nonumber \\
+4x^2 - 1 &= 7 \nonumber \\
+x^2 &= 2  \nonumber\\
 x &=& \pm 2
-\end{eqnarray}
+\end{align}
 \paragraph{Drittes Beispiel (Hochstellung, Wurzeln)}
-\begin{eqnarray}
-\left( a^{\frac{p}{q}} \right)^{rq} &=& \left( \left( \sqrt[q]{a^p} \right)^q \right)^r \nonumber \\
-&=& (a^p)^r = a^{rp}
-\end{eqnarray}
+\begin{align}
+\left( a^{\frac{p}{q}} \right)^{rq} &= \left( \left( \sqrt[q]{a^p} \right)^q \right)^r \nonumber \\
+&= (a^p)^r = a^{rp}
+\end{align}
 \paragraph{Viertes Beispiel (Brüche)}
 \begin{equation}
 \frac{1-x^4}{(x^3)^2}-\left(\frac{1}{x}\right)^2=\frac{1-2x^4}{x^6}
@@ -109,19 +109,19 @@ M = \frac
 \end{equation}
 
 \paragraph{Sechstes Beispiel (Klammerausdruck, Array)}
-\begin{eqnarray}
-\ln(1+|u|) &=& x-c \nonumber \\
-1+|u| &=& e^{x-c} \nonumber \\
-|u| &=& e^{x-c}-1 \nonumber \\
-u(x) &=& \begin{cases}
+\begin{align}
+\ln(1+|u|) &= x-c \nonumber \\
+1+|u| &= e^{x-c} \nonumber \\
+|u| &= e^{x-c}-1 \nonumber \\
+u(x) &= \begin{cases}
 e^{x-c}-1 & \text{für} \, x > c \\
 0 & \text{für}\, x=c \\
 -e^{x-c}+1 & \text{für} \, x < c
 \end{cases}
-\end{eqnarray}
+\end{align}
 
-\paragraph{Siebtes Beispiel (Funktionen, verschachtelte Bruche)}
-Aus der l’Hospitalschen Regel folgt:
+\paragraph{Siebtes Beispiel (Funktionen, verschachtelte Brüche)}
+Aus der l’Hos\-pi\-tal\-schen Regel folgt:
 
 \[
 \lim_{x \rightarrow \infty} \frac{\ln\sin(\pi x)}{\ln\sin(x)} =
@@ -141,13 +141,13 @@ f(x)=\int_a^b \frac{3x^2}{x^3-1} \mathrm dx
 
 Exkurs:
 
-\begin{eqnarray}
-u &:=& x^3-1 \nonumber \\
-\frac{\mathrm dx}{\mathrm dy} &=& 3x^2 \nonumber \\
-\mathrm dx &=& \frac{\mathrm du}{3x^2} \nonumber \\
-\int \frac{3x^2}{x^3-1} \mathrm dx &=& \int \frac{1}{u} \mathrm du \\
-f(x) &=& \ln(|u|) + c
-\end{eqnarray}
+\begin{align}
+u &:= x^3-1 \nonumber \\
+\frac{\mathrm dx}{\mathrm dy} &= 3x^2 \nonumber \\
+\mathrm dx &= \frac{\mathrm du}{3x^2} \nonumber \\
+\int \frac{3x^2}{x^3-1} \mathrm dx &= \int \frac{1}{u} \mathrm du \\
+f(x) &= \ln(|u|) + c
+\end{align}
 
 Es folgt damit:
 

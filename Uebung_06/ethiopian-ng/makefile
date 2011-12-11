@@ -1,9 +1,12 @@
-include ../../makefile.common
+# Copyright (c) 2011 Martin Ueding <dev@martin-ueding.de>
 
-ethiopian.short.out: ethiopian.out
-	head -n 15 $< > $@
+include ../../makefile.common
 
 ethiopian.out: ethiopian
 	./$^ > $@
 
 ethiopian: ethiopian.cpp
+
+clean:
+	$(RM) ethiopian
+	$(RM) ethiopian.out

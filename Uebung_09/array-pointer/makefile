@@ -6,7 +6,4 @@ pointer: pointer.cpp
 
 .PHONY: clean
 clean:
-	$(RM) *.class *.jar
-	$(RM) *.o *.out
-	$(RM) *.pyc
-	$(RM) *.orig
+	$(RM) pointer

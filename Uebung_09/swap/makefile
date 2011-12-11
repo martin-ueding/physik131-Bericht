@@ -7,9 +7,6 @@ swap.out: swap
 
 swap: swap.cpp
 
-.PHONY: clean
 clean:
-	$(RM) *.class *.jar
-	$(RM) *.o *.out
-	$(RM) *.pyc
-	$(RM) *.orig
+	$(RM) swap
+	$(RM) swap.out

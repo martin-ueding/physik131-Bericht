@@ -2,11 +2,7 @@
 
 include ../../makefile.common
 
-out.dat: arrays
-	./arrays > $@
-
-arrays: arrays.cpp
+all: ls.sh.out
 
 clean:
-	$(RM) arrays
-	$(RM) out.dat
+	$(RM) ls.sh.out

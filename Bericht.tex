@@ -19,32 +19,32 @@
 \definecolor{darkblue}{rgb}{0,0,.5}
 \definecolor{lightblue}{rgb}{0.9,.9,1}
 \definecolor{gray}{rgb}{.3,.3,.3}
-\hypersetup{pdftex=true, colorlinks=true, breaklinks=false, linkcolor=black, menucolor=black, pagecolor=black, urlcolor=darkblue}
+\hypersetup{colorlinks=true, breaklinks=false, linkcolor=black, menucolor=black, urlcolor=darkblue}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
 % Format for listings
+\usepackage{calc}
 \usepackage{caption}
 \DeclareCaptionFont{white}{\color{white}}
-\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth-2\fboxsep}{#1#2#3}}}
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, margin=0pt, font={bf,footnotesize}}
 \usepackage[T1]{fontenc}
 \usepackage[scaled]{beramono}
 \usepackage{listings}
 \lstset{
 	breaklines=true,
-	showstringspaces=false,
-%	backgroundcolor=\color{lightblue},
-	framexleftmargin=0pt,
-	framexrightmargin=0pt,
-	framextopmargin=0pt,
-	framexbottommargin=0pt,
-	frame=b,
-	xleftmargin=0pt,
-	xrightmargin=0pt,
-	basicstyle=\small\ttfamily,
-	keywordstyle=\color{black}\bfseries,
-	tabsize=4
-	}
+		showstringspaces=false,
+		framexleftmargin=0pt,
+		framexrightmargin=0pt,
+		framextopmargin=0pt,
+		framexbottommargin=0pt,
+		frame=b,
+		xleftmargin=0pt,
+		xrightmargin=0pt,
+		basicstyle=\small\ttfamily,
+		keywordstyle=\color{black}\bfseries,
+		tabsize=4
+}
 
 % Easy German quotes
 \newcommand\gqq[1]{\glqq #1\grqq}

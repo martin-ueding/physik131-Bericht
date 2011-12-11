@@ -12,7 +12,7 @@ Dies ist das einfache \gqq{Hello, World!}-Programm, das Kerningham und Ritchie z
 
 Um das ganze zu kompilieren braucht man einen C++-Compiler, in diesem Fall ist es \texttt{g++}. Man kann aber genauso gut \texttt{MSVC++} benutzen.
 
-Ich möchte nicht immer den Compilerbefehl erneut eintippen\footnote{Wobei in Bash der letzte Kompiliervorgang mit \texttt{!g++} noch recht schnell zu wiederholen ist.}, so dass ich hier eine Makefile benutze (Listing \ref{code:hello-make}) um das Programm mit einem einfachen \texttt{make} kompilieren zu können. Außerdem wird hier auch direkt die Ausgabe des Programms in eine Datei gefügt, die dann wiederum in dieses \LaTeX\ Dokument eingefügt wird. Somit sind die Ausgaben, die hier enthalten sind tatsächlich von den Programmen erzeugt worden.
+Ich möchte nicht immer den Compilerbefehl erneut eintippen\footnote{Wobei in Bash der letzte Kompiliervorgang mit \texttt{!g++} noch recht schnell zu wiederholen ist.}, so dass ich hier eine Makefile benutze um das Programm mit einem einfachen \texttt{make} kompilieren zu können. Außerdem wird hier auch direkt die Ausgabe des Programms in eine Datei gefügt, die dann wiederum in dieses \LaTeX\ Dokument eingefügt wird. Somit sind die Ausgaben, die hier enthalten sind tatsächlich von den Programmen erzeugt worden.
 
 
 Die Ausgabe des Programms \ref{code:hello} ist in Listing \ref{code:hello.out} zu sehen.
@@ -24,7 +24,7 @@ Die Optionen \texttt{-Wall und --pedantic} zeigen deutlich mehr Unstimmigkeiten 
 \section{Äthiopische Multiplikation}
 \label{section:ethiopian}
 
-Das Program (Listing \ref{code:ethiopian}) habe ich aus dem Skript kopiert und entsprechend wieder mit Makefile (Listing \ref{code:ethiopian-make}) versehen. Damit es von der Makefile allerdings nicht-interaktiv kompiliert werden kann, übernehme ich die Eingabezahlen von der Kommandozeile.
+Das Program (Listing \ref{code:ethiopian}) habe ich aus dem Skript kopiert und entsprechend wieder mit Makefile versehen. Damit es von der Makefile allerdings nicht-interaktiv kompiliert werden kann, übernehme ich die Eingabezahlen von der Kommandozeile.
 
 \code[c++]{Uebung_06/ethiopian/ethiopian.cpp}{ethiopian.cpp}{code:ethiopian}
 
@@ -32,12 +32,11 @@ Die Ausgabe für $14 \cdot 36$ ist in Listing \ref{code:ethiopian.out} gezeigt.
 
 \code{Uebung_06/ethiopian/ethiopian.out}{Ausgabe von ethiopian}{code:ethiopian.out}
 
-Möchte man nun eine Art Multiplikationstabelle von eins bis zehn erhalten, muss man zwei ineinander geschachtelte Schleifen bauen. \texttt{a} und \texttt{b} können nicht als Schleifenindizes verwendet werden, da sie vom Algorithmus verwendet werden. Entweder kapselt man den Algorithmus in eine Funktion, oder man benutzt einfach andere Variablen. Das geänderte Programm ist in Listing \ref{code:ethiopian-ng} zu sehen. Die Ausgabe  ist sehr lang, daher ist an dieser Stelle nur ein Ausschnitt (Listing \ref{code:ethiopian-ng.short.out}) gezeigt, die komplette Ausgabe kann in Listing \ref{code:ethiopian-ng.out} gefunden werden.
-
+Möchte man nun eine Art Multiplikationstabelle von eins bis zehn erhalten, muss man zwei ineinander geschachtelte Schleifen bauen. \texttt{a} und \texttt{b} können nicht als Schleifenindizes verwendet werden, da sie vom Algorithmus verwendet werden. Entweder kapselt man den Algorithmus in eine Funktion, oder man benutzt einfach andere Variablen. Das geänderte Programm ist in Listing \ref{code:ethiopian-ng} zu sehen. Die Ausgabe ist in Listing \ref{code:ethiopian-ng.short.out}) gezeigt.
 
 \code[c++]{Uebung_06/ethiopian-ng/ethiopian.cpp}{ethiopian-ng.cpp}{code:ethiopian-ng}
 
-\lstinputlisting[caption=Ausgabe von ethiopian-ng (erste 15 Zeilen), label=code:ethiopian-ng.short.out, float=htb]{Uebung_06/ethiopian-ng/ethiopian.short.out}
+\lstinputlisting[caption=Ausgabe von ethiopian-ng, label=code:ethiopian-ng.short.out, float=htb]{Uebung_06/ethiopian-ng/ethiopian.out}
 
 Möchte man alle Multiplikationen haben, lässt man die Indizes von 1 bis 10 laufen. Um kommutativ äquivalente Rechnungen zu unterdrücken, lässt man den inneren Index beim äußeren Index starten.
 
@@ -68,7 +67,7 @@ Mein Programm, dass die Daten einließt und wieder speichert ist in Listing \ref
 \code[c++]{Uebung_07/arrays/arrays.cpp}{arrays.cpp}{code:arrays.cpp}
 \code{Uebung_07/arrays/out.dat}{Ausgabe von arrays}{code:arrays.out}
 
-\subsection{Versuchsergebnisse}
+\section{Versuchsergebnisse}
 
 Dies ist das Programm, das die Spannungs- und Stromdaten einließt und entsprechend auswertet. Die Widerstandstabelle ist in Listing \ref{code:bericht.out}, die statistischen Größen in Listing \ref{code:means.dat}.
 
@@ -113,18 +112,3 @@ Die Lösung ist in Listing \ref{code:swap} gezeigt. In der Übung schreiben Sie 
 
 \code[c++]{Uebung_09/swap/swap.cpp}{Swap}{code:swap}
 \code{Uebung_09/swap/swap.out}{Swap}{code:swap.out}
-
-\chapter{Anhang}
-
-
-\section{vollständige Ausgabe von \texttt{ethiopian}}
-
-Die komplette Multiplikationstabelle des Programms in §\ref{section:ethiopian} für 1 bis 10 ist im folgenden Listing gezeigt.
-\lstinputlisting[caption=Ausgabe von ethiopian-ng, label=code:ethiopian-ng.out]{Uebung_06/ethiopian-ng/ethiopian.out}
-
-\section{Makefiles}
-\inputminted[label=makefile.common]{make}{makefile.common}
-\lstinputlisting[label=makefile zu hello, language=make, label=code:hello-make, float=htb]{Uebung_06/hello/makefile}
-\lstinputlisting[label=makefile zu ethiopian, language=make, label=code:ethiopian-make, float=htb]{Uebung_06/ethiopian/makefile}
-\lstinputlisting[label=makefile zu ethiopian-ng, language=make, label=code:ethiopian-ng-make, float=htb]{Uebung_06/ethiopian-ng/makefile}
-\lstinputlisting[label=makefile zu heron, language=make, label=code:ethiopian-ng-make, float=htb]{Uebung_06/heron/makefile}

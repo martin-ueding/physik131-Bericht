@@ -1,9 +1,7 @@
 # Copyright (c) 2011 Martin Ueding <dev@martin-ueding.de>
 
-include ../makefile.common
-
 all:
-	make -C wildcards
+	make -C Uebung05_Zubehoer
 
 clean:
-	make clean -C wildcards
+	make clean -C Uebung05_Zubehoer

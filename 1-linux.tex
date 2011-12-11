@@ -224,7 +224,6 @@ Leider war die Datei \texttt{cc++.tar} zum Bearbeitungszeitpunkt nicht verfügba
 \begin{table}[h!]
 \begin{center}
 \begin{tabular}{llll}
-\label{table:compression-results}
 Programm & Option & Zeit [s] & Dateigröße [KiB] \\
 \hline
 tar + bzip2 &  & 4.29 + 11.02 & 12701 \\
@@ -237,6 +236,7 @@ zip &  & 2.29 & 16694\\
 \end{tabular}
 \end{center}
 \caption{Zeiten und Dateigrößen verschiedener Kompressionsprogramme}
+\label{table:compression-results}
 \end{table}
 
 Man sieht an den Daten in Tabelle \ref{table:compression-results}, dass bzip2 etwas besser komprimiert, allerdings deutlich länger braucht. Zip ist am schnellsten, schafft allerdings auch am wenigsten Kompression.
