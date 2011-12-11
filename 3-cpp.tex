@@ -12,7 +12,7 @@ Dies ist das einfache \gqq{Hello, World!}-Programm (Listing \ref{code:hello}), d
 
 Um das ganze zu kompilieren braucht man einen C++-Compiler, in diesem Fall ist es \texttt{g++}. Man kann aber genauso gut \texttt{MSVC++} benutzen.
 
-Ich möchte nicht immer den Compilerbefehl erneut eintippen\footnote{Wobei in Bash der letzte Kompiliervorgang mit \texttt{!g++} noch recht schnell zu wiederholen ist.}, so dass ich hier eine Makefile benutze (Listing \ref{code:hello-make}) um das Programm mit einem einfachen \texttt{make} kompilieren zu können. Außerdem wird hier auch direkt die Ausgabe des Programms in eine Datei gefügt, die dann wiederum in dieses \LaTeX\ Dokument eingefügt wird. Somit sind die Ausgaben, die hier enthalten sind tatsächlich von den Programmen erzeugt worden.
+Ich möchte nicht immer den Compilerbefehl erneut eintippen\footnote{Wobei in Bash der letzte Kompiliervorgang mit \texttt{!g++} noch recht schnell zu wiederholen ist.}, so dass ich hier eine Makefile benutze um das Programm mit einem einfachen \texttt{make} kompilieren zu können. Außerdem wird hier auch direkt die Ausgabe des Programms in eine Datei gefügt, die dann wiederum in dieses \LaTeX\ Dokument eingefügt wird. Somit sind die Ausgaben, die hier enthalten sind tatsächlich von den Programmen erzeugt worden.
 
 
 Die Ausgabe des Programms \ref{code:hello} ist in Listing \ref{code:hello.out} zu sehen.
@@ -24,7 +24,7 @@ Die Optionen \texttt{-Wall und --pedantic} zeigen deutlich mehr Unstimmigkeiten 
 \section{Äthiopische Multiplikation}
 \label{section:ethiopian}
 
-Das Program (Listing \ref{code:ethiopian}) habe ich aus dem Skript kopiert und entsprechend wieder mit Makefile (Listing \ref{code:ethiopian-make}) versehen. Damit es von der Makefile allerdings nicht-interaktiv kompiliert werden kann, übernehme ich die Eingabezahlen von der Kommandozeile.
+Das Program (Listing \ref{code:ethiopian}) habe ich aus dem Skript kopiert und entsprechend wieder mit Makefile versehen. Damit es von der Makefile allerdings nicht-interaktiv kompiliert werden kann, übernehme ich die Eingabezahlen von der Kommandozeile.
 
 \code[c++]{Uebung_06/ethiopian/ethiopian.cpp}{ethiopian.cpp}{code:ethiopian}
 
@@ -113,12 +113,3 @@ Die Lösung ist in Listing \ref{code:swap} gezeigt. In der Übung schreiben Sie 
 
 \code[c++]{Uebung_09/swap/swap.cpp}{Swap}{code:swap}
 \code{Uebung_09/swap/swap.out}{Swap}{code:swap.out}
-
-\chapter{Anhang}
-
-\section{Makefiles}
-\lstinputlisting[caption=makefile.common, language=make, label=code:makefile.common, float=htb]{makefile.common}
-\lstinputlisting[caption=makefile zu hello, language=make, label=code:hello-make, float=htb]{Uebung_06/hello/makefile}
-\lstinputlisting[caption=makefile zu ethiopian, language=make, label=code:ethiopian-make, float=htb]{Uebung_06/ethiopian/makefile}
-\lstinputlisting[caption=makefile zu ethiopian-ng, language=make, label=code:ethiopian-ng-make, float=htb]{Uebung_06/ethiopian-ng/makefile}
-\lstinputlisting[caption=makefile zu heron, language=make, label=code:heron-make, float=htb]{Uebung_06/heron/makefile}
