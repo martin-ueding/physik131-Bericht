@@ -32,12 +32,11 @@ Die Ausgabe für $14 \cdot 36$ ist in Listing \ref{code:ethiopian.out} gezeigt.
 
 \code{Uebung_06/ethiopian/ethiopian.out}{Ausgabe von ethiopian}{code:ethiopian.out}
 
-Möchte man nun eine Art Multiplikationstabelle von eins bis zehn erhalten, muss man zwei ineinander geschachtelte Schleifen bauen. \texttt{a} und \texttt{b} können nicht als Schleifenindizes verwendet werden, da sie vom Algorithmus verwendet werden. Entweder kapselt man den Algorithmus in eine Funktion, oder man benutzt einfach andere Variablen. Das geänderte Programm ist in Listing \ref{code:ethiopian-ng} zu sehen. Die Ausgabe  ist sehr lang, daher ist an dieser Stelle nur ein Ausschnitt (Listing \ref{code:ethiopian-ng.short.out}) gezeigt, die komplette Ausgabe kann in Listing \ref{code:ethiopian-ng.out} gefunden werden.
-
+Möchte man nun eine Art Multiplikationstabelle von eins bis zehn erhalten, muss man zwei ineinander geschachtelte Schleifen bauen. \texttt{a} und \texttt{b} können nicht als Schleifenindizes verwendet werden, da sie vom Algorithmus verwendet werden. Entweder kapselt man den Algorithmus in eine Funktion, oder man benutzt einfach andere Variablen. Das geänderte Programm ist in Listing \ref{code:ethiopian-ng} zu sehen. Die Ausgabe ist in Listing \ref{code:ethiopian-ng.short.out}) gezeigt.
 
 \code[c++]{Uebung_06/ethiopian-ng/ethiopian.cpp}{ethiopian-ng.cpp}{code:ethiopian-ng}
 
-\lstinputlisting[caption=Ausgabe von ethiopian-ng (erste 15 Zeilen), label=code:ethiopian-ng.short.out, float=htb]{Uebung_06/ethiopian-ng/ethiopian.short.out}
+\lstinputlisting[caption=Ausgabe von ethiopian-ng, label=code:ethiopian-ng.short.out, float=htb]{Uebung_06/ethiopian-ng/ethiopian.out}
 
 Möchte man alle Multiplikationen haben, lässt man die Indizes von 1 bis 10 laufen. Um kommutativ äquivalente Rechnungen zu unterdrücken, lässt man den inneren Index beim äußeren Index starten.
 
@@ -116,12 +115,6 @@ Die Lösung ist in Listing \ref{code:swap} gezeigt. In der Übung schreiben Sie 
 \code{Uebung_09/swap/swap.out}{Swap}{code:swap.out}
 
 \chapter{Anhang}
-
-
-\section{vollständige Ausgabe von \texttt{ethiopian}}
-
-Die komplette Multiplikationstabelle des Programms in §\ref{section:ethiopian} für 1 bis 10 ist im folgenden Listing gezeigt.
-\lstinputlisting[caption=Ausgabe von ethiopian-ng, label=code:ethiopian-ng.out]{Uebung_06/ethiopian-ng/ethiopian.out}
 
 \section{Makefiles}
 \lstinputlisting[caption=makefile.common, language=make, label=code:makefile.common, float=htb]{makefile.common}
