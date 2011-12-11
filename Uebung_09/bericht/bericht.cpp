@@ -11,7 +11,7 @@ struct measurement {
 	double current;
 };
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
 	if (argc != 3) {
 		std::cout << "Usage: bericht in out" << std::endl;
 		return 1;
@@ -48,7 +48,7 @@ int main(int argc, char** argv) {
 		sum_voltage_squared += pow(cur.voltage, 2);
 
 		outfile << cur.voltage << " " << cur.current << " " << cur.voltage /
-			cur.current << std::endl;
+		        cur.current << std::endl;
 	}
 
 	infile.close();
@@ -60,18 +60,23 @@ int main(int argc, char** argv) {
 	double avg_power = sum_power / n;
 	double avg_voltage_squared = sum_voltage_squared / n;
 
-	double m = (avg_power - avg.voltage * avg.current) / (avg_voltage_squared - pow(avg.voltage, 2));
+	double m = (avg_power - avg.voltage * avg.current)
+	           / (avg_voltage_squared - pow(avg.voltage, 2));
 	double c = avg.current - m * avg.current;
 
-	std::cout << "Means: " << avg.voltage << " V, " << avg.current << " A" << std::endl;
-	std::cout << "Means: " << avg_power << " V^2, " << avg_voltage_squared << " W" << std::endl ;
+	std::cout << "Means: " << avg.voltage << " V, " << avg.current << " A"
+	          << std::endl;
+	std::cout << "Means: " << avg_power << " V^2, " << avg_voltage_squared
+	          << " W" << std::endl ;
 	std::cout << "m: " << m << ", c: " << c << std::endl ;
 
 	std::ofstream means;
 	means.open("means.dat", std::ofstream::out);
 
-	means << "Means: " << avg.voltage << " V, " << avg.current << " A" << std::endl;
-	means << "Means: " << avg_power << " V^2, " << avg_voltage_squared << " W" << std::endl ;
+	means << "Means: " << avg.voltage << " V, " << avg.current << " A"
+	      << std::endl;
+	means << "Means: " << avg_power << " V^2, " << avg_voltage_squared << " W"
+	      << std::endl;
 	means << "m: " << m << ", c: " << c << std::endl ;
 
 	means.close();
