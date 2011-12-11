@@ -18,7 +18,7 @@ int main() {
 	std::ofstream outfile;
 	outfile.open("out.dat", std::ofstream::out);
 
-	struct measurement cur, sum, average;
+	struct measurement cur, sum, avg;
 	sum.voltage = 0.0;
 	sum.current = 0.0;
 
@@ -42,30 +42,36 @@ int main() {
 		sum_power += cur.voltage * cur.current;
 		sum_voltage_squared += pow(cur.voltage, 2);
 
-		outfile << cur.voltage << " " << cur.current << " " << cur.voltage / cur.current << std::endl;
+		outfile << cur.voltage << " " << cur.current << " "
+		        << cur.voltage / cur.current << std::endl;
 	}
 
 	infile.close();
 	outfile.close();
 
-	average.voltage = sum.voltage / n;
-	average.current = sum.current / n;
+	avg.voltage = sum.voltage / n;
+	avg.current = sum.current / n;
 
-	double average_power = sum_power / n;
-	double average_voltage_squared = sum_voltage_squared / n;
+	double avg_power = sum_power / n;
+	double avg_voltage_squared = sum_voltage_squared / n;
 
-	double m = (average_power - average.voltage * average.current) / (average_voltage_squared - pow(average.voltage, 2));
-	double c = average.current - m * average.current;
+	double m = (avg_power - avg.voltage * avg.current)
+	           / (avg_voltage_squared - pow(avg.voltage, 2));
+	double c = avg.current - m * avg.current;
 
-	std::cout << "Means: " << average.voltage << " V, " << average.current << " A" << std::endl;
-	std::cout << "Means: " << average_power << " V^2, " << average_voltage_squared << " W" << std::endl ;
+	std::cout << "Means: " << avg.voltage << " V, " << avg.current << " A"
+	          << std::endl;
+	std::cout << "Means: " << avg_power << " V^2, " << avg_voltage_squared
+	          << " W" << std::endl ;
 	std::cout << "m: " << m << ", c: " << c << std::endl ;
 
 	std::ofstream means;
 	means.open("means.dat", std::ofstream::out);
 
-	means << "Means: " << average.voltage << " V, " << average.current << " A" << std::endl;
-	means << "Means: " << average_power << " V^2, " << average_voltage_squared << " W" << std::endl ;
+	means << "Means: " << avg.voltage << " V, " << avg.current << " A"
+	      << std::endl;
+	means << "Means: " << avg_power << " V^2, " << avg_voltage_squared
+	      << " W" << std::endl ;
 	means << "m: " << m << ", c: " << c << std::endl ;
 
 	means.close();

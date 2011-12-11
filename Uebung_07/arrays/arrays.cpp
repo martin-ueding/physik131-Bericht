@@ -40,9 +40,12 @@ int main() {
 		results_mult[n] = mult(x[n], y[n]);
 		results_div[n] = div(x[n], y[n]);
 
-		outfile << x[n] << " + " << y[n] << " = " << results_add[n] << std::endl;
-		outfile << x[n] << " * " << y[n] << " = " << results_mult[n] << std::endl;
-		outfile << x[n] << " / " << y[n] << " = " << results_div[n] << std::endl;
+		outfile << x[n] << " + " << y[n] << " = " << results_add[n]
+			<< std::endl;
+		outfile << x[n] << " * " << y[n] << " = " << results_mult[n]
+			<< std::endl;
+		outfile << x[n] << " / " << y[n] << " = " << results_div[n]
+			<< std::endl;
 	}
 
 	infile.close();
