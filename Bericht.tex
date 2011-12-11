@@ -22,9 +22,10 @@
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
 % Format for listings
+\usepackage{calc}
 \usepackage{caption}
 \DeclareCaptionFont{white}{\color{white}}
-\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth-2\fboxsep}{#1#2#3}}}
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, margin=0pt, font={bf,footnotesize}}
 \usepackage[T1]{fontenc}
 \usepackage[scaled]{beramono}
