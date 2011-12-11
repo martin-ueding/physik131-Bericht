@@ -2,6 +2,9 @@
 
 include ../../makefile.common
 
+swap.out: swap
+	./swap > swap.out
+
 swap: swap.cpp
 
 .PHONY: clean
