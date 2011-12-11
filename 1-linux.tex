@@ -145,9 +145,7 @@ Auch hier muss man sein Arbeitsverzeichnis für die relativen Pfade im Kopf habe
 
 Die Dateien lassen sich recht einfach mit dem Code aus Listing \ref{code:touch} erstellen. Dabei werden die geschweiften Klammern benutzt, um mehrere Dateien, die Namensbestandteile gemeinsam haben, zu erzeugen.
 
-\begin{lstlisting}[caption=Anlegen der Dateien, language=bash, label=code:touch, float=htb]
-touch datei{1..9}.txt logfile{10,10a,11,11a,11b}.txt
-\end{lstlisting}
+\code[bash]{Uebung_02/anlegen.sh}{Anlegen der Dateien}{code:touch}
 
 Listing \ref{code:ls} zeigt, wie man diese Dateien ausgeben (Ausgabe in Listing \ref{code:ls.out}) kann.
 
