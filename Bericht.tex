@@ -54,13 +54,8 @@
 
 \newcommand\e[1]{\cdot 10^{#1}}
 
-\newfloat{codefloat}{htb}{code}[chapter]
-
 \newcommand{\code}[4][text]{
-	\begin{codefloat}
-	\label{#4}
 	\inputminted[label=#3, frame=lines, framesep=2mm]{#1}{#2}
-	\end{codefloat}
 }
 
 \title{EDV für Physiker}
