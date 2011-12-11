@@ -151,8 +151,8 @@ touch datei{1..9}.txt logfile{10,10a,11,11a,11b}.txt
 
 Listing \ref{code:ls} zeigt, wie man diese Dateien ausgeben (Ausgabe in Listing \ref{code:ls.out}) kann.
 
-\lstinputlisting[caption=ls.sh, language=bash, label=code:ls, float=htb]{Uebung_02/wildcards/ls.sh}
-\lstinputlisting[caption=Ausgabe von ls.sh, label=code:ls.out, float=htb]{Uebung_02/wildcards/ls.sh.out}
+\code[bash]{Uebung_02/wildcards/ls.sh}{ls.sh}{code:ls}
+\code{Uebung_02/wildcards/ls.sh.out}{Ausgabe von ls.sh}{code:ls.out}
 
 Ich habe hier \texttt{echo} anstelle von \texttt{ls} benutzt, da die Wildcards so oder so von der Bash und nicht vom Befehl aufgelöst werden und \texttt{ls} jede Datei auf eine eigene Zeile schreibt, sofern \texttt{STDOUT} kein Terminal ist. Dies spart ein klein wenig Platz und erzeugt letztlich die gleiche Ausgabe.
 
@@ -168,15 +168,15 @@ Siehe §\ref{commands}.
 
 \section{Eingabe- und Ausgabeumleitung}
 
-\lstinputlisting[caption=standardausgabe.txt, label=code:standardausgabe, float=htb]{Uebung_03/standardausgabe.txt}
+\code{Uebung_03/standardausgabe.txt}{standardausgabe.txt}{code:standardausgabe}
 
 \section{Handling von Textdateien}
 
 Man kann es sich an dieser Stelle einfach machen und alle Kennzeichen rauswerfen, die mit einer Ziffer beginnen und es bleiben dann nur noch deutsche Kennzeichen übrig. Der Ansatz (Listing \ref{code:auto-einfach}) ist nicht nennenswert robust, erfüllt aber in der kleinen Eingabemenge seinen Zweck (Ausgabe in Listing \ref{code:auto-einfach.out}).
 
-\lstinputlisting[caption=auto\_einfach.sh, label=code:auto-einfach, language=bash, float=htb]{Uebung_03/auto_einfach.sh}
+\code[bash]{Uebung_03/auto_einfach.sh}{auto\_einfach.sh}{code:auto-einfach}
 
-\lstinputlisting[caption=Ausgabe von auto\_einfach.sh, label=code:auto-einfach.out, float=htb]{Uebung_03/auto_einfach.sh.out}
+\code{Uebung_03/auto_einfach.sh.out}{Ausgabe von auto\_einfach.sh}{code:auto-einfach.out}
 
 Allerdings ist es mit den Kennzeichen nicht so ganz einfach, möchte man wirklich nur deutsche Kennzeichen haben. Es gibt deutsche und Euro-Kennzeichen, alle Neuen sind Letztere. Die alten haben noch einen Bindestrich, die neuen nicht mehr. Außerdem dürfen in den alten die Buchstaben B, F, G, I, O und Q nicht vorkommen.\cite{wiki-kfz}
 
@@ -260,22 +260,22 @@ Die Datei, in die die Ausgabe umgeleitet wird, wird zwar direkt angelegt, weil b
 
 Für die Farben kann man eine einfache \texttt{for}-Schleife benutzen, wie in Listing \ref{code:farben} gezeigt. Dies erzeugt die gewünschte Ausgabe (Listing \ref{code:farben.out}).
 
-\lstinputlisting[caption=farben.sh, language=bash, float=htb, label=code:farben]{Uebung_03/farben.sh}
+\code[bash]{Uebung_03/farben.sh}{farben.sh}{code:farben}
 
-\lstinputlisting[caption=Ausgabe von farben.sh, float=htb, label=code:farben.out]{Uebung_03/farben.sh.out}
+\code{Uebung_03/farben.sh.out}{Ausgabe von farben.sh}{code:farben.out}
 
 
 \subsection{Zahlen}
 
 Für die Zahlen kann man entweder \texttt{{1..3}} benutzen\footnote{Ein Beispiel für die \texttt{{1..3}} finden Sie in §\ref{listing:zahlen2}}, oder eine C-artige for-Schleife benutzen (Listing \ref{code:zahlen}, Ausgabe in Listing \ref{code:zahlen.out}). Die Syntax, die auf dem Übungszettel steht, gibt es nicht, ich weiß nicht, wie Sie die Ausgabe auf dem Übungszettel damit erzeugt haben.
 
-\lstinputlisting[caption=zahlen.sh, language=bash, label=code:zahlen, float=htb]{Uebung_03/zahlen.sh}
-\lstinputlisting[caption=Ausgabe von zahlen.sh, label=code:zahlen.out, float=htb]{Uebung_03/zahlen.sh.out}
+\code[bash]{Uebung_03/zahlen.sh}{zahlen.sh}{code:zahlen}
+\code{Uebung_03/zahlen.sh.out}{Ausgabe von zahlen.sh}{code:zahlen.out}
 
 Soll von 2 bis 20 gezählt werden und der Vorname ausgegeben werden, wenn der Zähler auf 10 steht, sieht das Skript so aus wie in Listing \ref{code:zahlen-name}. (Ausgabe in Listing \ref{code:zahlen-name.out}.)
 
-\lstinputlisting[caption=zahlen\_name.sh, language=bash, label=code:zahlen-name, float=htb]{Uebung_03/zahlen_name.sh}
-\lstinputlisting[caption=Ausgabe von zahlen\_name.sh, label=code:zahlen-name.out, float=htb]{Uebung_03/zahlen_name.sh.out}
+\code[bash]{Uebung_03/zahlen_name.sh}{zahlen\_name.sh}{code:zahlen-name}
+\code{Uebung_03/zahlen_name.sh.out}{Ausgabe von zahlen\_name.sh}{code:zahlen-name.out}
 
 \section{Analyse von Pipelines}
 
