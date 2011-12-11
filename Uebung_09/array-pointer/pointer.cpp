@@ -4,7 +4,7 @@
 
 int main() {
 	int *pointer;
-	pointer = (int*) 0xDEADBEEF;
+	pointer = (int *) 0xDEADBEEF;
 	int array[10];
 
 	pointer = array;
@@ -12,7 +12,7 @@ int main() {
 	pointer = &array[3];
 	array[3] = pointer[5];
 
-	int *p1 = (int*) 0xDEADBEEF, *p2 = (int*) 0xDEADBEEF, i = 0;
+	int *p1 = (int *) 0xDEADBEEF, *p2 = (int *) 0xDEADBEEF, i = 0;
 
 	p1 = p2 + i;
 	p1 = i + p2;
