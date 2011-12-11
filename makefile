@@ -1,3 +1,5 @@
+# Copyright (c) 2011 Martin Ueding <dev@martin-ueding.de>
+
 Bericht.pdf: Bericht.tex 1-linux.tex 2-latex.tex 3-cpp.tex
 	make -C Uebung_02
 	make -C Uebung_03
@@ -14,4 +16,5 @@ clean:
 	$(RM) Bericht.lot
 	$(RM) Bericht.out
 	$(RM) Bericht.pdf
+	$(RM) Bericht.pyg
 	$(RM) Bericht.toc
