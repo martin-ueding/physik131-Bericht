@@ -7,11 +7,11 @@ Bericht.pdf: Bericht.tex 1-linux.tex 2-latex.tex 3-cpp.tex
 	pdflatex $<
 
 clean:
-	$(RM) *.aux
-	$(RM) *.lof
-	$(RM) *.log
-	$(RM) *.lol
-	$(RM) *.lot
-	$(RM) *.out
-	$(RM) *.toc
+	$(RM) Bericht.aux
+	$(RM) Bericht.lof
+	$(RM) Bericht.log
+	$(RM) Bericht.lol
+	$(RM) Bericht.lot
+	$(RM) Bericht.out
+	$(RM) Bericht.toc
 	$(RM) Bericht.pdf
