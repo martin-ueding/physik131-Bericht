@@ -13,5 +13,5 @@ clean:
 	$(RM) Bericht.lol
 	$(RM) Bericht.lot
 	$(RM) Bericht.out
-	$(RM) Bericht.toc
 	$(RM) Bericht.pdf
+	$(RM) Bericht.toc
