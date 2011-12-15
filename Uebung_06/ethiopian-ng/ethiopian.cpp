@@ -10,6 +10,9 @@ int main(int argc, char *argv[]) {
 	int i, j;
 	for (i = 1; i <= 10; i++) {
 		printf("%2d:", i);
+		for (j = 1; j < i; j++) {
+			printf("    ");
+		}
 		for (j = i; j <= 10; j++) {
 			a = i;
 			b = j;
@@ -29,5 +32,5 @@ int main(int argc, char *argv[]) {
 		std::cout << std::endl;
 	}
 
-		return 0;
+	return 0;
 }
