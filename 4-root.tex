@@ -24,11 +24,15 @@ Man kann mit \texttt{c1->SetLogx(1)} eine logarithmische Achse aktivieren und mi
 
 \section{Berichtsaufgabe}
 
+Man kann hier einfach den entsprechenden Konstruktor benutzen, da die Datei freundlichweise schon passend formatiert ist.
+
 \code[c++]{Uebung_10/bericht.C}{Code für Plot}{code:root1}
+
+ROOT gibt dann folgende Parameter für den Fit aus (Tablle \ref{table:fit}).
 
 \begin{table}[h]
 \begin{center}
-\begin{tabular}{rclcl}
+\begin{tabular}{lcrcr}
 Chi2 & = & 48.4851 &  \\ 
 NDf & = & 17 &  \\ 
 p0 & = & -0.153455 & $\pm$ & 0.0434887 \\ 
@@ -38,6 +42,8 @@ p1 & = & 2.04459 & $\pm$ & 0.00707916 \\
 \label{table:fit}
 \end{center}
 \end{table}
+
+ROOT zeichnet auch direkt die Linie ein. Man kann ihr Erscheinungsbild in der GUI dann auch noch verändern.
 
 
 \begin{figure}[h]
