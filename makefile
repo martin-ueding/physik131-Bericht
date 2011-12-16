@@ -1,6 +1,6 @@
 # Copyright (c) 2011 Martin Ueding <dev@martin-ueding.de>
 
-Bericht.pdf: Bericht.tex 1-linux.tex 2-latex.tex 3-cpp.tex
+Bericht.pdf: Bericht.tex 1-linux.tex 2-latex.tex 3-cpp.tex 4-root.tex
 	make -C Uebung_02
 	make -C Uebung_03
 	make -C Uebung_05
