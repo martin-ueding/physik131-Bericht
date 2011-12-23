@@ -332,6 +332,14 @@ Um alle Dateien zu Packen, würde ich \verb#tar -xzf backup.tar.gz .??* *# ausf�
 
 Das ganze bekommt man in den anderen Pool mit einem \verb#scp backup.tar ciptux:#, falls man vorher in der \texttt{.ssh/config} entsprechend den kompletten Hostnamen des Servers eingetragen hat.
 
+\subsection{Dateirechte}
+
+Im Allgemeinen werden Zugriffsrechte über die Werkzeuge \texttt{chmod} und \texttt{chown} sowie \texttt{chgrp} geändert.
+
+Wenn ein Verzeichnis nicht leer ist, kann es von \texttt{rmdir} nicht gelöscht werden. Man kann es vorher mit \texttt{rm uebung02/*} leeren, wobei man dort bei Unterverzeichnissen das gleiche Problem hat. Die einfache Variante ist es, einfach \texttt{rm -rf uebung02} zu benutzen.
+
+Wenn man unbedingt dem Kommilitonen Schreibrechte gewähren möchte, müssen die Rechte auf \texttt{664} oder \texttt{660} stehen. Ich würde lieber die Rechte auf \texttt{640} stellen und meinen Kommilitonen bitten seine Änderungen auf ähnliche Weise in seinem Heimatverzeichnis bereitzustellen. Dann kann ich mit \texttt{diff -u meinedatei seinedatei} schauen, was er verändert hat und es mit \texttt{cp seinedatei meinedatei} übernehmen.
+
 \chapter{Anhang}
 
 
