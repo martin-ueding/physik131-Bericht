@@ -1,9 +1,10 @@
-*.aux
-*.lof
-*.log
-*.lol
-*.lot
 *.out
-*.pyg
-*.toc
+Martin_Ueding_Bericht.aux
+Martin_Ueding_Bericht.lof
+Martin_Ueding_Bericht.log
+Martin_Ueding_Bericht.lol
+Martin_Ueding_Bericht.lot
+Martin_Ueding_Bericht.out
 Martin_Ueding_Bericht.pdf
+Martin_Ueding_Bericht.pyg
+Martin_Ueding_Bericht.toc
