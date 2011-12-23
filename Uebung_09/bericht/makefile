@@ -2,6 +2,9 @@
 
 include ../../makefile.common
 
+bericht.out: bericht
+	./bericht ../../Finale/data_abschlussbericht.dat $@
+
 bericht: bericht.cpp
 
 clean:
