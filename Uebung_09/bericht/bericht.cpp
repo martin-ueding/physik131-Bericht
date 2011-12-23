@@ -4,14 +4,27 @@
 #include <fstream>
 #include <iostream>
 
+// Encapsulate the maximum length of the data sets in a define statement.
 #define LENGTH 50
 
+/**
+ * Tuple of measurement data.
+ */
 struct measurement {
 	double voltage;
 	double current;
 };
 
+/**
+ * Main function.
+ *
+ * Iterates through the data files, calculates some statistic values and writes
+ * it to the output files.
+ *
+ * @return 0 on success, 1 if not enough arguments.
+ */
 int main(int argc, char **argv) {
+	// Abort if there are no two file names in the command line options.
 	if (argc != 3) {
 		std::cout << "Usage: bericht in out" << std::endl;
 		return 1;
