@@ -9,7 +9,7 @@
 	c1->cd(1);
 
 	// Create a new graph with error bars from the data file.
-	TGraphErrors *tge = new TGraphErrors("data_fehler_bericht_.dat");
+	TGraphErrors *tge = new TGraphErrors("../Finale/data_abschlussbericht.dat");
 
 	// Draw the graph with axes and points.
 	tge->Draw("ap");
