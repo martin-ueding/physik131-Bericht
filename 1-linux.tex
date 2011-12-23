@@ -10,13 +10,13 @@
 \subsection{Benutzerverwaltung und -rechte}
 \begin{itemize}
 \dd{chmod}{Ändert Dateirechte.}
-\dd{hostname}{Rechnername.}
+\dd{hostname}{Gibt den Rechnernamen aus.}
 \dd{last}{Letzte Anmeldungen aller Benutzer.}
-\dd{ps}{Prozessliste.}
+\dd{ps}{Gibt eine Prozessliste aus. Dieses Programm ist nicht interaktiv und eignet sich beispielsweise für Logdateien.}
 \dd{top}{Vorgänger von \texttt{htop}, eine interaktive Prozessverwaltung.}
-\dd{uname}{Kernelversion, Rechnername, ...}
+\dd{uname}{Gibt Kernelversion, Rechnername, ..., aus.}
 \dd{uptime}{Zeigt, wie viele Nächte der Rechner am Stück durchgemacht hat.}
-\dd{whoami}{Eigener Benutzername.}
+\dd{whoami}{Gibt den eigenen Benutzernamen aus.}
 \dd{w}{Wie \texttt{who}, nur ausführlicher.}
 \end{itemize}
 
@@ -295,6 +295,52 @@ Mit \verb#ps ux O+p > myprocesses.txt# lässt sich die entsprechende Datei (List
 Wenn man mag, kann man natürlich auch den Code aus Listing \ref{code:chain-pipe} benutzen.
 
 \code[bash]{Uebung_03/chain-pipe.sh}{verkettete Pipes}{code:chain-pipe}
+
+\section{weitere Linux Befehle}
+
+\subsection{Super GAU}
+
+Der Unterschied zwischen \verb#rm -rf ./uebung/*# und \verb#rm -rf ./uebung/ *# ist, dass bei erstem alle Dateien und Unterordner des Verzeichnis \texttt{uebung} ohne Nachfrage gelöscht werden, im zweiten wird der Ordner selbst ebenfalls rekursiv gelöscht und alle anderen Dateien ebenfalls gelöscht. Das einzige, das dann noch bleibt, sind versteckte Dateien, deren Namen mit einem Punkt beginnt.
+
+\subsection{frage.txt}
+
+Der erste Befehl kopiert die Datei \texttt{/home/meinname/uebung/frage.txt} nach \texttt{/home/meinname/uebung}. Dies klappt allerdings nicht, weil es schon ein Verzeichnis mit dem gleichen Namen gibt.
+
+Im zweiten Kommanto wird die Datei nach \texttt{/home/meinname/uebung/frage.txt} kopiert. Die Datei wird mit sich selbst überschrieben. Dies wird allerdings verhindert, das klappt also auch nicht.
+
+Der dritte Befehl wird alle Dateien und Unterordner (wobei das ohne das \texttt{-r} Flag auch nur zu Fehlermeldungen führt) nach \texttt{/home/meinname/uebung} kopieren. Falls es nur die Datei frage.txt gibt, wird dies nicht funktionieren, weil es das Verzeichnis \texttt{uebung} schon gibt. Sollte es allerdings mehrere Dateien geben oder sogar Unterordner geben, sollte es eine Fehlermeldung geben, die \gqq{keine reguläre Datei} lautet.
+
+Der vierte Befehl kopiert alle Dateien und Unterordner (wobei das ohne das \texttt{-r} Flag auch wieder nur zu Fehlermeldungen führt) in den Ordner selbst. Da die Dateien mit sich selbst überschrieben werden würden, schlägt das fehl.
+
+\paragraph*{Verzeichnis existiert nicht} Falls das Verzeichnis nicht existiert, kann die Datei \texttt{frage.txt} nicht existieren, womit die ersten Beiden Befehle daran scheitern werden, dass es die Datei nicht gibt.
+
+Das zweite Kommando könnte sich auch noch darüber beschweren, dass es das Verzeichnis nicht gibt.
+
+Die letzten beiden werden daran scheitern, dass die Datei \texttt{uebung/*} nicht existiert. Falls sie in Bash den Nullglob aktiviert haben, wird moniert, dass kein Ziel angegeben worden ist.
+
+\paragraph*{im Verzeichnis}
+
+Falls man im Verzeichnis ist, so wird der erste Befehl im dortigen Verzeichnis eine neue Datei \texttt{uebung} erzeugen -- kein Problem.
+
+Der zweite Befehl wird wegen das wohl nicht vorhandene Verzeichnis scheitern.
+
+Befehl drei wird nur funktionieren, wenn es exakt eine Datei gibt. Da mehrere Dateien drin sind, klappt es nicht.
+
+Bei dem vierten Befehl würden die ganzen Dateien (keine Unterordner wegen fehlendem \texttt{-r} Flag) in den Unterordner \texttt{uebung} kopiert. Falls der existiert, klappt es, sonst nicht.
+
+\subsection{Backup}
+
+Um alle Dateien zu Packen, würde ich \verb#tar -xzf backup.tar.gz .??* *# ausführen. Dies packt alle sichtbaren und unsichtbaren Dateien, allerdings nicht die impliziten \texttt{.} und \texttt{..} ein.
+
+Das ganze bekommt man in den anderen Pool mit einem \verb#scp backup.tar ciptux:#, falls man vorher in der \texttt{.ssh/config} entsprechend den kompletten Hostnamen des Servers eingetragen hat.
+
+\subsection{Dateirechte}
+
+Im Allgemeinen werden Zugriffsrechte über die Werkzeuge \texttt{chmod} und \texttt{chown} sowie \texttt{chgrp} geändert.
+
+Wenn ein Verzeichnis nicht leer ist, kann es von \texttt{rmdir} nicht gelöscht werden. Man kann es vorher mit \texttt{rm uebung02/*} leeren, wobei man dort bei Unterverzeichnissen das gleiche Problem hat. Die einfache Variante ist es, einfach \texttt{rm -rf uebung02} zu benutzen.
+
+Wenn man unbedingt dem Kommilitonen Schreibrechte gewähren möchte, müssen die Rechte auf \texttt{664} oder \texttt{660} stehen. Ich würde lieber die Rechte auf \texttt{640} stellen und meinen Kommilitonen bitten seine Änderungen auf ähnliche Weise in seinem Heimatverzeichnis bereitzustellen. Dann kann ich mit \texttt{diff -u meinedatei seinedatei} schauen, was er verändert hat und es mit \texttt{cp seinedatei meinedatei} übernehmen.
 
 \chapter{Anhang}
 

@@ -6,7 +6,7 @@
 
 \section{Das \gqq{Hello, World!}-Programm}
 
-Dies ist das einfache \gqq{Hello, World!}-Programm, das Kerningham und Ritchie zum Einstieg empfehlen um seine Entwicklungsumgebung entsprechend einzurichten.
+Dies ist das einfache \gqq{Hello, World!}-Programm (Listing \ref{code:hello}), das Kerningham und Ritchie zum Einstieg empfehlen um seine Entwicklungsumgebung entsprechend einzurichten.\cite{ritchie}
 
 \code[c++]{Uebung_06/hello/hello.cpp}{hello.cpp}{code:hello}
 
@@ -56,9 +56,13 @@ Das ganze Programm könnte man rekursiv implementieren, allerdings spricht hier 
 
 \code[c++]{Uebung_06/heron/heron.cpp}{heron.cpp}{code:heron}
 
-Ich lasse $\sqrt{2} \approx 1.41421356237309504880168872421$\footnote{Mit \texttt{N[Sqrt[2], 30]} in Mathematica berechnet.} berechnen, die Ausgabe ist in Listing \ref{code:heron.out} zu sehen. Man kann sehen, dass das Programm schnell zu einem brauchbaren Ergebnis kommt, der Algorithmus also leistungsfähig ist.
+Ich lasse $\sqrt{2} \approx 1.41421356237309504880168872421$\footnote{Mit \texttt{N[Sqrt[2], 30]} in Mathematica berechnet.} berechnen, die Ausgabe ist in Listing \ref{code:heron.2.out} zu sehen. Man kann sehen, dass das Programm schnell zu einem brauchbaren Ergebnis kommt, der Algorithmus also leistungsfähig ist.
 
-\code{Uebung_06/heron/heron.out}{Ausgabe von heron}{code:heron.out}
+\code{Uebung_06/heron/heron.2.out}{Ausgabe von heron für 2}{code:heron.2.out}
+\code{Uebung_06/heron/heron.4.out}{Ausgabe von heron für 4}{code:heron.4.out}
+\code{Uebung_06/heron/heron.10.out}{Ausgabe von heron für 10}{code:heron.10.out}
+
+Für die CppDoc Kommentare habe ich in \cite{cppdoc} nachgeschaut.
 
 \chapter{Übung 7}
 
@@ -113,3 +117,11 @@ Die Lösung ist in Listing \ref{code:swap} gezeigt. In der Übung schreiben Sie 
 
 \code[c++]{Uebung_09/swap/swap.cpp}{Swap}{code:swap}
 \code{Uebung_09/swap/swap.out}{Ausgabe von Swap}{code:swap.out}
+
+\section{Versuchsergebnisse, die Zweite}
+
+Dies ist das Programm aus der 7. Übung, entsprechend für die Berichtsaufgabe angepasst.
+
+\code[c++]{Uebung_09/bericht/bericht.cpp}{bericht.cpp}{}
+\code{Uebung_09/bericht/out.dat}{Ausgabedatei von bericht}{}
+\code{Uebung_09/bericht/means.dat}{Ausgabe von bericht}{}
