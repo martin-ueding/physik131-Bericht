@@ -38,27 +38,6 @@ Dieses Programm fügt mehrere Kommandozeilenargumente in eine Datei zusammen.
 
 \chapter{Übung 9}
 
-\section{Einfache Zeiger}
-
-Die Programmzeile wird die Zahl 5 und die Adresse von i, die auf dem Aufgabenzettel angegeben ist, ausgeben.
-
-Die Ausgabe von \verb#&i# ist die Speicheradresse, \verb#*(&i)# wird die Zahl 5 ausgeben.
-
-\section{Überprüfungsaufgabe}
-
-Fast alles davon geht. Nur kann man keinem Array einen Pointer zuweisen. Das Array ist zwar ein Pointer, allerdings ein Speziallfall davon. Klassische Polymorphie.
-
-Bei der zweiten Teilaufgabe sollte der Compiler nichts davon akzeptieren, da \texttt{int} und \texttt{int*} unterschiedliche Datentypen sind. Da es allerdings nur Zahlen sind, kann man trotzdem irgendwie mit ihnen rechnen.
-
-Auf den Pointer kann man anscheinend ints addieren, allerdings kann man dem int fast kein Pointerwerte zuweisen, nur per Multiplikation. Nur eine Differenz ist möglich. Das ist interessant. Letztlich ist nur eine Differenz interessant, da dies die Lange eines Arrays darstellen kann.
-
-\section{Zeiger und Funktionen}
-
-Die Lösung ist in Listing \ref{code:swap} gezeigt. In der Übung schreiben Sie \texttt{int **}, allerdings weiß ich nicht so recht, wo ich das dann einbauen soll. Die Ausgabe ist in \ref{code:swap.out} gezeigt.
-
-\code[c++]{Uebung_09/swap/swap.cpp}{Swap}{code:swap}
-\code{Uebung_09/swap/swap.out}{Ausgabe von Swap}{code:swap.out}
-
 \section{Versuchsergebnisse, die Zweite}
 
 Dies ist das Programm aus der 7. Übung, entsprechend für die Berichtsaufgabe angepasst.
