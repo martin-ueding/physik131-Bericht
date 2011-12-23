@@ -11,6 +11,8 @@
 struct measurement {
 	double voltage;
 	double current;
+	double e_voltage;
+	double e_current;
 };
 
 /**
@@ -56,7 +58,7 @@ int main(int argc, char **argv) {
 	// is reached.
 	for (; n < LENGTH && infile.good();) {
 		// Parse the line from the input file.
-		infile >> cur.voltage >> cur.current;
+		infile >> cur.voltage >> cur.current >> cur.e_voltage >> cur.e_current;
 
 		// In case the last line was read, abort right here.
 		if (!infile.good()) {
@@ -74,9 +76,16 @@ int main(int argc, char **argv) {
 		sum_power += cur.voltage * cur.current;
 		sum_voltage_squared += pow(cur.voltage, 2);
 
+		// Calculate the resistance.
+		double resistance = cur.voltage / cur.current;
+
+		// Calculate the combined error.
+		double e_resistance = sqrt(pow(cur.e_voltage, 2) + pow(cur.e_current, 2));
+
 		// Write the set into the output file.
-		outfile << cur.voltage << " " << cur.current << " " << cur.voltage /
-		        cur.current << std::endl;
+		outfile << cur.voltage << "\t" << cur.current << "\t" << cur.e_voltage <<
+			"\t" << cur.e_current << "\t" << resistance << "\t" << e_resistance <<
+			std::endl;
 	}
 
 	// Close the input and output file.
