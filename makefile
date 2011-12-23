@@ -8,6 +8,7 @@ Martin_Ueding_Bericht.pdf: Martin_Ueding_Bericht.tex 1-linux.tex 2-latex.tex 3-c
 	make -C Uebung_07
 	make -C Uebung_08
 	make -C Uebung_09
+	make -C Uebung_10
 	pdflatex $<
 
 clean:

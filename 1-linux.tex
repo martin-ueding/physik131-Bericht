@@ -122,13 +122,13 @@ Der erste Befehl kopiert die Datei \texttt{/home/meinname/uebung/frage.txt} nach
 
 Im zweiten Kommanto wird die Datei nach \texttt{/home/meinname/uebung/frage.txt} kopiert. Die Datei wird mit sich selbst überschrieben. Dies wird allerdings verhindert, das klappt also auch nicht.
 
-Der dritte Befehl wird alle Dateien und Unterordner (wobei das ohne das \texttt{-r} Flag auch nur zu Fehlermeldungen führt) nach \texttt{/home/meinname/uebung} kopieren. Falls es nur die Datei frage.txt gibt, wird dies nicht funktionieren, weil es das Verzeichnis \texttt{uebung} schon gibt. Sollte es allerdings mehrere Dateien geben oder sogar Unterordner geben, sollte es eine Fehlermeldung geben, die \gqq{keine reguläre Datei} lautet.
+Der dritte Befehl wird alle Dateien nach \texttt{/home/meinname/uebung} kopieren. Es sollte eine Fehlermeldung geben, die \gqq{keine reguläre Datei} lautet, da man schlecht mehrere Dateien in eine kopieren kann.
 
-Der vierte Befehl kopiert alle Dateien und Unterordner (wobei das ohne das \texttt{-r} Flag auch wieder nur zu Fehlermeldungen führt) in den Ordner selbst. Da die Dateien mit sich selbst überschrieben werden würden, schlägt das fehl.
+Der vierte Befehl kopiert alle Dateien in den Ordner selbst. Da die Dateien mit sich selbst überschrieben werden würden, schlägt das fehl.
 
 \paragraph*{Verzeichnis existiert nicht} Falls das Verzeichnis nicht existiert, kann die Datei \texttt{frage.txt} nicht existieren, womit die ersten Beiden Befehle daran scheitern werden, dass es die Datei nicht gibt.
 
-Das zweite Kommando könnte sich auch noch darüber beschweren, dass es das Verzeichnis nicht gibt.
+Das zweite Kommando könnte sich auch noch darüber beschweren, dass es das Zielverzeichnis nicht gibt.
 
 Die letzten beiden werden daran scheitern, dass die Datei \texttt{uebung/*} nicht existiert. Falls sie in Bash den Nullglob aktiviert haben, wird moniert, dass kein Ziel angegeben worden ist.
 
@@ -140,7 +140,7 @@ Der zweite Befehl wird wegen das wohl nicht vorhandene Verzeichnis scheitern.
 
 Befehl drei wird nur funktionieren, wenn es exakt eine Datei gibt. Da mehrere Dateien drin sind, klappt es nicht.
 
-Bei dem vierten Befehl würden die ganzen Dateien (keine Unterordner wegen fehlendem \texttt{-r} Flag) in den Unterordner \texttt{uebung} kopiert. Falls der existiert, klappt es, sonst nicht.
+Bei dem vierten Befehl würden die ganzen Dateien in den Unterordner \texttt{uebung} kopiert. Da es diesen nicht gibt, schlägt es fehl.
 
 \subsection{Backup}
 
