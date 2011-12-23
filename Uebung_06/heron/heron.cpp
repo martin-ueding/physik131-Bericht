@@ -60,7 +60,11 @@ int main(int argc, char **argv) {
 	// Iterate while the difference between the current and previous step are
 	// bigger than the set amount of the user's input value.
 	while (fabs(current - previous) > smallest_change * input) {
+		// Save the current value for later comparison.
 		previous = current;
+
+		// Print the current state of the calculation.
+		printf("%f\n", current);
 
 		// Apply the heron algorithm and go one step further.
 		current = iterate(current, input);
@@ -70,6 +74,7 @@ int main(int argc, char **argv) {
 	current = fabs(current);
 
 	// Print the answer.
+	printf("\n");
 	printf("The square root of %f is %f.\n", input, current);
 
 	// Return with a zero return value so that the calling shell knows that
