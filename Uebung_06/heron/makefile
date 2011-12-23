@@ -2,8 +2,16 @@
 
 include ../../makefile.common
 
-heron.out: heron
+all: heron.2.out heron.4.out heron.10.out
+
+heron.2.out: heron
 	./$^ 2 > $@
+
+heron.4.out: heron
+	./$^ 4 > $@
+
+heron.10.out: heron
+	./$^ 10 > $@
 
 heron: heron.cpp
 
