@@ -159,17 +159,3 @@ Im Allgemeinen werden Zugriffsrechte über die Werkzeuge \texttt{chmod} und \tex
 Wenn ein Verzeichnis nicht leer ist, kann es von \texttt{rmdir} nicht gelöscht werden. Man kann es vorher mit \texttt{rm uebung02/*} leeren, wobei man dort bei Unterverzeichnissen das gleiche Problem hat. Die einfache Variante ist es, einfach \texttt{rm -rf uebung02} zu benutzen.
 
 Wenn man unbedingt dem Kommilitonen Schreibrechte gewähren möchte, müssen die Rechte auf \texttt{664} oder \texttt{660} stehen. Ich würde lieber die Rechte auf \texttt{640} stellen und meinen Kommilitonen bitten seine Änderungen auf ähnliche Weise in seinem Heimatverzeichnis bereitzustellen. Dann kann ich mit \texttt{diff -u meinedatei seinedatei} schauen, was er verändert hat und es mit \texttt{cp seinedatei meinedatei} übernehmen.
-
-\chapter{Anhang}
-
-
-\section{Kompressionsvergleich}
-\label{listing:compression}
-\code[bash]{Uebung_03/compare.sh}{compare.sh}{}
-
-\section{Alternative Zählschleife}
-\label{listing:zahlen2}
-
-\code[bash]{Uebung_03/zahlen2.sh}{zahlen2.sh}{}
- 
-\code{Uebung_03/zahlen2.sh.out}{Ausgabe von zahlen2.sh}{}
