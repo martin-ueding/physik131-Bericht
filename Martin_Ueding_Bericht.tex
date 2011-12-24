@@ -1,35 +1,40 @@
 % Copyright (c) 2011 Martin Ueding <dev@martin-ueding.de>
 %
 \documentclass[12pt]{article}
-\usepackage{geometry}
-\geometry{a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm}
-\usepackage{graphicx}
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{epstopdf}
-\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
 \usepackage[activate]{pdfcprot}
-\usepackage{setspace}
 \usepackage[ngerman]{babel}
 \usepackage[parfill]{parskip}
-\usepackage{hyperref}
-\usepackage{color}
-\usepackage{units}
-\definecolor{darkblue}{rgb}{0,0,.5}
-\definecolor{lightblue}{rgb}{0.9,.9,1}
-\definecolor{gray}{rgb}{.3,.3,.3}
-\hypersetup{colorlinks=true, breaklinks=false, linkcolor=black, menucolor=black, urlcolor=darkblue}
-\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
-
-% Format for listings
+\usepackage[scaled]{beramono}
+\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amssymb}
 \usepackage{calc}
 \usepackage{caption}
+\usepackage{color}
+\usepackage{epstopdf}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{setspace}
+\usepackage{units}
+
+\definecolor{darkblue}{rgb}{0,0,.5}
+\definecolor{gray}{rgb}{.3,.3,.3}
+\definecolor{lightblue}{rgb}{0.9,.9,1}
+
+\hypersetup{colorlinks=true, breaklinks=false, linkcolor=black, menucolor=black, urlcolor=darkblue}
+
+% Format for listings
 \DeclareCaptionFont{white}{\color{white}}
 \DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth-2\fboxsep}{#1#2#3}}}
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, margin=0pt, font={bf,footnotesize}}
-\usepackage[T1]{fontenc}
-\usepackage[scaled]{beramono}
-\usepackage{listings}
 \lstset{
 	breaklines=true,
 		showstringspaces=false,
@@ -45,15 +50,16 @@
 		tabsize=4
 }
 
-% \code{language}{source file}{caption}{label}
+% \code{language}{source file}{caption}{label}.
 \newcommand{\code}[4][]{\lstinputlisting[caption=#3, language=#1, label=#4]{#2}}
 
-% Easy German quotes
+% Easy German quotes.
 \newcommand\gqq[1]{\glqq #1\grqq}
 
-% Definition List Item
+% Definition List Item.
 \newcommand\dd[2]{\item[\texttt{#1}] #2}
 
+% Shortcut for powers of ten.
 \newcommand\e[1]{\cdot 10^{#1}}
 
 \title{EDV für Physiker}
