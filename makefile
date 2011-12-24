@@ -2,7 +2,7 @@
 
 all: Martin_Ueding_Bericht.pdf README.html
 
-Martin_Ueding_Bericht.pdf: Martin_Ueding_Bericht.tex 1-linux.tex 2-latex.tex 3-cpp.tex 4-root.tex
+Martin_Ueding_Bericht.pdf: Martin_Ueding_Bericht.tex 0-commands.tex 1-linux.tex 2-latex.tex 3-cpp.tex 4-root.tex
 	make -C Uebung_02
 	make -C Uebung_03
 	make -C Uebung_05
