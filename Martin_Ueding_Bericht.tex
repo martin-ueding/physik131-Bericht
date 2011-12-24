@@ -1,17 +1,22 @@
 % Copyright (c) 2011 Martin Ueding <dev@martin-ueding.de>
 %
 \documentclass[12pt]{report}
+\usepackage[T1]{fontenc}
 \usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
 \usepackage[activate]{pdfcprot}
 \usepackage[ngerman]{babel}
 \usepackage[parfill]{parskip}
+\usepackage[scaled]{beramono}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{calc}
+\usepackage{caption}
 \usepackage{color}
 \usepackage{epstopdf}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{listings}
 \usepackage{setspace}
 \usepackage{units}
 
@@ -22,14 +27,9 @@
 \hypersetup{colorlinks=true, breaklinks=false, linkcolor=black, menucolor=black, urlcolor=darkblue}
 
 % Format for listings
-\usepackage{calc}
-\usepackage{caption}
 \DeclareCaptionFont{white}{\color{white}}
 \DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth-2\fboxsep}{#1#2#3}}}
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, margin=0pt, font={bf,footnotesize}}
-\usepackage[T1]{fontenc}
-\usepackage[scaled]{beramono}
-\usepackage{listings}
 \lstset{
 	breaklines=true,
 		showstringspaces=false,
