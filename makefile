@@ -28,3 +28,4 @@ clean:
 	make clean -C Uebung_07
 	make clean -C Uebung_08
 	make clean -C Uebung_09
+	make clean -C Uebung_10

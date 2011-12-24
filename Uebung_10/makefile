@@ -2,3 +2,6 @@
 
 histogram.pdf: bericht.C
 	root -b -q $^
+
+clean:
+	$(RM) histogram.pdf
