@@ -12,7 +12,7 @@ Dies ist das einfache \gqq{Hello, World!}-Programm (Listing \ref{code:hello}), d
 
 Um das ganze zu kompilieren braucht man einen C++-Compiler, in diesem Fall ist es \texttt{g++}. Man kann aber genauso gut \texttt{MSVC++} benutzen.
 
-Ich möchte nicht immer den Compilerbefehl erneut eintippen\footnote{Wobei in Bash der letzte Kompiliervorgang mit \texttt{!g++} noch recht schnell zu wiederholen ist.}, so dass ich hier eine Makefile benutze um das Programm mit einem einfachen \texttt{make} kompilieren zu können. Außerdem wird hier auch direkt die Ausgabe des Programms in eine Datei gefügt, die dann wiederum in dieses \LaTeX\ Dokument eingefügt wird. Somit sind die Ausgaben, die hier enthalten sind tatsächlich von den Programmen erzeugt worden.
+Ich möchte nicht immer den Kompilerbefehl erneut eintippen\footnote{Wobei in Bash der letzte Kompiliervorgang mit \texttt{!g++} noch recht schnell zu wiederholen ist.}, so dass ich hier eine Makefile benutze um das Programm mit einem einfachen \texttt{make} kompilieren zu können. Außerdem wird hier auch direkt die Ausgabe des Programms in eine Datei gefügt, die dann wiederum in dieses \LaTeX\ Dokument eingefügt wird. Somit sind die Ausgaben, die hier enthalten sind tatsächlich von den Programmen erzeugt worden.
 
 
 Die Ausgabe des Programms \ref{code:hello} ist in Listing \ref{code:hello.out} zu sehen.
@@ -24,7 +24,7 @@ Die Optionen \texttt{-Wall und --pedantic} zeigen deutlich mehr Unstimmigkeiten 
 \section{Äthiopische Multiplikation}
 \label{section:ethiopian}
 
-Das Program (Listing \ref{code:ethiopian}) habe ich aus dem Skript kopiert und entsprechend wieder mit Makefile versehen. Damit es von der Makefile allerdings nicht-interaktiv kompiliert werden kann, übernehme ich die Eingabezahlen von der Kommandozeile.
+Das Programm (Listing \ref{code:ethiopian}) habe ich aus dem Skript kopiert und entsprechend wieder mit Makefile versehen. Damit es von der Makefile allerdings nicht-interaktiv kompiliert werden kann, übernehme ich die Eingabezahlen von der Kommandozeile.
 
 \code[c++]{Uebung_06/ethiopian/ethiopian.cpp}{ethiopian.cpp}{code:ethiopian}
 
@@ -111,7 +111,7 @@ Fast alles davon geht. Nur kann man keinem Array einen Pointer zuweisen. Das Arr
 
 Bei der zweiten Teilaufgabe sollte der Compiler nichts davon akzeptieren, da \texttt{int} und \texttt{int*} unterschiedliche Datentypen sind. Da es allerdings nur Zahlen sind, kann man trotzdem irgendwie mit ihnen rechnen.
 
-Auf den Pointer kann man anscheinend ints addieren, allerdings kann man dem int fast kein Pointerwerte zuweisen, nur per Multiplikation. Nur eine Differenz ist möglich. Das ist interessant. Letztlich ist nur eine Differenz interessant, da dies die Lange eines Arrays darstellen kann.
+Auf den Pointer kann man anscheinend ints addieren, allerdings kann man dem int fast keine Pointerwerte zuweisen. Nur eine Differenz ist möglich. Das ist interessant. Letztlich ist nur eine Differenz interessant, da dies die Lange eines Arrays darstellen kann.
 
 \section{Zeiger und Funktionen}
 
