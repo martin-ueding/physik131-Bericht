@@ -50,13 +50,6 @@
 	f4->SetLineWidth(3);
 	f4->Draw("same");
 
-	// Fix the text in the top corner.
-	TPaveText *pt = new TPaveText(0.02638191,0.9265734,0.1167337,0.9772727,"blNDC");
-	pt->SetName("title");
-	pt->SetBorderSize(2);
-	pt->SetTextSize(0.02447552);
-	TText *text = pt->AddText("Kugel");
-	pt->Draw();
 	c1->Modified();
 	c1->cd();
 	c1->SetSelected(c1);
