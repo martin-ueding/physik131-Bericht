@@ -3,11 +3,11 @@
 all: kugel.pdf histogram.pdf
 
 kugel.pdf: kugel.C
+	root -b -q $^
 
 histogram.pdf: bericht.C
-
-%.pdf: %.C
 	root -b -q $^
 
 clean:
 	$(RM) histogram.pdf
+	$(RM) kugel.pdf
