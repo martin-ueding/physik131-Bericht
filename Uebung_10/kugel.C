@@ -8,6 +8,7 @@
 	// Plot the linear acceleration function as a reference. Since it grows the
 	// most, it should be set first, in order to get the axes right.
 	TF1 *f5 = new TF1("f5","10*x",0,50);
+	f5->SetTitle("Kugel");
 	f5->SetFillColor(19);
 	f5->SetFillStyle(0);
 	f5->SetLineWidth(1);
