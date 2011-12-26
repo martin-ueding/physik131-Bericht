@@ -10,3 +10,4 @@ histogram.pdf: bericht.C
 
 clean:
 	$(RM) histogram.pdf
+	$(RM) kugel.pdf
