@@ -54,7 +54,6 @@
 	pt->SetName("title");
 	pt->SetBorderSize(2);
 	pt->SetTextSize(0.02447552);
-	TLine *line = pt->AddLine(0,-11.65235,0,-11.65235);
 	TText *text = pt->AddText("Kugel");
 	pt->Draw();
 	c1->Modified();
