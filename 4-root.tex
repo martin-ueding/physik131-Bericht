@@ -30,3 +30,24 @@ ROOT zeichnet auch direkt die Linie ein. Man kann ihr Erscheinungsbild in der GU
 \caption{Messwerte mit linearem Fit}
 \end{center}
 \end{figure}
+
+\section{Kugel im Öltank}
+
+Für $\alpha \neq 0$ kann man die Funktionen einfach plotten. Für die kleine Masse habe ich blaue Farbe benutzt, für $m=\unit[1{,}5]{kg}$ rote Farbe. Das kleine $\alpha$ ist mit einer dünnen Linie, das große $\alpha$ mit einer dicken Linie dargestellt. Die ganz dünne schwarze Linie zeigt $\alpha = 0$.
+
+Dabei braucht man gar nicht die Taylorreihe zu entwickeln, sondern auf den Aufgabenzettel der Physik zu schauen. Dort hat man bereits die Formel
+
+\begin{equation*}
+\dot{\vec{v}} = \vec{g} - \frac{\alpha}{m} \vec{v}
+\end{equation*}
+
+hergeleitet. Fällt das $\alpha$ weg, so hat man einfach nur eine ganz normale Fallbewegung. Dann braucht man nur noch $v(t) = g*t$ einzutragen.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=14cm]{Uebung_10/kugel.pdf}
+\caption{Zeit-Geschwindigkeits Plot für die Kugel im Öltank}
+\end{center}
+\end{figure}
+
+\code[c++]{Uebung_10/kugel.C}{Code für Kugelaufgabe}{code:root-kugel}
