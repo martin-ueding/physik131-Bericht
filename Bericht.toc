@@ -1,0 +1,86 @@
+\select@language {ngerman}
+\contentsline {part}{I\hspace {1em}Linux}{2}{part.1}
+\contentsline {chapter}{\numberline {1}\IeC {\"U}bung 1}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Befehle in der Konsole}{3}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Benutzerverwaltung und -rechte}{3}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Dateibehandlung}{3}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Informationen zu Programmen}{4}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}Textdateien}{4}{subsection.1.1.4}
+\contentsline {subsection}{\numberline {1.1.5}Bash built-ins}{4}{subsection.1.1.5}
+\contentsline {subsection}{\numberline {1.1.6}Diverses}{5}{subsection.1.1.6}
+\contentsline {section}{\numberline {1.2}absoluter und relativer Pfad}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}grundlegende Emacs Steuerung}{5}{section.1.3}
+\contentsline {chapter}{\numberline {2}\IeC {\"U}bung 2}{6}{chapter.2}
+\contentsline {section}{\numberline {2.1}Das Unix-Hilfe-System -- der \texttt {man} Befehl}{6}{section.2.1}
+\contentsline {section}{\numberline {2.2}Datums- und Kalenderangaben}{6}{section.2.2}
+\contentsline {section}{\numberline {2.3}Bash Variablen}{6}{section.2.3}
+\contentsline {section}{\numberline {2.4}Umgang mit Dateien und Verzeichnissen}{6}{section.2.4}
+\contentsline {section}{\numberline {2.5}Absolute und relative Pfade}{7}{section.2.5}
+\contentsline {section}{\numberline {2.6}Wildcards}{7}{section.2.6}
+\contentsline {section}{\numberline {2.7}Umgang mit Rechten unter Unix}{7}{section.2.7}
+\contentsline {chapter}{\numberline {3}\IeC {\"U}bung 3}{8}{chapter.3}
+\contentsline {section}{\numberline {3.1}Weitere Unix-Befehle}{8}{section.3.1}
+\contentsline {section}{\numberline {3.2}Eingabe- und Ausgabeumleitung}{8}{section.3.2}
+\contentsline {section}{\numberline {3.3}Handling von Textdateien}{8}{section.3.3}
+\contentsline {section}{\numberline {3.4}Pipelines}{9}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Namen}{9}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Zahlen}{10}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Komprimierung und Archivierung}{11}{section.3.5}
+\contentsline {section}{\numberline {3.6}Verteiltes Arbeiten}{11}{section.3.6}
+\contentsline {section}{\numberline {3.7}Shell - Skript}{12}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Zahlen}{12}{subsection.3.7.1}
+\contentsline {section}{\numberline {3.8}Analyse von Pipelines}{13}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}Teilaufgabe a}{13}{subsection.3.8.1}
+\contentsline {subsection}{\numberline {3.8.2}Teilaufgabe b}{13}{subsection.3.8.2}
+\contentsline {subsection}{\numberline {3.8.3}Teilaufgabe c}{13}{subsection.3.8.3}
+\contentsline {section}{\numberline {3.9}weitere Linux Befehle}{14}{section.3.9}
+\contentsline {subsection}{\numberline {3.9.1}Super GAU}{14}{subsection.3.9.1}
+\contentsline {subsection}{\numberline {3.9.2}frage.txt}{14}{subsection.3.9.2}
+\contentsline {subsection}{\numberline {3.9.3}Backup}{15}{subsection.3.9.3}
+\contentsline {subsection}{\numberline {3.9.4}Dateirechte}{15}{subsection.3.9.4}
+\contentsline {chapter}{\numberline {4}Anhang}{16}{chapter.4}
+\contentsline {section}{\numberline {4.1}Kompressionsvergleich}{16}{section.4.1}
+\contentsline {section}{\numberline {4.2}Alternative Z\IeC {\"a}hlschleife}{17}{section.4.2}
+\contentsline {part}{II\hspace {1em}\textlatin {\LaTeX }}{18}{part.2}
+\contentsline {chapter}{\numberline {5}\IeC {\"U}bung 4}{19}{chapter.5}
+\contentsline {chapter}{\numberline {6}\IeC {\"U}bung 5}{20}{chapter.6}
+\contentsline {section}{\numberline {6.1}Mathematischer Formelsatz}{20}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Beispiele auf Aufgabenblatt}{20}{subsection.6.1.1}
+\contentsline {paragraph}{Flie\IeC {\ss }text}{20}{section*.6}
+\contentsline {paragraph}{eckige Klammern}{20}{section*.7}
+\contentsline {paragraph}{equation Umgebung}{20}{section*.8}
+\contentsline {subsection}{\numberline {6.1.2}matheuebung.pdf}{20}{subsection.6.1.2}
+\contentsline {subsubsection}{Gleichungsumformungen}{20}{section*.9}
+\contentsline {paragraph}{Erstes Beispiel (Einfache Gleichung}{20}{section*.10}
+\contentsline {paragraph}{Zweites Beispiel (Gleichung \IeC {\"u}ber mehrere Zeilen)}{20}{section*.11}
+\contentsline {paragraph}{Drittes Beispiel (Hochstellung, Wurzeln)}{20}{section*.12}
+\contentsline {paragraph}{Viertes Beispiel (Br\IeC {\"u}che)}{21}{section*.13}
+\contentsline {paragraph}{F\IeC {\"u}nftes Beispiel (Mathe im Flie\IeC {\ss }text )}{21}{section*.14}
+\contentsline {paragraph}{Sechstes Beispiel (Klammerausdruck, Array)}{21}{section*.15}
+\contentsline {paragraph}{Siebtes Beispiel (Funktionen, verschachtelte Br\IeC {\"u}che)}{21}{section*.16}
+\contentsline {subsubsection}{Die L\IeC {\"o}sung von Integralen (Integrale)}{21}{section*.17}
+\contentsline {paragraph}{Die Integral - Multiplikationsregel}{22}{section*.18}
+\contentsline {subsection}{\numberline {6.1.3}Vektoren und Matrizen (Vektoren, Arrays, Fortsetzungspunkte)}{22}{subsection.6.1.3}
+\contentsline {section}{\numberline {6.2}Einbindung von Graphiken}{22}{section.6.2}
+\contentsline {section}{\numberline {6.3}Weiteres zur Textstrukturierung}{22}{section.6.3}
+\contentsline {section}{\numberline {6.4}Berichtaufgaben}{23}{section.6.4}
+\contentsline {part}{III\hspace {1em}C++}{24}{part.3}
+\contentsline {chapter}{\numberline {7}\IeC {\"U}bung 6}{25}{chapter.7}
+\contentsline {section}{\numberline {7.1}Das \glqq Hello, World!\grqq -Programm}{25}{section.7.1}
+\contentsline {section}{\numberline {7.2}\IeC {\"A}thiopische Multiplikation}{25}{section.7.2}
+\contentsline {section}{\numberline {7.3}Heron}{27}{section.7.3}
+\contentsline {chapter}{\numberline {8}\IeC {\"U}bung 7}{31}{chapter.8}
+\contentsline {section}{\numberline {8.1}Versuchsergebnisse}{33}{section.8.1}
+\contentsline {chapter}{\numberline {9}\IeC {\"U}bung 8}{36}{chapter.9}
+\contentsline {section}{\numberline {9.1}Strings}{36}{section.9.1}
+\contentsline {section}{\numberline {9.2}Klassen}{37}{section.9.2}
+\contentsline {section}{\numberline {9.3}Berichtsaufgabe}{40}{section.9.3}
+\contentsline {chapter}{\numberline {10}\IeC {\"U}bung 9}{41}{chapter.10}
+\contentsline {section}{\numberline {10.1}Einfache Zeiger}{41}{section.10.1}
+\contentsline {section}{\numberline {10.2}\IeC {\"U}berpr\IeC {\"u}fungsaufgabe}{41}{section.10.2}
+\contentsline {section}{\numberline {10.3}Zeiger und Funktionen}{41}{section.10.3}
+\contentsline {section}{\numberline {10.4}Versuchsergebnisse, die Zweite}{42}{section.10.4}
+\contentsline {part}{IV\hspace {1em}ROOT}{46}{part.4}
+\contentsline {chapter}{\numberline {11}\IeC {\"U}bung 10}{47}{chapter.11}
+\contentsline {section}{\numberline {11.1}Berichtsaufgabe}{48}{section.11.1}
+\contentsline {part}{V\hspace {1em}Anhang}{49}{part.5}
