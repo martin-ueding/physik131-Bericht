@@ -35,3 +35,6 @@ clean:
 	make clean -C Uebung_08
 	make clean -C Uebung_09
 	make clean -C Uebung_10
+
+tarball:
+	git archive --prefix ueding_martin_edv_ws1112/ HEAD > ueding_martin_edv_ws1112.tar
