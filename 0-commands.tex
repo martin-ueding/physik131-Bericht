@@ -4,7 +4,7 @@
 \label{commands}
 
 \subsection{Benutzerverwaltung und -rechte}
-\begin{itemize}
+\begin{description}
 \dd{chmod}{Ändert Dateirechte.}
 \dd{hostname}{Gibt den Rechnernamen aus.}
 \dd{last}{Letzte Anmeldungen aller Benutzer.}
@@ -14,10 +14,10 @@
 \dd{uptime}{Zeigt, wie viele Nächte der Rechner am Stück durchgemacht hat.}
 \dd{whoami}{Gibt den eigenen Benutzernamen aus.}
 \dd{w}{Wie \texttt{who}, nur ausführlicher.}
-\end{itemize}
+\end{description}
 
 \subsection{Dateibehandlung}
-\begin{itemize}
+\begin{description}
 \dd{bzip2}{Komprimiert eine Datei.}
 \dd{cd}{Wechselt in das angegebene Verzeichnis. Dabei ist \texttt{..} das übergeordnete Verzeichnis. Wird als Verzeichnis \texttt{-} angegeben, kommt man in das vorherige Verzeichnis. \texttt{cd} ohne Verzeichnis wechselt in das Heimatverzeichnis\footnote{Meistens \texttt{/home/<benutzername>}.}.}
 \dd{cp}{Kopiert Dateien.}
@@ -33,17 +33,17 @@
 \dd{scp}{Kopiert über SSH.}
 \dd{tar}{Erstellt ein Archiv mehrerer Dateien. Mit \texttt{tar -xzf archiv.tar.gt datei1 datei2…}\cite{man-tar} erstellt man direkt ein komprimiertes Archiv mehrerer Dateien.}
 \dd{touch}{Setzt das Änderungsdatum einer Datei auf den aktuellen Zeitpunkt und erzeugt die Datei, falls sie nicht existiert.}
-\end{itemize}
+\end{description}
 
 \subsection{Informationen zu Programmen}
-\begin{itemize}
+\begin{description}
 \dd{apropos}{Unscharfe Suche nach Befehlen.}
 \dd{man}{Zeigt Handbücher zu Programmen an.}
 \dd{whatis}{Zeigt die erste Zeile des Handbuchs an.}
-\end{itemize}
+\end{description}
 
 \subsection{Textdateien}
-\begin{itemize}
+\begin{description}
 \dd{diff}{Vergleicht Dateien miteinander.}
 \dd{emacs}{Texteditor.}
 \dd{grep}{Filtert Zeilen nach einem Suchmuster.}
@@ -55,18 +55,18 @@
 \dd{uniq}{Spezialfall von \texttt{sort -u}}
 \dd{vim}{Texteditor für Programmierer.}
 \dd{wc}{Zählt Wörter, Zeilen, Buchstaben.}
-\end{itemize}
+\end{description}
 
 \subsection{Bash built-ins}
-\begin{itemize}
+\begin{description}
 \dd{clear}{Fügt leere Zeilen ein, bis der Bildschirm leer ist.}
 \dd{set}{Zeigt das Environment der Shell an.}
 \dd{echo}{Gibt Text aus.}
 \dd{history}{Zeigt die letzten Kommandos an.}
-\end{itemize}
+\end{description}
 
 \subsection{Diverses}
-\begin{itemize}
+\begin{description}
 \dd{bc}{Einfacher Taschenrechner. Man sollte in der Bash allerdings nicht mit \texttt{\$(echo 5+4 | bc)} rechnen, sondern die neuen, von C übernommenen Funktionen zum direkten Rechnen, \texttt{\$((5+4))}, benutzen.}
 \dd{blkid}{Zeigt die UUID der Partitionen an.}
 \dd{e2label}{Zeigt und vergibt Partitionslabel.}
@@ -75,4 +75,4 @@
 \dd{cal}{Zeigt einen Kalendermonat an.}
 \dd{date}{Zeigt das Datum in einem gewählten Format an.}
 \dd{gv}{Zeigt eine PDF oder PS Datei an. Normalerweise würde man okular (KDE) oder evince (Gnome) benutzen.}
-\end{itemize}
+\end{description}
