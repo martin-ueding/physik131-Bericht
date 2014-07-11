@@ -1,4 +1,4 @@
-# Copyright (c) 2011 Martin Ueding <dev@martin-ueding.de>
+# Copyright © 2011, 2014 Martin Ueding <dev@martin-ueding.de>
 
 all: Martin_Ueding_Bericht.pdf README.html
 
@@ -10,8 +10,8 @@ Martin_Ueding_Bericht.pdf: Martin_Ueding_Bericht.tex 0-commands.tex 1-linux.tex 
 	make -C Uebung_07
 	make -C Uebung_08
 	make -C Uebung_09
-	make -C Uebung_10
-	pdflatex $<
+	#make -C Uebung_10
+	latexmk -pdf $<
 
 README.html: README.markdown
 	markdown $^ > $@
